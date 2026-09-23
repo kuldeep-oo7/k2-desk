@@ -1,0 +1,815 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>K&sup2; Desk</title>
+<style>
+  :root { color-scheme: dark; --bg:#0c0d14; --panel:#14161f; --line:#262a40; --muted:#8e93a6;
+          --text:#e6e8f0; --green:#00e676; --red:#ff5252; --amber:#ffb300; }
+  * { box-sizing:border-box }
+  body { margin:0; background:var(--bg); color:var(--text);
+         font:14px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; padding:14px }
+  h1 { font-size:18px; margin:0 0 4px } h2 { font-size:15px; margin:26px 0 8px }
+  .stamp { color:var(--muted); font-size:12px; margin-bottom:14px }
+  .note { border:1px solid var(--line); border-left:3px solid var(--amber); border-radius:8px;
+          padding:10px 12px; margin-bottom:16px; font-size:12px; line-height:1.6; color:var(--muted) }
+  .note.frozen { border-left-color:var(--green) }
+  .wrap { overflow-x:auto; border:1px solid var(--line); border-radius:10px; background:var(--panel) }
+  table { border-collapse:collapse; width:100%; min-width:760px }
+  th { text-align:left; font-size:9px; letter-spacing:.06em; color:var(--muted);
+       padding:8px 10px; border-bottom:1px solid var(--line); white-space:nowrap }
+  td { padding:9px 10px; border-bottom:1px solid rgba(255,255,255,.05); vertical-align:top }
+  .num { text-align:right; white-space:nowrap }
+  .sub { font-size:10px; color:var(--muted); margin-top:2px }
+  code { font-size:10px; color:var(--text); word-break:break-all }
+  .up { color:var(--green) } .down { color:var(--red) }
+  tr:last-child td { border-bottom:none }
+</style></head><body>
+
+<h1>K&sup2; Desk</h1>
+<div class="stamp">Built 2026-09-23 21:21 IST &middot; session 2026-09-23 &middot; market CLOSED &middot;
+  13,695 contracts examined, 1,062 cleared every gate</div>
+
+<div class="note "><b>THESE LEVELS ARE INDICATIVE, NOT FIXED.</b> The market is closed.
+       There is no traded price to anchor them to, so nothing has been written down.
+       They are set once &mdash; and then held all day &mdash; on the first build that
+       sees a live exchange book.</div>
+
+<div class="note">
+  <b>WHERE THESE PRICES COME FROM.</b> All prices are from the <b>2026-09-23</b> settlement file. The market was closed when this was built, so nothing here is executable right now.
+  This page is a <b>snapshot</b>, rebuilt on a schedule &mdash; it is not a live feed.
+  <b>Check the price on your broker before placing anything.</b>
+  Net figures are after brokerage, STT at 0.15%, exchange, stamp and GST; the
+  spread is extra and is only known where a live book was seen.
+</div>
+
+<h2>Calls &amp; Puts &mdash; the shortlist</h2>
+<div class="wrap"><table>
+  <thead><tr>
+    <th>CONTRACT</th><th class="num">BUY LIMIT</th><th class="num">SELL &middot; NET</th><th class="num">STOP</th>
+    <th class="num">NOW</th>
+    <th class="num">IV / REALISED</th><th class="num">P(TOUCH)</th><th class="num">DECAY</th><th class="num">SCORE</th>
+  </tr></thead><tbody>
+      <tr>
+        <td><b>JINDALSTEL 1180 CE</b>
+          <div class="sub"><code>JINDALSTEL26OCT1180CE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹32</b><div class="sub">&times;625 = ₹20,000</div></td>
+        <td class="num up"><b>₹48</b><div class="sub">net ₹9,886.18</div></td>
+        <td class="num down">₹16</td>
+        <td class="num">₹32<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">20% / 27.7%<div class="sub">VRP 0.72</div></td>
+        <td class="num">62%<div class="sub">~7.7d</div></td>
+        <td class="num down">12.78%</td>
+        <td class="num">80.5</td>
+      </tr>
+      <tr>
+        <td><b>TATAPOWER 380 PE</b>
+          <div class="sub"><code>TATAPOWER26OCT380PE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹12.75</b><div class="sub">&times;1450 = ₹18,487.5</div></td>
+        <td class="num up"><b>₹19.13</b><div class="sub">net ₹9,134.97</div></td>
+        <td class="num down">₹6.38</td>
+        <td class="num">₹12.75<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">19.1% / 22.4%<div class="sub">VRP 0.85</div></td>
+        <td class="num">69.1%<div class="sub">~5.7d</div></td>
+        <td class="num ">3.5%</td>
+        <td class="num">80.1</td>
+      </tr>
+      <tr>
+        <td><b>HEROMOTOCO 5500 PE</b>
+          <div class="sub"><code>HEROMOTOCO26OCT5500PE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹205</b><div class="sub">&times;150 = ₹30,750</div></td>
+        <td class="num up"><b>₹307.5</b><div class="sub">net ₹15,225.37</div></td>
+        <td class="num down">₹102.5</td>
+        <td class="num">₹205<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">25.2% / 26.1%<div class="sub">VRP 0.97</div></td>
+        <td class="num">61.9%<div class="sub">~7.7d</div></td>
+        <td class="num ">6.95%</td>
+        <td class="num">80.1</td>
+      </tr>
+      <tr>
+        <td><b>COALINDIA 430 PE</b>
+          <div class="sub"><code>COALINDIA26OCT430PE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹10.6</b><div class="sub">&times;1350 = ₹14,310</div></td>
+        <td class="num up"><b>₹15.9</b><div class="sub">net ₹7,060.13</div></td>
+        <td class="num down">₹5.3</td>
+        <td class="num">₹10.6<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">19.2% / 19.8%<div class="sub">VRP 0.97</div></td>
+        <td class="num">62.7%<div class="sub">~7.6d</div></td>
+        <td class="num ">7.61%</td>
+        <td class="num">80</td>
+      </tr>
+      <tr>
+        <td><b>JINDALSTEL 1160 CE</b>
+          <div class="sub"><code>JINDALSTEL26OCT1160CE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹42.6</b><div class="sub">&times;625 = ₹26,625</div></td>
+        <td class="num up"><b>₹63.9</b><div class="sub">net ₹13,176.61</div></td>
+        <td class="num down">₹21.3</td>
+        <td class="num">₹42.6<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">19.3% / 27.7%<div class="sub">VRP 0.7</div></td>
+        <td class="num">64.9%<div class="sub">~6.8d</div></td>
+        <td class="num ">8.1%</td>
+        <td class="num">79.2</td>
+      </tr>
+      <tr>
+        <td><b>HEROMOTOCO 5400 CE</b>
+          <div class="sub"><code>HEROMOTOCO26OCT5400CE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹151.2</b><div class="sub">&times;150 = ₹22,680</div></td>
+        <td class="num up"><b>₹226.8</b><div class="sub">net ₹11,217.25</div></td>
+        <td class="num down">₹75.6</td>
+        <td class="num">₹151.2<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">21.1% / 26.1%<div class="sub">VRP 0.81</div></td>
+        <td class="num">58.1%<div class="sub">~8.8d</div></td>
+        <td class="num down">14.71%</td>
+        <td class="num">79</td>
+      </tr>
+      <tr>
+        <td><b>PFC 360 PE</b>
+          <div class="sub"><code>PFC26OCT360PE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹14.5</b><div class="sub">&times;1300 = ₹18,850</div></td>
+        <td class="num up"><b>₹21.75</b><div class="sub">net ₹9,315.01</div></td>
+        <td class="num down">₹7.25</td>
+        <td class="num">₹14.5<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">22.8% / 21.6%<div class="sub">VRP 1.05</div></td>
+        <td class="num">60.9%<div class="sub">~8.1d</div></td>
+        <td class="num ">5.32%</td>
+        <td class="num">78.8</td>
+      </tr>
+      <tr>
+        <td><b>GODREJCP 900 CE</b>
+          <div class="sub"><code>GODREJCP26OCT900CE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹16.6</b><div class="sub">&times;500 = ₹8,300</div></td>
+        <td class="num up"><b>₹24.9</b><div class="sub">net ₹4,075.15</div></td>
+        <td class="num down">₹8.3</td>
+        <td class="num">₹16.6<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">20.1% / 38.1%<div class="sub">VRP 0.53</div></td>
+        <td class="num">67.6%<div class="sub">~6d</div></td>
+        <td class="num down">13.73%</td>
+        <td class="num">78.7</td>
+      </tr>
+      <tr>
+        <td><b>UNIONBANK 180 CE</b>
+          <div class="sub"><code>UNIONBANK26OCT180CE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹5.9</b><div class="sub">&times;4425 = ₹26,107.5</div></td>
+        <td class="num up"><b>₹8.85</b><div class="sub">net ₹12,919.58</div></td>
+        <td class="num down">₹2.95</td>
+        <td class="num">₹5.9<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">22.1% / 25.9%<div class="sub">VRP 0.86</div></td>
+        <td class="num">57.3%<div class="sub">~9.1d</div></td>
+        <td class="num down">13.59%</td>
+        <td class="num">78.2</td>
+      </tr>
+      <tr>
+        <td><b>HEROMOTOCO 5600 PE</b>
+          <div class="sub"><code>HEROMOTOCO26OCT5600PE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹267.1</b><div class="sub">&times;150 = ₹40,065</div></td>
+        <td class="num up"><b>₹400.65</b><div class="sub">net ₹19,851.84</div></td>
+        <td class="num down">₹133.55</td>
+        <td class="num">₹267.1<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">25.1% / 26.1%<div class="sub">VRP 0.96</div></td>
+        <td class="num">63.1%<div class="sub">~7.4d</div></td>
+        <td class="num ">4.44%</td>
+        <td class="num">78.2</td>
+      </tr>
+      <tr>
+        <td><b>TATAPOWER 370 PE</b>
+          <div class="sub"><code>TATAPOWER26OCT370PE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹7.5</b><div class="sub">&times;1450 = ₹10,875</div></td>
+        <td class="num up"><b>₹11.25</b><div class="sub">net ₹5,354.07</div></td>
+        <td class="num down">₹3.75</td>
+        <td class="num">₹7.5<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">19.6% / 22.4%<div class="sub">VRP 0.87</div></td>
+        <td class="num">62.7%<div class="sub">~7.6d</div></td>
+        <td class="num ">10.02%</td>
+        <td class="num">77.9</td>
+      </tr>
+      <tr>
+        <td><b>PFC 350 CE</b>
+          <div class="sub"><code>PFC26OCT350CE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹8.5</b><div class="sub">&times;1300 = ₹11,050</div></td>
+        <td class="num up"><b>₹12.75</b><div class="sub">net ₹5,440.99</div></td>
+        <td class="num down">₹4.25</td>
+        <td class="num">₹8.5<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">18.1% / 21.6%<div class="sub">VRP 0.84</div></td>
+        <td class="num">56.1%<div class="sub">~9.5d</div></td>
+        <td class="num down">16.27%</td>
+        <td class="num">77.8</td>
+      </tr>
+      <tr>
+        <td><b>ITC 275 PE</b>
+          <div class="sub"><code>ITC26OCT275PE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹7.3</b><div class="sub">&times;1725 = ₹12,592.5</div></td>
+        <td class="num up"><b>₹10.95</b><div class="sub">net ₹6,207.1</div></td>
+        <td class="num down">₹3.65</td>
+        <td class="num">₹7.3<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">18.7% / 17.5%<div class="sub">VRP 1.07</div></td>
+        <td class="num">60.7%<div class="sub">~8.2d</div></td>
+        <td class="num ">7.06%</td>
+        <td class="num">77.7</td>
+      </tr>
+      <tr>
+        <td><b>GLENMARK 2500 CE</b>
+          <div class="sub"><code>GLENMARK26OCT2500CE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹68.75</b><div class="sub">&times;375 = ₹25,781.25</div></td>
+        <td class="num up"><b>₹103.13</b><div class="sub">net ₹12,757.55</div></td>
+        <td class="num down">₹34.38</td>
+        <td class="num">₹68.75<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">21.3% / 25.6%<div class="sub">VRP 0.83</div></td>
+        <td class="num">56.9%<div class="sub">~9.2d</div></td>
+        <td class="num down">15.74%</td>
+        <td class="num">77.5</td>
+      </tr>
+      <tr>
+        <td><b>HEROMOTOCO 5400 PE</b>
+          <div class="sub"><code>HEROMOTOCO26OCT5400PE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹147</b><div class="sub">&times;150 = ₹22,050</div></td>
+        <td class="num up"><b>₹220.5</b><div class="sub">net ₹10,904.35</div></td>
+        <td class="num down">₹73.5</td>
+        <td class="num">₹147<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">24.5% / 26.1%<div class="sub">VRP 0.94</div></td>
+        <td class="num">59.6%<div class="sub">~8.4d</div></td>
+        <td class="num ">10.82%</td>
+        <td class="num">77.5</td>
+      </tr>
+      <tr>
+        <td><b>TMPV 305 PE</b>
+          <div class="sub"><code>TMPV26OCT305PE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹11.15</b><div class="sub">&times;1600 = ₹17,840</div></td>
+        <td class="num up"><b>₹16.73</b><div class="sub">net ₹8,813.37</div></td>
+        <td class="num down">₹5.58</td>
+        <td class="num">₹11.15<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">30% / 34.3%<div class="sub">VRP 0.87</div></td>
+        <td class="num">61.9%<div class="sub">~7.6d</div></td>
+        <td class="num ">9.19%</td>
+        <td class="num">77.5</td>
+      </tr>
+      <tr>
+        <td><b>TATAPOWER 370 CE</b>
+          <div class="sub"><code>TATAPOWER26OCT370CE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹8.95</b><div class="sub">&times;1450 = ₹12,977.5</div></td>
+        <td class="num up"><b>₹13.43</b><div class="sub">net ₹6,398.32</div></td>
+        <td class="num down">₹4.47</td>
+        <td class="num">₹8.95<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">16.8% / 22.4%<div class="sub">VRP 0.75</div></td>
+        <td class="num">60.5%<div class="sub">~8.2d</div></td>
+        <td class="num down">13.37%</td>
+        <td class="num">77.4</td>
+      </tr>
+      <tr>
+        <td><b>KOTAKBANK 420 PE</b>
+          <div class="sub"><code>KOTAKBANK26OCT420PE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹12</b><div class="sub">&times;2000 = ₹24,000</div></td>
+        <td class="num up"><b>₹18</b><div class="sub">net ₹11,872.85</div></td>
+        <td class="num down">₹6</td>
+        <td class="num">₹12<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">22.1% / 18.2%<div class="sub">VRP 1.22</div></td>
+        <td class="num">53%<div class="sub">~10.4d</div></td>
+        <td class="num ">10.84%</td>
+        <td class="num">77.3</td>
+      </tr>
+      <tr>
+        <td><b>PFC 345 CE</b>
+          <div class="sub"><code>PFC26OCT345CE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹11</b><div class="sub">&times;1300 = ₹14,300</div></td>
+        <td class="num up"><b>₹16.5</b><div class="sub">net ₹7,055.17</div></td>
+        <td class="num down">₹5.5</td>
+        <td class="num">₹11<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">17.3% / 21.6%<div class="sub">VRP 0.8</div></td>
+        <td class="num">59.8%<div class="sub">~8.4d</div></td>
+        <td class="num ">10.62%</td>
+        <td class="num">77.3</td>
+      </tr>
+      <tr>
+        <td><b>HAVELLS 1100 PE</b>
+          <div class="sub"><code>HAVELLS26OCT1100PE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹38.95</b><div class="sub">&times;500 = ₹19,475</div></td>
+        <td class="num up"><b>₹58.43</b><div class="sub">net ₹9,625.43</div></td>
+        <td class="num down">₹19.48</td>
+        <td class="num">₹38.95<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">27.8% / 24.3%<div class="sub">VRP 1.15</div></td>
+        <td class="num">53.1%<div class="sub">~10.3d</div></td>
+        <td class="num ">11.66%</td>
+        <td class="num">77.3</td>
+      </tr>
+      <tr>
+        <td><b>TMPV 310 PE</b>
+          <div class="sub"><code>TMPV26OCT310PE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹14.15</b><div class="sub">&times;1600 = ₹22,640</div></td>
+        <td class="num up"><b>₹21.23</b><div class="sub">net ₹11,197.38</div></td>
+        <td class="num down">₹7.08</td>
+        <td class="num">₹14.15<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">30.6% / 34.3%<div class="sub">VRP 0.89</div></td>
+        <td class="num">63.1%<div class="sub">~7.3d</div></td>
+        <td class="num ">6.84%</td>
+        <td class="num">77.3</td>
+      </tr>
+      <tr>
+        <td><b>BRITANNIA 5000 PE</b>
+          <div class="sub"><code>BRITANNIA26OCT5000PE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹125</b><div class="sub">&times;125 = ₹15,625</div></td>
+        <td class="num up"><b>₹187.5</b><div class="sub">net ₹7,713.25</div></td>
+        <td class="num down">₹62.5</td>
+        <td class="num">₹125<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">20.4% / 19.2%<div class="sub">VRP 1.07</div></td>
+        <td class="num">58%<div class="sub">~9d</div></td>
+        <td class="num ">9.84%</td>
+        <td class="num">77.2</td>
+      </tr>
+      <tr>
+        <td><b>UNITDSPR 1440 CE</b>
+          <div class="sub"><code>UNITDSPR26OCT1440CE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹35.6</b><div class="sub">&times;400 = ₹14,240</div></td>
+        <td class="num up"><b>₹53.4</b><div class="sub">net ₹7,025.37</div></td>
+        <td class="num down">₹17.8</td>
+        <td class="num">₹35.6<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">15.9% / 21.1%<div class="sub">VRP 0.75</div></td>
+        <td class="num">60.4%<div class="sub">~8.2d</div></td>
+        <td class="num down">12.62%</td>
+        <td class="num">77.1</td>
+      </tr>
+      <tr>
+        <td><b>LT 4000 PE</b>
+          <div class="sub"><code>LT26OCT4000PE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹108.8</b><div class="sub">&times;175 = ₹19,040</div></td>
+        <td class="num up"><b>₹163.2</b><div class="sub">net ₹9,409.38</div></td>
+        <td class="num down">₹54.4</td>
+        <td class="num">₹108.8<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">19.3% / 15.2%<div class="sub">VRP 1.28</div></td>
+        <td class="num">53.6%<div class="sub">~10.3d</div></td>
+        <td class="num ">9.14%</td>
+        <td class="num">77</td>
+      </tr>
+      <tr>
+        <td><b>M&amp;M 3100 PE</b>
+          <div class="sub"><code>M&amp;M26OCT3100PE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹106</b><div class="sub">&times;200 = ₹21,200</div></td>
+        <td class="num up"><b>₹159</b><div class="sub">net ₹10,482.18</div></td>
+        <td class="num down">₹53</td>
+        <td class="num">₹106<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">25.5% / 20.9%<div class="sub">VRP 1.22</div></td>
+        <td class="num">52.2%<div class="sub">~10.6d</div></td>
+        <td class="num ">10.97%</td>
+        <td class="num">76.9</td>
+      </tr>
+      <tr>
+        <td><b>SUNPHARMA 1860 CE</b>
+          <div class="sub"><code>SUNPHARMA26OCT1860CE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹42.75</b><div class="sub">&times;350 = ₹14,962.5</div></td>
+        <td class="num up"><b>₹64.13</b><div class="sub">net ₹7,384.21</div></td>
+        <td class="num down">₹21.38</td>
+        <td class="num">₹42.75<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">12.5% / 17.7%<div class="sub">VRP 0.71</div></td>
+        <td class="num">61.6%<div class="sub">~7.9d</div></td>
+        <td class="num ">11.11%</td>
+        <td class="num">76.9</td>
+      </tr>
+      <tr>
+        <td><b>JINDALSTEL 1200 CE</b>
+          <div class="sub"><code>JINDALSTEL26OCT1200CE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹23.3</b><div class="sub">&times;625 = ₹14,562.5</div></td>
+        <td class="num up"><b>₹34.95</b><div class="sub">net ₹7,185.54</div></td>
+        <td class="num down">₹11.65</td>
+        <td class="num">₹23.3<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">20.5% / 27.7%<div class="sub">VRP 0.74</div></td>
+        <td class="num">57.3%<div class="sub">~9.1d</div></td>
+        <td class="num down">20.23%</td>
+        <td class="num">76.6</td>
+      </tr>
+      <tr>
+        <td><b>ASIANPAINT 2500 PE</b>
+          <div class="sub"><code>ASIANPAINT26OCT2500PE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹73.8</b><div class="sub">&times;250 = ₹18,450</div></td>
+        <td class="num up"><b>₹110.7</b><div class="sub">net ₹9,116.34</div></td>
+        <td class="num down">₹36.9</td>
+        <td class="num">₹73.8<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">21% / 19.4%<div class="sub">VRP 1.08</div></td>
+        <td class="num">58.9%<div class="sub">~8.7d</div></td>
+        <td class="num ">7.97%</td>
+        <td class="num">76.5</td>
+      </tr>
+      <tr>
+        <td><b>HAL 4900 PE</b>
+          <div class="sub"><code>HAL26OCT4900PE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹148.7</b><div class="sub">&times;150 = ₹22,305</div></td>
+        <td class="num up"><b>₹223.05</b><div class="sub">net ₹11,031</div></td>
+        <td class="num down">₹74.35</td>
+        <td class="num">₹148.7<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">23.4% / 25.2%<div class="sub">VRP 0.93</div></td>
+        <td class="num">62.5%<div class="sub">~7.6d</div></td>
+        <td class="num ">8.01%</td>
+        <td class="num">76.4</td>
+      </tr>
+      <tr>
+        <td><b>SHRIRAMFIN 1020 CE</b>
+          <div class="sub"><code>SHRIRAMFIN26OCT1020CE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹30</b><div class="sub">&times;825 = ₹24,750</div></td>
+        <td class="num up"><b>₹45</b><div class="sub">net ₹12,245.36</div></td>
+        <td class="num down">₹15</td>
+        <td class="num">₹30<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">24.3% / 26.5%<div class="sub">VRP 0.92</div></td>
+        <td class="num">53.1%<div class="sub">~10.3d</div></td>
+        <td class="num down">18.19%</td>
+        <td class="num">76.4</td>
+      </tr>
+      <tr>
+        <td><b>COALINDIA 425 PE</b>
+          <div class="sub"><code>COALINDIA26OCT425PE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹7.85</b><div class="sub">&times;1350 = ₹10,597.5</div></td>
+        <td class="num up"><b>₹11.77</b><div class="sub">net ₹5,216.25</div></td>
+        <td class="num down">₹3.93</td>
+        <td class="num">₹7.85<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">18.6% / 19.8%<div class="sub">VRP 0.94</div></td>
+        <td class="num">60.2%<div class="sub">~8.3d</div></td>
+        <td class="num ">11.22%</td>
+        <td class="num">76.1</td>
+      </tr>
+      <tr>
+        <td><b>EICHERMOT 7500 CE</b>
+          <div class="sub"><code>EICHERMOT26OCT7500CE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹174.85</b><div class="sub">&times;100 = ₹17,485</div></td>
+        <td class="num up"><b>₹262.27</b><div class="sub">net ₹8,637.06</div></td>
+        <td class="num down">₹87.43</td>
+        <td class="num">₹174.85<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">16.3% / 19.1%<div class="sub">VRP 0.86</div></td>
+        <td class="num">55.3%<div class="sub">~9.8d</div></td>
+        <td class="num down">16.24%</td>
+        <td class="num">76</td>
+      </tr>
+      <tr>
+        <td><b>ETERNAL 350 PE</b>
+          <div class="sub"><code>ETERNAL26OCT350PE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹15.1</b><div class="sub">&times;2425 = ₹36,617.5</div></td>
+        <td class="num up"><b>₹22.65</b><div class="sub">net ₹18,139.57</div></td>
+        <td class="num down">₹7.55</td>
+        <td class="num">₹15.1<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">30.5% / 26.7%<div class="sub">VRP 1.15</div></td>
+        <td class="num">53.8%<div class="sub">~10.1d</div></td>
+        <td class="num ">10.19%</td>
+        <td class="num">76</td>
+      </tr>
+      <tr>
+        <td><b>HAVELLS 1120 PE</b>
+          <div class="sub"><code>HAVELLS26OCT1120PE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹51.3</b><div class="sub">&times;500 = ₹25,650</div></td>
+        <td class="num up"><b>₹76.95</b><div class="sub">net ₹12,692.36</div></td>
+        <td class="num down">₹25.65</td>
+        <td class="num">₹51.3<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">28.5% / 24.3%<div class="sub">VRP 1.18</div></td>
+        <td class="num">54.4%<div class="sub">~9.9d</div></td>
+        <td class="num ">8.19%</td>
+        <td class="num">76</td>
+      </tr>
+      <tr>
+        <td><b>UNITDSPR 1420 CE</b>
+          <div class="sub"><code>UNITDSPR26OCT1420CE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹48.7</b><div class="sub">&times;400 = ₹19,480</div></td>
+        <td class="num up"><b>₹73.05</b><div class="sub">net ₹9,627.91</div></td>
+        <td class="num down">₹24.35</td>
+        <td class="num">₹48.7<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">16.3% / 21.1%<div class="sub">VRP 0.77</div></td>
+        <td class="num">60.7%<div class="sub">~8.2d</div></td>
+        <td class="num ">9.12%</td>
+        <td class="num">76</td>
+      </tr>
+      <tr>
+        <td><b>PFC 350 PE</b>
+          <div class="sub"><code>PFC26OCT350PE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹9.6</b><div class="sub">&times;1300 = ₹12,480</div></td>
+        <td class="num up"><b>₹14.4</b><div class="sub">net ₹6,151.23</div></td>
+        <td class="num down">₹4.8</td>
+        <td class="num">₹9.6<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">24.5% / 21.6%<div class="sub">VRP 1.13</div></td>
+        <td class="num">52.6%<div class="sub">~10.5d</div></td>
+        <td class="num down">13.45%</td>
+        <td class="num">75.9</td>
+      </tr>
+      <tr>
+        <td><b>TMPV 305 CE</b>
+          <div class="sub"><code>TMPV26OCT305CE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹9.55</b><div class="sub">&times;1600 = ₹15,280</div></td>
+        <td class="num up"><b>₹14.33</b><div class="sub">net ₹7,541.9</div></td>
+        <td class="num down">₹4.78</td>
+        <td class="num">₹9.55<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">26.4% / 34.3%<div class="sub">VRP 0.77</div></td>
+        <td class="num">59.6%<div class="sub">~8.3d</div></td>
+        <td class="num down">14.71%</td>
+        <td class="num">75.9</td>
+      </tr>
+      <tr>
+        <td><b>NAUKRI 1300 CE</b>
+          <div class="sub"><code>NAUKRI26OCT1300CE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹46</b><div class="sub">&times;550 = ₹25,300</div></td>
+        <td class="num up"><b>₹69</b><div class="sub">net ₹12,518.52</div></td>
+        <td class="num down">₹23</td>
+        <td class="num">₹46<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">24.2% / 32.2%<div class="sub">VRP 0.75</div></td>
+        <td class="num">62%<div class="sub">~7.6d</div></td>
+        <td class="num ">11.31%</td>
+        <td class="num">75.9</td>
+      </tr>
+      <tr>
+        <td><b>UNIONBANK 180 PE</b>
+          <div class="sub"><code>UNIONBANK26OCT180PE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹4.9</b><div class="sub">&times;4425 = ₹21,682.5</div></td>
+        <td class="num up"><b>₹7.35</b><div class="sub">net ₹10,721.82</div></td>
+        <td class="num down">₹2.45</td>
+        <td class="num">₹4.9<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">26.8% / 25.9%<div class="sub">VRP 1.04</div></td>
+        <td class="num">53.9%<div class="sub">~10.1d</div></td>
+        <td class="num down">14.65%</td>
+        <td class="num">75.8</td>
+      </tr>
+      <tr>
+        <td><b>COALINDIA 425 CE</b>
+          <div class="sub"><code>COALINDIA26OCT425CE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.8d left</div></td>
+        <td class="num"><b>₹10.1</b><div class="sub">&times;1350 = ₹13,635</div></td>
+        <td class="num up"><b>₹15.15</b><div class="sub">net ₹6,724.88</div></td>
+        <td class="num down">₹5.05</td>
+        <td class="num">₹10.1<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">15.8% / 19.8%<div class="sub">VRP 0.8</div></td>
+        <td class="num">58.1%<div class="sub">~8.9d</div></td>
+        <td class="num down">14.18%</td>
+        <td class="num">75.8</td>
+      </tr></tbody>
+</table></div>
+
+<h2>Futures &mdash; priced per unit, not per lot</h2>
+<div class="wrap"><table>
+  <thead><tr>
+    <th>SYMBOL</th><th class="num">BUY LIMIT</th><th class="num">TARGET 1 &middot; 2</th>
+    <th class="num">STOP</th><th class="num">NOW</th><th class="num">1 UNIT</th><th class="num">R : R</th>
+  </tr></thead><tbody>
+      <tr>
+        <td><b>LT</b><div class="sub"><code>LT26OCTFUT</code></div></td>
+        <td class="num"><b>₹3,873.56</b></td>
+        <td class="num up">₹3,970.4<div class="sub">₹4,067.24</div></td>
+        <td class="num down">₹3,815.46</td>
+        <td class="num">₹3,904.8<div class="sub up">AT THE LIMIT</div></td>
+        <td class="num">₹3,873.56<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹96.84 / &minus;₹58.1</div></td>
+      </tr>
+      <tr>
+        <td><b>MARUTI</b><div class="sub"><code>MARUTI26OCTFUT</code></div></td>
+        <td class="num"><b>₹12,092.48</b></td>
+        <td class="num up">₹12,394.79<div class="sub">₹12,697.1</div></td>
+        <td class="num down">₹11,911.09</td>
+        <td class="num">₹12,190<div class="sub up">AT THE LIMIT</div></td>
+        <td class="num">₹12,092.48<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹302.31 / &minus;₹181.39</div></td>
+      </tr>
+      <tr>
+        <td><b>WIPRO</b><div class="sub"><code>WIPRO26OCTFUT</code></div></td>
+        <td class="num"><b>₹164.67</b></td>
+        <td class="num up">₹168.79<div class="sub">₹172.9</div></td>
+        <td class="num down">₹162.2</td>
+        <td class="num">₹166<div class="sub up">AT THE LIMIT</div></td>
+        <td class="num">₹164.67<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹4.12 / &minus;₹2.47</div></td>
+      </tr>
+      <tr>
+        <td><b>EICHERMOT</b><div class="sub"><code>EICHERMOT26OCTFUT</code></div></td>
+        <td class="num"><b>₹7,367.58</b></td>
+        <td class="num up">₹7,551.77<div class="sub">₹7,735.96</div></td>
+        <td class="num down">₹7,257.07</td>
+        <td class="num">₹7,427<div class="sub up">AT THE LIMIT</div></td>
+        <td class="num">₹7,367.58<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹184.19 / &minus;₹110.51</div></td>
+      </tr>
+      <tr>
+        <td><b>KOTAKBANK</b><div class="sub"><code>KOTAKBANK26OCTFUT</code></div></td>
+        <td class="num"><b>₹409.35</b></td>
+        <td class="num up">₹419.58<div class="sub">₹429.82</div></td>
+        <td class="num down">₹403.21</td>
+        <td class="num">₹412.65<div class="sub up">AT THE LIMIT</div></td>
+        <td class="num">₹409.35<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹10.23 / &minus;₹6.14</div></td>
+      </tr>
+      <tr>
+        <td><b>PFC</b><div class="sub"><code>PFC26OCTFUT</code></div></td>
+        <td class="num"><b>₹343.03</b></td>
+        <td class="num up">₹351.61<div class="sub">₹360.18</div></td>
+        <td class="num down">₹337.88</td>
+        <td class="num">₹345.8<div class="sub up">AT THE LIMIT</div></td>
+        <td class="num">₹343.03<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹8.58 / &minus;₹5.15</div></td>
+      </tr>
+      <tr>
+        <td><b>UNIONBANK</b><div class="sub"><code>UNIONBANK26OCTFUT</code></div></td>
+        <td class="num"><b>₹176.58</b></td>
+        <td class="num up">₹180.99<div class="sub">₹185.41</div></td>
+        <td class="num down">₹173.93</td>
+        <td class="num">₹178<div class="sub up">AT THE LIMIT</div></td>
+        <td class="num">₹176.58<div class="sub">per unit</div></td>
+        <td class="num">1.66<div class="sub">+₹4.41 / &minus;₹2.65</div></td>
+      </tr>
+      <tr>
+        <td><b>M&amp;M</b><div class="sub"><code>M&amp;M26OCTFUT</code></div></td>
+        <td class="num"><b>₹3,010.72</b></td>
+        <td class="num up">₹3,085.99<div class="sub">₹3,161.26</div></td>
+        <td class="num down">₹2,965.56</td>
+        <td class="num">₹3,035<div class="sub up">AT THE LIMIT</div></td>
+        <td class="num">₹3,010.72<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹75.27 / &minus;₹45.16</div></td>
+      </tr>
+      <tr>
+        <td><b>MAZDOCK</b><div class="sub"><code>MAZDOCK26OCTFUT</code></div></td>
+        <td class="num"><b>₹2,186.37</b></td>
+        <td class="num up">₹2,241.03<div class="sub">₹2,295.69</div></td>
+        <td class="num down">₹2,153.57</td>
+        <td class="num">₹2,204<div class="sub up">AT THE LIMIT</div></td>
+        <td class="num">₹2,186.37<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹54.66 / &minus;₹32.8</div></td>
+      </tr>
+      <tr>
+        <td><b>AMBER</b><div class="sub"><code>AMBER26OCTFUT</code></div></td>
+        <td class="num"><b>₹6,944</b></td>
+        <td class="num up">₹7,117.6<div class="sub">₹7,291.2</div></td>
+        <td class="num down">₹6,839.84</td>
+        <td class="num">₹7,000<div class="sub up">AT THE LIMIT</div></td>
+        <td class="num">₹6,944<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹173.6 / &minus;₹104.16</div></td>
+      </tr>
+      <tr>
+        <td><b>JINDALSTEL</b><div class="sub"><code>JINDALSTEL26OCTFUT</code></div></td>
+        <td class="num"><b>₹1,131.87</b></td>
+        <td class="num up">₹1,160.17<div class="sub">₹1,188.46</div></td>
+        <td class="num down">₹1,114.89</td>
+        <td class="num">₹1,141<div class="sub up">AT THE LIMIT</div></td>
+        <td class="num">₹1,131.87<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹28.3 / &minus;₹16.98</div></td>
+      </tr>
+      <tr>
+        <td><b>GLENMARK</b><div class="sub"><code>GLENMARK26OCTFUT</code></div></td>
+        <td class="num"><b>₹2,441.71</b></td>
+        <td class="num up">₹2,502.75<div class="sub">₹2,563.8</div></td>
+        <td class="num down">₹2,405.08</td>
+        <td class="num">₹2,461.4<div class="sub up">AT THE LIMIT</div></td>
+        <td class="num">₹2,441.71<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹61.04 / &minus;₹36.63</div></td>
+      </tr>
+      <tr>
+        <td><b>HEROMOTOCO</b><div class="sub"><code>HEROMOTOCO26OCTFUT</code></div></td>
+        <td class="num"><b>₹5,375.65</b></td>
+        <td class="num up">₹5,510.04<div class="sub">₹5,644.43</div></td>
+        <td class="num down">₹5,295.02</td>
+        <td class="num">₹5,419<div class="sub up">AT THE LIMIT</div></td>
+        <td class="num">₹5,375.65<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹134.39 / &minus;₹80.63</div></td>
+      </tr>
+      <tr>
+        <td><b>BDL</b><div class="sub"><code>BDL26OCTFUT</code></div></td>
+        <td class="num"><b>₹1,158.66</b></td>
+        <td class="num up">₹1,187.63<div class="sub">₹1,216.59</div></td>
+        <td class="num down">₹1,141.28</td>
+        <td class="num">₹1,168<div class="sub up">AT THE LIMIT</div></td>
+        <td class="num">₹1,158.66<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹28.97 / &minus;₹17.38</div></td>
+      </tr>
+      <tr>
+        <td><b>UNITDSPR</b><div class="sub"><code>UNITDSPR26OCTFUT</code></div></td>
+        <td class="num"><b>₹1,385.82</b></td>
+        <td class="num up">₹1,420.47<div class="sub">₹1,455.11</div></td>
+        <td class="num down">₹1,365.03</td>
+        <td class="num">₹1,397<div class="sub up">AT THE LIMIT</div></td>
+        <td class="num">₹1,385.82<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹34.65 / &minus;₹20.79</div></td>
+      </tr>
+      <tr>
+        <td><b>BAJAJ-AUTO</b><div class="sub"><code>BAJAJ-AUTO26OCTFUT</code></div></td>
+        <td class="num"><b>₹11,272.1</b></td>
+        <td class="num up">₹11,553.9<div class="sub">₹11,835.71</div></td>
+        <td class="num down">₹11,103.02</td>
+        <td class="num">₹11,363<div class="sub up">AT THE LIMIT</div></td>
+        <td class="num">₹11,272.1<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹281.8 / &minus;₹169.08</div></td>
+      </tr>
+      <tr>
+        <td><b>JUBLFOOD</b><div class="sub"><code>JUBLFOOD26OCTFUT</code></div></td>
+        <td class="num"><b>₹487.17</b></td>
+        <td class="num up">₹499.35<div class="sub">₹511.53</div></td>
+        <td class="num down">₹479.86</td>
+        <td class="num">₹491.1<div class="sub up">AT THE LIMIT</div></td>
+        <td class="num">₹487.17<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹12.18 / &minus;₹7.31</div></td>
+      </tr>
+      <tr>
+        <td><b>DRREDDY</b><div class="sub"><code>DRREDDY26OCTFUT</code></div></td>
+        <td class="num"><b>₹1,201.31</b></td>
+        <td class="num up">₹1,231.34<div class="sub">₹1,261.38</div></td>
+        <td class="num down">₹1,183.29</td>
+        <td class="num">₹1,211<div class="sub up">AT THE LIMIT</div></td>
+        <td class="num">₹1,201.31<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹30.03 / &minus;₹18.02</div></td>
+      </tr>
+      <tr>
+        <td><b>TITAN</b><div class="sub"><code>TITAN26OCTFUT</code></div></td>
+        <td class="num"><b>₹4,889.07</b></td>
+        <td class="num up">₹5,011.3<div class="sub">₹5,133.52</div></td>
+        <td class="num down">₹4,815.73</td>
+        <td class="num">₹4,928.5<div class="sub up">AT THE LIMIT</div></td>
+        <td class="num">₹4,889.07<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹122.23 / &minus;₹73.34</div></td>
+      </tr>
+      <tr>
+        <td><b>ASTRAL</b><div class="sub"><code>ASTRAL26OCTFUT</code></div></td>
+        <td class="num"><b>₹1,370.55</b></td>
+        <td class="num up">₹1,404.81<div class="sub">₹1,439.08</div></td>
+        <td class="num down">₹1,349.99</td>
+        <td class="num">₹1,381.6<div class="sub up">AT THE LIMIT</div></td>
+        <td class="num">₹1,370.55<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹34.26 / &minus;₹20.56</div></td>
+      </tr>
+      <tr>
+        <td><b>DABUR</b><div class="sub"><code>DABUR26OCTFUT</code></div></td>
+        <td class="num"><b>₹385</b></td>
+        <td class="num up">₹394.62<div class="sub">₹404.25</div></td>
+        <td class="num down">₹379.23</td>
+        <td class="num">₹388.1<div class="sub up">AT THE LIMIT</div></td>
+        <td class="num">₹385<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹9.62 / &minus;₹5.77</div></td>
+      </tr>
+      <tr>
+        <td><b>SHRIRAMFIN</b><div class="sub"><code>SHRIRAMFIN26OCTFUT</code></div></td>
+        <td class="num"><b>₹997.95</b></td>
+        <td class="num up">₹1,022.9<div class="sub">₹1,047.85</div></td>
+        <td class="num down">₹982.98</td>
+        <td class="num">₹1,006<div class="sub up">AT THE LIMIT</div></td>
+        <td class="num">₹997.95<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹24.95 / &minus;₹14.97</div></td>
+      </tr>
+      <tr>
+        <td><b>HAVELLS</b><div class="sub"><code>HAVELLS26OCTFUT</code></div></td>
+        <td class="num"><b>₹1,080.19</b></td>
+        <td class="num up">₹1,107.19<div class="sub">₹1,134.2</div></td>
+        <td class="num down">₹1,063.99</td>
+        <td class="num">₹1,088.9<div class="sub up">AT THE LIMIT</div></td>
+        <td class="num">₹1,080.19<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹27 / &minus;₹16.2</div></td>
+      </tr>
+      <tr>
+        <td><b>OBEROIRLTY</b><div class="sub"><code>OBEROIRLTY26OCTFUT</code></div></td>
+        <td class="num"><b>₹1,806.43</b></td>
+        <td class="num up">₹1,851.59<div class="sub">₹1,896.75</div></td>
+        <td class="num down">₹1,779.33</td>
+        <td class="num">₹1,821<div class="sub up">AT THE LIMIT</div></td>
+        <td class="num">₹1,806.43<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹45.16 / &minus;₹27.1</div></td>
+      </tr>
+      <tr>
+        <td><b>SAGILITY</b><div class="sub"><code>SAGILITY26OCTFUT</code></div></td>
+        <td class="num"><b>₹45.25</b></td>
+        <td class="num up">₹46.38<div class="sub">₹47.51</div></td>
+        <td class="num down">₹44.57</td>
+        <td class="num">₹45.61<div class="sub up">AT THE LIMIT</div></td>
+        <td class="num">₹45.25<div class="sub">per unit</div></td>
+        <td class="num">1.66<div class="sub">+₹1.13 / &minus;₹0.68</div></td>
+      </tr></tbody>
+</table></div>
+
+<div class="note" style="margin-top:20px;border-left-color:var(--red)">
+  <b>WHAT THIS DOES NOT ESTABLISH.</b> That any of it makes money. The paper ledger
+  has no closed trades yet, so nothing here has a measured hit rate &mdash; the ranking
+  is built on things that were measured, which is not the same as an edge that was
+  proven. Size accordingly.
+</div>
+
+</body></html>
