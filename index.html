@@ -23,6 +23,8 @@
   .sub { font-size:10px; color:var(--muted); margin-top:2px }
   code { font-size:10px; color:var(--text); word-break:break-all }
   .up { color:var(--green) } .down { color:var(--red) }
+  .name { font-size:15px; letter-spacing:.02em }
+  .warn { color:var(--amber) }
   tr:last-child td { border-bottom:none }
   /* Three tabs, no JavaScript: a radio button per tab, and CSS shows the pane
      whose button is checked. Works on any phone, with scripts off, forever. */
@@ -49,8 +51,8 @@
 </style></head><body>
 
 <h1>K&sup2; Desk</h1>
-<div class="stamp">Built 2026-09-23 22:35 IST &middot; session 2026-09-23 &middot; market CLOSED &middot;
-  13,695 contracts examined, 1,062 cleared every gate</div>
+<div class="stamp">Built 2026-09-23 23:15 IST &middot; session 2026-09-23 &middot; market CLOSED &middot;
+  13,477 contracts examined, 1,065 cleared every gate</div>
 
 <div class="note "><b>THESE LEVELS ARE INDICATIVE, NOT FIXED.</b> The market is closed.
        There is no traded price to anchor them to, so nothing has been written down.
@@ -65,8 +67,8 @@
 
   <nav class="tabs">
     <label for="v-fut" class="t-fut">FUTURES <span>25</span></label>
-    <label for="v-ce" class="t-ce">CALLS <span>18</span></label>
-    <label for="v-pe" class="t-pe">PUTS <span>22</span></label>
+    <label for="v-ce" class="t-ce">CALLS <span>24</span></label>
+    <label for="v-pe" class="t-pe">PUTS <span>16</span></label>
     <label for="v-trk" class="t-trk">TRACK <span>0</span></label>
   </nav>
 
@@ -78,227 +80,277 @@
         <th class="num">STOP</th><th class="num">NOW</th><th class="num">1 UNIT</th><th class="num">R : R</th>
       </tr></thead><tbody>
       <tr>
-        <td><b>LT</b><div class="sub"><code>LT26OCTFUT</code></div><div class="sub">Angel <code>LT27OCT26FUT</code></div></td>
+        <td><b class="name">LT OCT FUT</b>
+          <div class="sub">Zerodha <code>LT26OCTFUT</code> &middot; Angel <code>LT27OCT26FUT</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; <b class="warn">exit or roll by Wed 21 Oct</b></div></td>
         <td class="num"><b>₹3,914.83</b></td>
         <td class="num up">₹4,012.7<div class="sub">₹4,110.57</div></td>
         <td class="num down">₹3,856.11</td>
-        <td class="num">₹3,946.4<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹3,946.4<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub down">futures, last trade &mdash; NOT live at 15:40</div></td>
         <td class="num">₹3,914.83<div class="sub">per unit</div></td>
         <td class="num">1.67<div class="sub">+₹97.87 / &minus;₹58.72</div></td>
       </tr>
       <tr>
-        <td><b>MARUTI</b><div class="sub"><code>MARUTI26OCTFUT</code></div><div class="sub">Angel <code>MARUTI27OCT26FUT</code></div></td>
+        <td><b class="name">MARUTI OCT FUT</b>
+          <div class="sub">Zerodha <code>MARUTI26OCTFUT</code> &middot; Angel <code>MARUTI27OCT26FUT</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; <b class="warn">exit or roll by Wed 21 Oct</b></div></td>
         <td class="num"><b>₹12,201.6</b></td>
         <td class="num up">₹12,506.64<div class="sub">₹12,811.68</div></td>
         <td class="num down">₹12,018.58</td>
-        <td class="num">₹12,300<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹12,300<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub down">futures, last trade &mdash; NOT live at 15:39</div></td>
         <td class="num">₹12,201.6<div class="sub">per unit</div></td>
         <td class="num">1.67<div class="sub">+₹305.04 / &minus;₹183.02</div></td>
       </tr>
       <tr>
-        <td><b>WIPRO</b><div class="sub"><code>WIPRO26OCTFUT</code></div><div class="sub">Angel <code>WIPRO27OCT26FUT</code></div></td>
+        <td><b class="name">WIPRO OCT FUT</b>
+          <div class="sub">Zerodha <code>WIPRO26OCTFUT</code> &middot; Angel <code>WIPRO27OCT26FUT</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; <b class="warn">exit or roll by Wed 21 Oct</b></div></td>
         <td class="num"><b>₹162.69</b></td>
         <td class="num up">₹166.76<div class="sub">₹170.82</div></td>
         <td class="num down">₹160.25</td>
-        <td class="num">₹164<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹164<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub down">futures, last trade &mdash; NOT live at 15:40</div></td>
         <td class="num">₹162.69<div class="sub">per unit</div></td>
         <td class="num">1.67<div class="sub">+₹4.07 / &minus;₹2.44</div></td>
       </tr>
       <tr>
-        <td><b>EICHERMOT</b><div class="sub"><code>EICHERMOT26OCTFUT</code></div><div class="sub">Angel <code>EICHERMOT27OCT26FUT</code></div></td>
+        <td><b class="name">EICHERMOT OCT FUT</b>
+          <div class="sub">Zerodha <code>EICHERMOT26OCTFUT</code> &middot; Angel <code>EICHERMOT27OCT26FUT</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; <b class="warn">exit or roll by Wed 21 Oct</b></div></td>
         <td class="num"><b>₹7,453.89</b></td>
         <td class="num up">₹7,640.24<div class="sub">₹7,826.58</div></td>
         <td class="num down">₹7,342.08</td>
-        <td class="num">₹7,514<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹7,514<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub down">futures, last trade &mdash; NOT live at 15:40</div></td>
         <td class="num">₹7,453.89<div class="sub">per unit</div></td>
         <td class="num">1.67<div class="sub">+₹186.35 / &minus;₹111.81</div></td>
       </tr>
       <tr>
-        <td><b>KOTAKBANK</b><div class="sub"><code>KOTAKBANK26OCTFUT</code></div><div class="sub">Angel <code>KOTAKBANK27OCT26FUT</code></div></td>
+        <td><b class="name">KOTAKBANK OCT FUT</b>
+          <div class="sub">Zerodha <code>KOTAKBANK26OCTFUT</code> &middot; Angel <code>KOTAKBANK27OCT26FUT</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; <b class="warn">exit or roll by Wed 21 Oct</b></div></td>
         <td class="num"><b>₹413.07</b></td>
         <td class="num up">₹423.4<div class="sub">₹433.72</div></td>
         <td class="num down">₹406.87</td>
-        <td class="num">₹416.4<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹416.4<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub down">futures, last trade &mdash; NOT live at 15:40</div></td>
         <td class="num">₹413.07<div class="sub">per unit</div></td>
         <td class="num">1.67<div class="sub">+₹10.33 / &minus;₹6.2</div></td>
       </tr>
       <tr>
-        <td><b>PFC</b><div class="sub"><code>PFC26OCTFUT</code></div><div class="sub">Angel <code>PFC27OCT26FUT</code></div></td>
+        <td><b class="name">PFC OCT FUT</b>
+          <div class="sub">Zerodha <code>PFC26OCTFUT</code> &middot; Angel <code>PFC27OCT26FUT</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; <b class="warn">exit or roll by Wed 21 Oct</b></div></td>
         <td class="num"><b>₹345.61</b></td>
         <td class="num up">₹354.25<div class="sub">₹362.89</div></td>
         <td class="num down">₹340.43</td>
-        <td class="num">₹348.4<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹348.4<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub down">futures, last trade &mdash; NOT live at 15:40</div></td>
         <td class="num">₹345.61<div class="sub">per unit</div></td>
         <td class="num">1.67<div class="sub">+₹8.64 / &minus;₹5.18</div></td>
       </tr>
       <tr>
-        <td><b>UNIONBANK</b><div class="sub"><code>UNIONBANK26OCTFUT</code></div><div class="sub">Angel <code>UNIONBANK27OCT26FUT</code></div></td>
+        <td><b class="name">UNIONBANK OCT FUT</b>
+          <div class="sub">Zerodha <code>UNIONBANK26OCTFUT</code> &middot; Angel <code>UNIONBANK27OCT26FUT</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; <b class="warn">exit or roll by Wed 21 Oct</b></div></td>
         <td class="num"><b>₹179.93</b></td>
         <td class="num up">₹184.43<div class="sub">₹188.93</div></td>
         <td class="num down">₹177.23</td>
-        <td class="num">₹181.38<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹181.38<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub down">futures, last trade &mdash; NOT live at 15:40</div></td>
         <td class="num">₹179.93<div class="sub">per unit</div></td>
         <td class="num">1.67<div class="sub">+₹4.5 / &minus;₹2.7</div></td>
       </tr>
       <tr>
-        <td><b>M&amp;M</b><div class="sub"><code>M&amp;M26OCTFUT</code></div><div class="sub">Angel <code>M&amp;M27OCT26FUT</code></div></td>
+        <td><b class="name">M&amp;M OCT FUT</b>
+          <div class="sub">Zerodha <code>M&amp;M26OCTFUT</code> &middot; Angel <code>M&amp;M27OCT26FUT</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; <b class="warn">exit or roll by Wed 21 Oct</b></div></td>
         <td class="num"><b>₹3,036.12</b></td>
         <td class="num up">₹3,112.02<div class="sub">₹3,187.93</div></td>
         <td class="num down">₹2,990.58</td>
-        <td class="num">₹3,060.6<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹3,060.6<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub down">futures, last trade &mdash; NOT live at 15:40</div></td>
         <td class="num">₹3,036.12<div class="sub">per unit</div></td>
         <td class="num">1.67<div class="sub">+₹75.9 / &minus;₹45.54</div></td>
       </tr>
       <tr>
-        <td><b>MAZDOCK</b><div class="sub"><code>MAZDOCK26OCTFUT</code></div><div class="sub">Angel <code>MAZDOCK27OCT26FUT</code></div></td>
+        <td><b class="name">MAZDOCK OCT FUT</b>
+          <div class="sub">Zerodha <code>MAZDOCK26OCTFUT</code> &middot; Angel <code>MAZDOCK27OCT26FUT</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; <b class="warn">exit or roll by Wed 21 Oct</b></div></td>
         <td class="num"><b>₹2,186.47</b></td>
         <td class="num up">₹2,241.13<div class="sub">₹2,295.79</div></td>
         <td class="num down">₹2,153.67</td>
-        <td class="num">₹2,204.1<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹2,204.1<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub down">futures, last trade &mdash; NOT live at 15:40</div></td>
         <td class="num">₹2,186.47<div class="sub">per unit</div></td>
         <td class="num">1.67<div class="sub">+₹54.66 / &minus;₹32.8</div></td>
       </tr>
       <tr>
-        <td><b>AMBER</b><div class="sub"><code>AMBER26OCTFUT</code></div><div class="sub">Angel <code>AMBER27OCT26FUT</code></div></td>
+        <td><b class="name">AMBER OCT FUT</b>
+          <div class="sub">Zerodha <code>AMBER26OCTFUT</code> &middot; Angel <code>AMBER27OCT26FUT</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; <b class="warn">exit or roll by Wed 21 Oct</b></div></td>
         <td class="num"><b>₹7,041.22</b></td>
         <td class="num up">₹7,217.25<div class="sub">₹7,393.28</div></td>
         <td class="num down">₹6,935.6</td>
-        <td class="num">₹7,098<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹7,098<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub down">futures, last trade &mdash; NOT live at 15:40</div></td>
         <td class="num">₹7,041.22<div class="sub">per unit</div></td>
         <td class="num">1.67<div class="sub">+₹176.03 / &minus;₹105.62</div></td>
       </tr>
       <tr>
-        <td><b>JINDALSTEL</b><div class="sub"><code>JINDALSTEL26OCTFUT</code></div><div class="sub">Angel <code>JINDALSTEL27OCT26FUT</code></div></td>
+        <td><b class="name">JINDALSTEL OCT FUT</b>
+          <div class="sub">Zerodha <code>JINDALSTEL26OCTFUT</code> &middot; Angel <code>JINDALSTEL27OCT26FUT</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; <b class="warn">exit or roll by Wed 21 Oct</b></div></td>
         <td class="num"><b>₹1,170.66</b></td>
         <td class="num up">₹1,199.93<div class="sub">₹1,229.19</div></td>
         <td class="num down">₹1,153.1</td>
-        <td class="num">₹1,180.1<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹1,180.1<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub down">futures, last trade &mdash; NOT live at 15:40</div></td>
         <td class="num">₹1,170.66<div class="sub">per unit</div></td>
         <td class="num">1.67<div class="sub">+₹29.27 / &minus;₹17.56</div></td>
       </tr>
       <tr>
-        <td><b>GLENMARK</b><div class="sub"><code>GLENMARK26OCTFUT</code></div><div class="sub">Angel <code>GLENMARK27OCT26FUT</code></div></td>
+        <td><b class="name">GLENMARK OCT FUT</b>
+          <div class="sub">Zerodha <code>GLENMARK26OCTFUT</code> &middot; Angel <code>GLENMARK27OCT26FUT</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; <b class="warn">exit or roll by Wed 21 Oct</b></div></td>
         <td class="num"><b>₹2,475.04</b></td>
         <td class="num up">₹2,536.92<div class="sub">₹2,598.79</div></td>
         <td class="num down">₹2,437.91</td>
-        <td class="num">₹2,495<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹2,495<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub down">futures, last trade &mdash; NOT live at 15:40</div></td>
         <td class="num">₹2,475.04<div class="sub">per unit</div></td>
         <td class="num">1.67<div class="sub">+₹61.88 / &minus;₹37.13</div></td>
       </tr>
       <tr>
-        <td><b>HEROMOTOCO</b><div class="sub"><code>HEROMOTOCO26OCTFUT</code></div><div class="sub">Angel <code>HEROMOTOCO27OCT26FUT</code></div></td>
+        <td><b class="name">HEROMOTOCO OCT FUT</b>
+          <div class="sub">Zerodha <code>HEROMOTOCO26OCTFUT</code> &middot; Angel <code>HEROMOTOCO27OCT26FUT</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; <b class="warn">exit or roll by Wed 21 Oct</b></div></td>
         <td class="num"><b>₹5,354.32</b></td>
         <td class="num up">₹5,488.18<div class="sub">₹5,622.04</div></td>
         <td class="num down">₹5,274.01</td>
-        <td class="num">₹5,397.5<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹5,397.5<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub down">futures, last trade &mdash; NOT live at 15:40</div></td>
         <td class="num">₹5,354.32<div class="sub">per unit</div></td>
         <td class="num">1.67<div class="sub">+₹133.86 / &minus;₹80.31</div></td>
       </tr>
       <tr>
-        <td><b>BDL</b><div class="sub"><code>BDL26OCTFUT</code></div><div class="sub">Angel <code>BDL27OCT26FUT</code></div></td>
+        <td><b class="name">BDL OCT FUT</b>
+          <div class="sub">Zerodha <code>BDL26OCTFUT</code> &middot; Angel <code>BDL27OCT26FUT</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; <b class="warn">exit or roll by Wed 21 Oct</b></div></td>
         <td class="num"><b>₹1,141.79</b></td>
         <td class="num up">₹1,170.33<div class="sub">₹1,198.88</div></td>
         <td class="num down">₹1,124.66</td>
-        <td class="num">₹1,151<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹1,151<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub down">futures, last trade &mdash; NOT live at 15:40</div></td>
         <td class="num">₹1,141.79<div class="sub">per unit</div></td>
         <td class="num">1.67<div class="sub">+₹28.54 / &minus;₹17.13</div></td>
       </tr>
       <tr>
-        <td><b>UNITDSPR</b><div class="sub"><code>UNITDSPR26OCTFUT</code></div><div class="sub">Angel <code>UNITDSPR27OCT26FUT</code></div></td>
+        <td><b class="name">UNITDSPR OCT FUT</b>
+          <div class="sub">Zerodha <code>UNITDSPR26OCTFUT</code> &middot; Angel <code>UNITDSPR27OCT26FUT</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; <b class="warn">exit or roll by Wed 21 Oct</b></div></td>
         <td class="num"><b>₹1,432.45</b></td>
         <td class="num up">₹1,468.26<div class="sub">₹1,504.07</div></td>
         <td class="num down">₹1,410.96</td>
-        <td class="num">₹1,444<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹1,444<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub down">futures, last trade &mdash; NOT live at 15:40</div></td>
         <td class="num">₹1,432.45<div class="sub">per unit</div></td>
         <td class="num">1.67<div class="sub">+₹35.81 / &minus;₹21.49</div></td>
       </tr>
       <tr>
-        <td><b>BAJAJ-AUTO</b><div class="sub"><code>BAJAJ-AUTO26OCTFUT</code></div><div class="sub">Angel <code>BAJAJ-AUTO27OCT26FUT</code></div></td>
+        <td><b class="name">BAJAJ-AUTO OCT FUT</b>
+          <div class="sub">Zerodha <code>BAJAJ-AUTO26OCTFUT</code> &middot; Angel <code>BAJAJ-AUTO27OCT26FUT</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; <b class="warn">exit or roll by Wed 21 Oct</b></div></td>
         <td class="num"><b>₹11,412.96</b></td>
         <td class="num up">₹11,698.28<div class="sub">₹11,983.61</div></td>
         <td class="num down">₹11,241.77</td>
-        <td class="num">₹11,505<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹11,505<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub down">futures, last trade &mdash; NOT live at 15:40</div></td>
         <td class="num">₹11,412.96<div class="sub">per unit</div></td>
         <td class="num">1.67<div class="sub">+₹285.32 / &minus;₹171.19</div></td>
       </tr>
       <tr>
-        <td><b>JUBLFOOD</b><div class="sub"><code>JUBLFOOD26OCTFUT</code></div><div class="sub">Angel <code>JUBLFOOD27OCT26FUT</code></div></td>
-        <td class="num"><b>₹478.79</b></td>
-        <td class="num up">₹490.76<div class="sub">₹502.73</div></td>
-        <td class="num down">₹471.61</td>
-        <td class="num">₹482.65<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
-        <td class="num">₹478.79<div class="sub">per unit</div></td>
-        <td class="num">1.67<div class="sub">+₹11.97 / &minus;₹7.18</div></td>
-      </tr>
-      <tr>
-        <td><b>DRREDDY</b><div class="sub"><code>DRREDDY26OCTFUT</code></div><div class="sub">Angel <code>DRREDDY27OCT26FUT</code></div></td>
+        <td><b class="name">DRREDDY OCT FUT</b>
+          <div class="sub">Zerodha <code>DRREDDY26OCTFUT</code> &middot; Angel <code>DRREDDY27OCT26FUT</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; <b class="warn">exit or roll by Wed 21 Oct</b></div></td>
         <td class="num"><b>₹1,200.32</b></td>
         <td class="num up">₹1,230.33<div class="sub">₹1,260.34</div></td>
         <td class="num down">₹1,182.32</td>
-        <td class="num">₹1,210<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹1,210<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub down">futures, last trade &mdash; NOT live at 15:40</div></td>
         <td class="num">₹1,200.32<div class="sub">per unit</div></td>
         <td class="num">1.67<div class="sub">+₹30.01 / &minus;₹18</div></td>
       </tr>
       <tr>
-        <td><b>TITAN</b><div class="sub"><code>TITAN26OCTFUT</code></div><div class="sub">Angel <code>TITAN27OCT26FUT</code></div></td>
-        <td class="num"><b>₹4,883.62</b></td>
-        <td class="num up">₹5,005.71<div class="sub">₹5,127.8</div></td>
-        <td class="num down">₹4,810.37</td>
-        <td class="num">₹4,923<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
-        <td class="num">₹4,883.62<div class="sub">per unit</div></td>
-        <td class="num">1.67<div class="sub">+₹122.09 / &minus;₹73.25</div></td>
+        <td><b class="name">JUBLFOOD OCT FUT</b>
+          <div class="sub">Zerodha <code>JUBLFOOD26OCTFUT</code> &middot; Angel <code>JUBLFOOD27OCT26FUT</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; <b class="warn">exit or roll by Wed 21 Oct</b></div></td>
+        <td class="num"><b>₹478.79</b></td>
+        <td class="num up">₹490.76<div class="sub">₹502.73</div></td>
+        <td class="num down">₹471.61</td>
+        <td class="num">₹482.65<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub down">futures, last trade &mdash; NOT live at 15:40</div></td>
+        <td class="num">₹478.79<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹11.97 / &minus;₹7.18</div></td>
       </tr>
       <tr>
-        <td><b>ASTRAL</b><div class="sub"><code>ASTRAL26OCTFUT</code></div><div class="sub">Angel <code>ASTRAL27OCT26FUT</code></div></td>
+        <td><b class="name">ASTRAL OCT FUT</b>
+          <div class="sub">Zerodha <code>ASTRAL26OCTFUT</code> &middot; Angel <code>ASTRAL27OCT26FUT</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; <b class="warn">exit or roll by Wed 21 Oct</b></div></td>
         <td class="num"><b>₹1,394.26</b></td>
         <td class="num up">₹1,429.12<div class="sub">₹1,463.97</div></td>
         <td class="num down">₹1,373.35</td>
-        <td class="num">₹1,405.5<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹1,405.5<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub down">futures, last trade &mdash; NOT live at 15:40</div></td>
         <td class="num">₹1,394.26<div class="sub">per unit</div></td>
         <td class="num">1.67<div class="sub">+₹34.86 / &minus;₹20.91</div></td>
       </tr>
       <tr>
-        <td><b>DABUR</b><div class="sub"><code>DABUR26OCTFUT</code></div><div class="sub">Angel <code>DABUR27OCT26FUT</code></div></td>
+        <td><b class="name">TITAN OCT FUT</b>
+          <div class="sub">Zerodha <code>TITAN26OCTFUT</code> &middot; Angel <code>TITAN27OCT26FUT</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; <b class="warn">exit or roll by Wed 21 Oct</b></div></td>
+        <td class="num"><b>₹4,883.62</b></td>
+        <td class="num up">₹5,005.71<div class="sub">₹5,127.8</div></td>
+        <td class="num down">₹4,810.37</td>
+        <td class="num">₹4,923<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub down">futures, last trade &mdash; NOT live at 15:40</div></td>
+        <td class="num">₹4,883.62<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹122.09 / &minus;₹73.25</div></td>
+      </tr>
+      <tr>
+        <td><b class="name">DABUR OCT FUT</b>
+          <div class="sub">Zerodha <code>DABUR26OCTFUT</code> &middot; Angel <code>DABUR27OCT26FUT</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; <b class="warn">exit or roll by Wed 21 Oct</b></div></td>
         <td class="num"><b>₹387.38</b></td>
         <td class="num up">₹397.06<div class="sub">₹406.75</div></td>
         <td class="num down">₹381.57</td>
-        <td class="num">₹390.5<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹390.5<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub down">futures, last trade &mdash; NOT live at 15:40</div></td>
         <td class="num">₹387.38<div class="sub">per unit</div></td>
         <td class="num">1.67<div class="sub">+₹9.68 / &minus;₹5.81</div></td>
       </tr>
       <tr>
-        <td><b>SHRIRAMFIN</b><div class="sub"><code>SHRIRAMFIN26OCTFUT</code></div><div class="sub">Angel <code>SHRIRAMFIN27OCT26FUT</code></div></td>
+        <td><b class="name">SHRIRAMFIN OCT FUT</b>
+          <div class="sub">Zerodha <code>SHRIRAMFIN26OCTFUT</code> &middot; Angel <code>SHRIRAMFIN27OCT26FUT</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; <b class="warn">exit or roll by Wed 21 Oct</b></div></td>
         <td class="num"><b>₹1,006.88</b></td>
         <td class="num up">₹1,032.05<div class="sub">₹1,057.22</div></td>
         <td class="num down">₹991.78</td>
-        <td class="num">₹1,015<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹1,015<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub down">futures, last trade &mdash; NOT live at 15:40</div></td>
         <td class="num">₹1,006.88<div class="sub">per unit</div></td>
         <td class="num">1.67<div class="sub">+₹25.17 / &minus;₹15.1</div></td>
       </tr>
       <tr>
-        <td><b>HAVELLS</b><div class="sub"><code>HAVELLS26OCTFUT</code></div><div class="sub">Angel <code>HAVELLS27OCT26FUT</code></div></td>
+        <td><b class="name">HAVELLS OCT FUT</b>
+          <div class="sub">Zerodha <code>HAVELLS26OCTFUT</code> &middot; Angel <code>HAVELLS27OCT26FUT</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; <b class="warn">exit or roll by Wed 21 Oct</b></div></td>
         <td class="num"><b>₹1,080.78</b></td>
         <td class="num up">₹1,107.8<div class="sub">₹1,134.82</div></td>
         <td class="num down">₹1,064.57</td>
-        <td class="num">₹1,089.5<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹1,089.5<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub down">futures, last trade &mdash; NOT live at 15:39</div></td>
         <td class="num">₹1,080.78<div class="sub">per unit</div></td>
         <td class="num">1.67<div class="sub">+₹27.02 / &minus;₹16.21</div></td>
       </tr>
       <tr>
-        <td><b>OBEROIRLTY</b><div class="sub"><code>OBEROIRLTY26OCTFUT</code></div><div class="sub">Angel <code>OBEROIRLTY27OCT26FUT</code></div></td>
+        <td><b class="name">OBEROIRLTY OCT FUT</b>
+          <div class="sub">Zerodha <code>OBEROIRLTY26OCTFUT</code> &middot; Angel <code>OBEROIRLTY27OCT26FUT</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; <b class="warn">exit or roll by Wed 21 Oct</b></div></td>
         <td class="num"><b>₹1,827.26</b></td>
         <td class="num up">₹1,872.94<div class="sub">₹1,918.62</div></td>
         <td class="num down">₹1,799.85</td>
-        <td class="num">₹1,842<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹1,842<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub down">futures, last trade &mdash; NOT live at 15:40</div></td>
         <td class="num">₹1,827.26<div class="sub">per unit</div></td>
         <td class="num">1.67<div class="sub">+₹45.68 / &minus;₹27.41</div></td>
       </tr>
       <tr>
-        <td><b>SAGILITY</b><div class="sub"><code>SAGILITY26OCTFUT</code></div><div class="sub">Angel <code>SAGILITY27OCT26FUT</code></div></td>
+        <td><b class="name">SAGILITY OCT FUT</b>
+          <div class="sub">Zerodha <code>SAGILITY26OCTFUT</code> &middot; Angel <code>SAGILITY27OCT26FUT</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; <b class="warn">exit or roll by Wed 21 Oct</b></div></td>
         <td class="num"><b>₹45.91</b></td>
         <td class="num up">₹47.06<div class="sub">₹48.21</div></td>
         <td class="num down">₹45.22</td>
-        <td class="num">₹46.28<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹46.28<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub down">futures, last trade &mdash; NOT live at 15:40</div></td>
         <td class="num">₹45.91<div class="sub">per unit</div></td>
         <td class="num">1.67<div class="sub">+₹1.15 / &minus;₹0.69</div></td>
       </tr></tbody>
@@ -315,238 +367,316 @@
     <th class="num">IV / REALISED</th><th class="num">P(TOUCH)</th><th class="num">DECAY</th><th class="num">SCORE</th>
   </tr></thead><tbody>
       <tr>
-        <td><b>JINDALSTEL 1180 CE</b>
-          <div class="sub"><code>JINDALSTEL26OCT1180CE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
+        <td><b class="name">JINDALSTEL OCT 1180 CE</b>
+          <div class="sub">Zerodha <code>JINDALSTEL26OCT1180CE</code> &middot; Angel <code>JINDALSTEL27OCT261180CE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
         <td class="num"><b>₹32</b><div class="sub">&times;625 = ₹20,000</div></td>
         <td class="num up"><b>₹48</b><div class="sub">net ₹9,886.18</div></td>
         <td class="num down">₹16</td>
         <td class="num">₹32<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">20.1% / 27.7%<div class="sub">VRP 0.72</div></td>
-        <td class="num">62%<div class="sub">~7.7d</div></td>
-        <td class="num down">12.8%</td>
-        <td class="num">80.5</td>
+        <td class="num">22.5% / 27.7%<div class="sub">VRP 0.81</div></td>
+        <td class="num">62.4%<div class="sub">~7.5d</div></td>
+        <td class="num ">10.98%</td>
+        <td class="num">81.7</td>
       </tr>
       <tr>
-        <td><b>JINDALSTEL 1160 CE</b>
-          <div class="sub"><code>JINDALSTEL26OCT1160CE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
+        <td><b class="name">JINDALSTEL OCT 1160 CE</b>
+          <div class="sub">Zerodha <code>JINDALSTEL26OCT1160CE</code> &middot; Angel <code>JINDALSTEL27OCT261160CE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
         <td class="num"><b>₹42.6</b><div class="sub">&times;625 = ₹26,625</div></td>
         <td class="num up"><b>₹63.9</b><div class="sub">net ₹13,176.61</div></td>
         <td class="num down">₹21.3</td>
         <td class="num">₹42.6<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">19.4% / 27.7%<div class="sub">VRP 0.7</div></td>
-        <td class="num">64.9%<div class="sub">~6.8d</div></td>
-        <td class="num ">8.11%</td>
-        <td class="num">79.2</td>
+        <td class="num">22.4% / 27.7%<div class="sub">VRP 0.81</div></td>
+        <td class="num">65.3%<div class="sub">~6.7d</div></td>
+        <td class="num ">7.03%</td>
+        <td class="num">80.4</td>
       </tr>
       <tr>
-        <td><b>HEROMOTOCO 5400 CE</b>
-          <div class="sub"><code>HEROMOTOCO26OCT5400CE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
+        <td><b class="name">HEROMOTOCO OCT 5400 CE</b>
+          <div class="sub">Zerodha <code>HEROMOTOCO26OCT5400CE</code> &middot; Angel <code>HEROMOTOCO27OCT265400CE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
         <td class="num"><b>₹151.2</b><div class="sub">&times;150 = ₹22,680</div></td>
         <td class="num up"><b>₹226.8</b><div class="sub">net ₹11,217.25</div></td>
         <td class="num down">₹75.6</td>
         <td class="num">₹151.2<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">21.1% / 26.1%<div class="sub">VRP 0.81</div></td>
-        <td class="num">58.1%<div class="sub">~8.8d</div></td>
-        <td class="num down">14.73%</td>
-        <td class="num">79</td>
+        <td class="num">23.4% / 26.1%<div class="sub">VRP 0.9</div></td>
+        <td class="num">58.7%<div class="sub">~8.6d</div></td>
+        <td class="num down">12.71%</td>
+        <td class="num">80.2</td>
       </tr>
       <tr>
-        <td><b>GODREJCP 900 CE</b>
-          <div class="sub"><code>GODREJCP26OCT900CE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
-        <td class="num"><b>₹16.6</b><div class="sub">&times;500 = ₹8,300</div></td>
-        <td class="num up"><b>₹24.9</b><div class="sub">net ₹4,075.15</div></td>
-        <td class="num down">₹8.3</td>
-        <td class="num">₹16.6<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">20.2% / 38.1%<div class="sub">VRP 0.53</div></td>
-        <td class="num">67.6%<div class="sub">~6d</div></td>
-        <td class="num down">13.75%</td>
-        <td class="num">78.7</td>
-      </tr>
-      <tr>
-        <td><b>UNIONBANK 180 CE</b>
-          <div class="sub"><code>UNIONBANK26OCT180CE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
+        <td><b class="name">UNIONBANK OCT 180 CE</b>
+          <div class="sub">Zerodha <code>UNIONBANK26OCT180CE</code> &middot; Angel <code>UNIONBANK27OCT26180CE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
         <td class="num"><b>₹5.9</b><div class="sub">&times;4425 = ₹26,107.5</div></td>
         <td class="num up"><b>₹8.85</b><div class="sub">net ₹12,919.58</div></td>
         <td class="num down">₹2.95</td>
         <td class="num">₹5.9<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">22.1% / 25.9%<div class="sub">VRP 0.86</div></td>
-        <td class="num">57.3%<div class="sub">~9.1d</div></td>
-        <td class="num down">13.61%</td>
-        <td class="num">78.2</td>
+        <td class="num">23.8% / 25.9%<div class="sub">VRP 0.92</div></td>
+        <td class="num">59.5%<div class="sub">~8.4d</div></td>
+        <td class="num ">10.75%</td>
+        <td class="num">79.9</td>
       </tr>
       <tr>
-        <td><b>PFC 350 CE</b>
-          <div class="sub"><code>PFC26OCT350CE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
-        <td class="num"><b>₹8.5</b><div class="sub">&times;1300 = ₹11,050</div></td>
-        <td class="num up"><b>₹12.75</b><div class="sub">net ₹5,440.99</div></td>
-        <td class="num down">₹4.25</td>
-        <td class="num">₹8.5<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">18.2% / 21.6%<div class="sub">VRP 0.84</div></td>
-        <td class="num">56.1%<div class="sub">~9.5d</div></td>
-        <td class="num down">16.3%</td>
-        <td class="num">77.8</td>
-      </tr>
-      <tr>
-        <td><b>GLENMARK 2500 CE</b>
-          <div class="sub"><code>GLENMARK26OCT2500CE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
-        <td class="num"><b>₹68.75</b><div class="sub">&times;375 = ₹25,781.25</div></td>
-        <td class="num up"><b>₹103.13</b><div class="sub">net ₹12,757.55</div></td>
-        <td class="num down">₹34.38</td>
-        <td class="num">₹68.75<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">21.3% / 25.6%<div class="sub">VRP 0.83</div></td>
-        <td class="num">56.9%<div class="sub">~9.2d</div></td>
-        <td class="num down">15.76%</td>
-        <td class="num">77.5</td>
-      </tr>
-      <tr>
-        <td><b>TATAPOWER 370 CE</b>
-          <div class="sub"><code>TATAPOWER26OCT370CE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
+        <td><b class="name">TATAPOWER OCT 370 CE</b>
+          <div class="sub">Zerodha <code>TATAPOWER26OCT370CE</code> &middot; Angel <code>TATAPOWER27OCT26370CE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
         <td class="num"><b>₹8.95</b><div class="sub">&times;1450 = ₹12,977.5</div></td>
         <td class="num up"><b>₹13.43</b><div class="sub">net ₹6,398.32</div></td>
         <td class="num down">₹4.47</td>
         <td class="num">₹8.95<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">16.8% / 22.4%<div class="sub">VRP 0.75</div></td>
-        <td class="num">60.5%<div class="sub">~8.2d</div></td>
-        <td class="num down">13.39%</td>
-        <td class="num">77.4</td>
+        <td class="num">18.6% / 22.4%<div class="sub">VRP 0.83</div></td>
+        <td class="num">62.6%<div class="sub">~7.6d</div></td>
+        <td class="num ">10.33%</td>
+        <td class="num">79.3</td>
       </tr>
       <tr>
-        <td><b>PFC 345 CE</b>
-          <div class="sub"><code>PFC26OCT345CE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
-        <td class="num"><b>₹11</b><div class="sub">&times;1300 = ₹14,300</div></td>
-        <td class="num up"><b>₹16.5</b><div class="sub">net ₹7,055.17</div></td>
-        <td class="num down">₹5.5</td>
-        <td class="num">₹11<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">17.3% / 21.6%<div class="sub">VRP 0.8</div></td>
-        <td class="num">59.7%<div class="sub">~8.4d</div></td>
-        <td class="num ">10.64%</td>
-        <td class="num">77.2</td>
+        <td><b class="name">GLENMARK OCT 2500 CE</b>
+          <div class="sub">Zerodha <code>GLENMARK26OCT2500CE</code> &middot; Angel <code>GLENMARK27OCT262500CE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
+        <td class="num"><b>₹68.75</b><div class="sub">&times;375 = ₹25,781.25</div></td>
+        <td class="num up"><b>₹103.13</b><div class="sub">net ₹12,757.55</div></td>
+        <td class="num down">₹34.38</td>
+        <td class="num">₹68.75<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">23.7% / 25.6%<div class="sub">VRP 0.92</div></td>
+        <td class="num">57.3%<div class="sub">~9d</div></td>
+        <td class="num down">13.67%</td>
+        <td class="num">78.6</td>
       </tr>
       <tr>
-        <td><b>UNITDSPR 1440 CE</b>
-          <div class="sub"><code>UNITDSPR26OCT1440CE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
-        <td class="num"><b>₹35.6</b><div class="sub">&times;400 = ₹14,240</div></td>
-        <td class="num up"><b>₹53.4</b><div class="sub">net ₹7,025.37</div></td>
-        <td class="num down">₹17.8</td>
-        <td class="num">₹35.6<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">15.9% / 21.1%<div class="sub">VRP 0.76</div></td>
-        <td class="num">60.4%<div class="sub">~8.2d</div></td>
-        <td class="num down">12.64%</td>
-        <td class="num">77.1</td>
+        <td><b class="name">GODREJCP OCT 900 CE</b>
+          <div class="sub">Zerodha <code>GODREJCP26OCT900CE</code> &middot; Angel <code>GODREJCP27OCT26900CE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
+        <td class="num"><b>₹16.6</b><div class="sub">&times;500 = ₹8,300</div></td>
+        <td class="num up"><b>₹24.9</b><div class="sub">net ₹4,075.15</div></td>
+        <td class="num down">₹8.3</td>
+        <td class="num">₹16.6<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">22.5% / 38.1%<div class="sub">VRP 0.59</div></td>
+        <td class="num">67.3%<div class="sub">~6d</div></td>
+        <td class="num down">12.33%</td>
+        <td class="num">78.3</td>
       </tr>
       <tr>
-        <td><b>SUNPHARMA 1860 CE</b>
-          <div class="sub"><code>SUNPHARMA26OCT1860CE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
+        <td><b class="name">SUNPHARMA OCT 1860 CE</b>
+          <div class="sub">Zerodha <code>SUNPHARMA26OCT1860CE</code> &middot; Angel <code>SUNPHARMA27OCT261860CE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
         <td class="num"><b>₹42.75</b><div class="sub">&times;350 = ₹14,962.5</div></td>
         <td class="num up"><b>₹64.13</b><div class="sub">net ₹7,384.21</div></td>
         <td class="num down">₹21.38</td>
         <td class="num">₹42.75<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">12.5% / 17.7%<div class="sub">VRP 0.71</div></td>
-        <td class="num">61.6%<div class="sub">~7.9d</div></td>
-        <td class="num ">11.13%</td>
-        <td class="num">76.9</td>
+        <td class="num">15.9% / 17.7%<div class="sub">VRP 0.9</div></td>
+        <td class="num">61%<div class="sub">~8.1d</div></td>
+        <td class="num ">9.78%</td>
+        <td class="num">78.2</td>
       </tr>
       <tr>
-        <td><b>JINDALSTEL 1200 CE</b>
-          <div class="sub"><code>JINDALSTEL26OCT1200CE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
-        <td class="num"><b>₹23.3</b><div class="sub">&times;625 = ₹14,562.5</div></td>
-        <td class="num up"><b>₹34.95</b><div class="sub">net ₹7,185.54</div></td>
-        <td class="num down">₹11.65</td>
-        <td class="num">₹23.3<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">20.5% / 27.7%<div class="sub">VRP 0.74</div></td>
-        <td class="num">57.2%<div class="sub">~9d</div></td>
-        <td class="num down">20.03%</td>
-        <td class="num">76.7</td>
-      </tr>
-      <tr>
-        <td><b>SHRIRAMFIN 1020 CE</b>
-          <div class="sub"><code>SHRIRAMFIN26OCT1020CE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
-        <td class="num"><b>₹30</b><div class="sub">&times;825 = ₹24,750</div></td>
-        <td class="num up"><b>₹45</b><div class="sub">net ₹12,245.36</div></td>
-        <td class="num down">₹15</td>
-        <td class="num">₹30<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">24.3% / 26.5%<div class="sub">VRP 0.92</div></td>
-        <td class="num">53%<div class="sub">~10.3d</div></td>
-        <td class="num down">18.21%</td>
-        <td class="num">76.4</td>
-      </tr>
-      <tr>
-        <td><b>EICHERMOT 7500 CE</b>
-          <div class="sub"><code>EICHERMOT26OCT7500CE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
-        <td class="num"><b>₹174.85</b><div class="sub">&times;100 = ₹17,485</div></td>
-        <td class="num up"><b>₹262.27</b><div class="sub">net ₹8,637.06</div></td>
-        <td class="num down">₹87.43</td>
-        <td class="num">₹174.85<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">16.4% / 19.1%<div class="sub">VRP 0.86</div></td>
-        <td class="num">55.2%<div class="sub">~9.8d</div></td>
-        <td class="num down">16.26%</td>
-        <td class="num">76</td>
-      </tr>
-      <tr>
-        <td><b>UNITDSPR 1420 CE</b>
-          <div class="sub"><code>UNITDSPR26OCT1420CE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
-        <td class="num"><b>₹48.7</b><div class="sub">&times;400 = ₹19,480</div></td>
-        <td class="num up"><b>₹73.05</b><div class="sub">net ₹9,627.91</div></td>
-        <td class="num down">₹24.35</td>
-        <td class="num">₹48.7<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">16.3% / 21.1%<div class="sub">VRP 0.77</div></td>
-        <td class="num">60.6%<div class="sub">~8.2d</div></td>
-        <td class="num ">9.13%</td>
-        <td class="num">75.9</td>
-      </tr>
-      <tr>
-        <td><b>TMPV 305 CE</b>
-          <div class="sub"><code>TMPV26OCT305CE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
-        <td class="num"><b>₹9.55</b><div class="sub">&times;1600 = ₹15,280</div></td>
-        <td class="num up"><b>₹14.33</b><div class="sub">net ₹7,541.9</div></td>
-        <td class="num down">₹4.78</td>
-        <td class="num">₹9.55<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">26.4% / 34.3%<div class="sub">VRP 0.77</div></td>
-        <td class="num">59.6%<div class="sub">~8.3d</div></td>
-        <td class="num down">14.73%</td>
-        <td class="num">75.9</td>
-      </tr>
-      <tr>
-        <td><b>NAUKRI 1300 CE</b>
-          <div class="sub"><code>NAUKRI26OCT1300CE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
-        <td class="num"><b>₹46</b><div class="sub">&times;550 = ₹25,300</div></td>
-        <td class="num up"><b>₹69</b><div class="sub">net ₹12,518.52</div></td>
-        <td class="num down">₹23</td>
-        <td class="num">₹46<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">24.3% / 32.2%<div class="sub">VRP 0.75</div></td>
-        <td class="num">62%<div class="sub">~7.6d</div></td>
-        <td class="num ">11.33%</td>
-        <td class="num">75.9</td>
-      </tr>
-      <tr>
-        <td><b>COALINDIA 425 CE</b>
-          <div class="sub"><code>COALINDIA26OCT425CE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
+        <td><b class="name">COALINDIA OCT 425 CE</b>
+          <div class="sub">Zerodha <code>COALINDIA26OCT425CE</code> &middot; Angel <code>COALINDIA27OCT26425CE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
         <td class="num"><b>₹10.1</b><div class="sub">&times;1350 = ₹13,635</div></td>
         <td class="num up"><b>₹15.15</b><div class="sub">net ₹6,724.88</div></td>
         <td class="num down">₹5.05</td>
         <td class="num">₹10.1<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">15.8% / 19.8%<div class="sub">VRP 0.8</div></td>
-        <td class="num">58.1%<div class="sub">~8.9d</div></td>
-        <td class="num down">14.2%</td>
-        <td class="num">75.8</td>
+        <td class="num">17.9% / 19.8%<div class="sub">VRP 0.9</div></td>
+        <td class="num">60%<div class="sub">~8.3d</div></td>
+        <td class="num ">11.01%</td>
+        <td class="num">77.9</td>
+      </tr>
+      <tr>
+        <td><b class="name">EICHERMOT OCT 7500 CE</b>
+          <div class="sub">Zerodha <code>EICHERMOT26OCT7500CE</code> &middot; Angel <code>EICHERMOT27OCT267500CE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
+        <td class="num"><b>₹174.85</b><div class="sub">&times;100 = ₹17,485</div></td>
+        <td class="num up"><b>₹262.27</b><div class="sub">net ₹8,637.06</div></td>
+        <td class="num down">₹87.43</td>
+        <td class="num">₹174.85<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">18.6% / 19.1%<div class="sub">VRP 0.97</div></td>
+        <td class="num">56.6%<div class="sub">~9.4d</div></td>
+        <td class="num down">13.22%</td>
+        <td class="num">77.8</td>
+      </tr>
+      <tr>
+        <td><b class="name">UNITDSPR OCT 1440 CE</b>
+          <div class="sub">Zerodha <code>UNITDSPR26OCT1440CE</code> &middot; Angel <code>UNITDSPR27OCT261440CE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
+        <td class="num"><b>₹35.6</b><div class="sub">&times;400 = ₹14,240</div></td>
+        <td class="num up"><b>₹53.4</b><div class="sub">net ₹7,025.37</div></td>
+        <td class="num down">₹17.8</td>
+        <td class="num">₹35.6<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">19.3% / 21.1%<div class="sub">VRP 0.92</div></td>
+        <td class="num">58.9%<div class="sub">~8.6d</div></td>
+        <td class="num ">11.87%</td>
+        <td class="num">77.8</td>
+      </tr>
+      <tr>
+        <td><b class="name">NAUKRI OCT 1300 CE</b>
+          <div class="sub">Zerodha <code>NAUKRI26OCT1300CE</code> &middot; Angel <code>NAUKRI27OCT261300CE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
+        <td class="num"><b>₹46</b><div class="sub">&times;550 = ₹25,300</div></td>
+        <td class="num up"><b>₹69</b><div class="sub">net ₹12,518.52</div></td>
+        <td class="num down">₹23</td>
+        <td class="num">₹46<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">25.8% / 32.2%<div class="sub">VRP 0.8</div></td>
+        <td class="num">64.1%<div class="sub">~7d</div></td>
+        <td class="num ">8.99%</td>
+        <td class="num">77.5</td>
+      </tr>
+      <tr>
+        <td><b class="name">COALINDIA OCT 420 CE</b>
+          <div class="sub">Zerodha <code>COALINDIA26OCT420CE</code> &middot; Angel <code>COALINDIA27OCT26420CE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
+        <td class="num"><b>₹12.65</b><div class="sub">&times;1350 = ₹17,077.5</div></td>
+        <td class="num up"><b>₹18.98</b><div class="sub">net ₹8,434.66</div></td>
+        <td class="num down">₹6.33</td>
+        <td class="num">₹12.65<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">17.4% / 19.8%<div class="sub">VRP 0.88</div></td>
+        <td class="num">63.2%<div class="sub">~7.4d</div></td>
+        <td class="num ">7.22%</td>
+        <td class="num">77.4</td>
+      </tr>
+      <tr>
+        <td><b class="name">PFC OCT 345 CE</b>
+          <div class="sub">Zerodha <code>PFC26OCT345CE</code> &middot; Angel <code>PFC27OCT26345CE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
+        <td class="num"><b>₹11</b><div class="sub">&times;1300 = ₹14,300</div></td>
+        <td class="num up"><b>₹16.5</b><div class="sub">net ₹7,055.17</div></td>
+        <td class="num down">₹5.5</td>
+        <td class="num">₹11<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">22.1% / 21.6%<div class="sub">VRP 1.02</div></td>
+        <td class="num">56.4%<div class="sub">~9.4d</div></td>
+        <td class="num ">11.39%</td>
+        <td class="num">77.1</td>
+      </tr>
+      <tr>
+        <td><b class="name">HINDALCO OCT 1000 CE</b>
+          <div class="sub">Zerodha <code>HINDALCO26OCT1000CE</code> &middot; Angel <code>HINDALCO27OCT261000CE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
+        <td class="num"><b>₹28.85</b><div class="sub">&times;700 = ₹20,195</div></td>
+        <td class="num up"><b>₹43.28</b><div class="sub">net ₹9,983.03</div></td>
+        <td class="num down">₹14.43</td>
+        <td class="num">₹28.85<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">20.8% / 24.4%<div class="sub">VRP 0.85</div></td>
+        <td class="num">62.4%<div class="sub">~7.6d</div></td>
+        <td class="num ">9.62%</td>
+        <td class="num">77</td>
+      </tr>
+      <tr>
+        <td><b class="name">TMPV OCT 300 CE</b>
+          <div class="sub">Zerodha <code>TMPV26OCT300CE</code> &middot; Angel <code>TMPV27OCT26300CE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
+        <td class="num"><b>₹11.9</b><div class="sub">&times;1600 = ₹19,040</div></td>
+        <td class="num up"><b>₹17.85</b><div class="sub">net ₹9,409.38</div></td>
+        <td class="num down">₹5.95</td>
+        <td class="num">₹11.9<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">28.2% / 34.3%<div class="sub">VRP 0.82</div></td>
+        <td class="num">63.5%<div class="sub">~7.1d</div></td>
+        <td class="num ">8.86%</td>
+        <td class="num">76.9</td>
+      </tr>
+      <tr>
+        <td><b class="name">SHRIRAMFIN OCT 1020 CE</b>
+          <div class="sub">Zerodha <code>SHRIRAMFIN26OCT1020CE</code> &middot; Angel <code>SHRIRAMFIN27OCT261020CE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
+        <td class="num"><b>₹30</b><div class="sub">&times;825 = ₹24,750</div></td>
+        <td class="num up"><b>₹45</b><div class="sub">net ₹12,245.36</div></td>
+        <td class="num down">₹15</td>
+        <td class="num">₹30<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">26.5% / 26.5%<div class="sub">VRP 1</div></td>
+        <td class="num">53.7%<div class="sub">~10.1d</div></td>
+        <td class="num down">15.99%</td>
+        <td class="num">76.8</td>
+      </tr>
+      <tr>
+        <td><b class="name">GLENMARK OCT 2480 CE</b>
+          <div class="sub">Zerodha <code>GLENMARK26OCT2480CE</code> &middot; Angel <code>GLENMARK27OCT262480CE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
+        <td class="num"><b>₹80.25</b><div class="sub">&times;375 = ₹30,093.75</div></td>
+        <td class="num up"><b>₹120.38</b><div class="sub">net ₹14,899.43</div></td>
+        <td class="num down">₹40.13</td>
+        <td class="num">₹80.25<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">24.2% / 25.6%<div class="sub">VRP 0.95</div></td>
+        <td class="num">58.3%<div class="sub">~8.8d</div></td>
+        <td class="num ">11.61%</td>
+        <td class="num">76.7</td>
+      </tr>
+      <tr>
+        <td><b class="name">TITAN OCT 4900 CE</b>
+          <div class="sub">Zerodha <code>TITAN26OCT4900CE</code> &middot; Angel <code>TITAN27OCT264900CE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
+        <td class="num"><b>₹128</b><div class="sub">&times;175 = ₹22,400</div></td>
+        <td class="num up"><b>₹192</b><div class="sub">net ₹11,078.18</div></td>
+        <td class="num down">₹64</td>
+        <td class="num">₹128<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">19.6% / 19.1%<div class="sub">VRP 1.03</div></td>
+        <td class="num">55.2%<div class="sub">~9.8d</div></td>
+        <td class="num down">12.99%</td>
+        <td class="num">76.6</td>
+      </tr>
+      <tr>
+        <td><b class="name">UNITDSPR OCT 1420 CE</b>
+          <div class="sub">Zerodha <code>UNITDSPR26OCT1420CE</code> &middot; Angel <code>UNITDSPR27OCT261420CE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
+        <td class="num"><b>₹48.7</b><div class="sub">&times;400 = ₹19,480</div></td>
+        <td class="num up"><b>₹73.05</b><div class="sub">net ₹9,627.91</div></td>
+        <td class="num down">₹24.35</td>
+        <td class="num">₹48.7<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">20.6% / 21.1%<div class="sub">VRP 0.98</div></td>
+        <td class="num">59.2%<div class="sub">~8.6d</div></td>
+        <td class="num ">8.82%</td>
+        <td class="num">76.6</td>
+      </tr>
+      <tr>
+        <td><b class="name">DLF OCT 680 CE</b>
+          <div class="sub">Zerodha <code>DLF26OCT680CE</code> &middot; Angel <code>DLF27OCT26680CE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
+        <td class="num"><b>₹19.3</b><div class="sub">&times;950 = ₹18,335</div></td>
+        <td class="num up"><b>₹28.95</b><div class="sub">net ₹9,059.22</div></td>
+        <td class="num down">₹9.65</td>
+        <td class="num">₹19.3<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">24.6% / 26.6%<div class="sub">VRP 0.93</div></td>
+        <td class="num">57.1%<div class="sub">~9.1d</div></td>
+        <td class="num down">13.9%</td>
+        <td class="num">76.5</td>
+      </tr>
+      <tr>
+        <td><b class="name">ASHOKLEY OCT 160 CE</b>
+          <div class="sub">Zerodha <code>ASHOKLEY26OCT160CE</code> &middot; Angel <code>ASHOKLEY27OCT26160CE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
+        <td class="num"><b>₹7.27</b><div class="sub">&times;5000 = ₹36,350</div></td>
+        <td class="num up"><b>₹10.91</b><div class="sub">net ₹18,006.72</div></td>
+        <td class="num down">₹3.64</td>
+        <td class="num">₹7.27<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">27.1% / 27.1%<div class="sub">VRP 1</div></td>
+        <td class="num">58.2%<div class="sub">~8.8d</div></td>
+        <td class="num ">9%</td>
+        <td class="num">76.5</td>
+      </tr>
+      <tr>
+        <td><b class="name">ASIANPAINT OCT 2460 CE</b>
+          <div class="sub">Zerodha <code>ASIANPAINT26OCT2460CE</code> &middot; Angel <code>ASIANPAINT27OCT262460CE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
+        <td class="num"><b>₹59.65</b><div class="sub">&times;250 = ₹14,912.5</div></td>
+        <td class="num up"><b>₹89.48</b><div class="sub">net ₹7,359.38</div></td>
+        <td class="num down">₹29.83</td>
+        <td class="num">₹59.65<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">19.2% / 19.4%<div class="sub">VRP 0.99</div></td>
+        <td class="num">55.8%<div class="sub">~9.6d</div></td>
+        <td class="num down">13.46%</td>
+        <td class="num">76.5</td>
+      </tr>
+      <tr>
+        <td><b class="name">BAJFINANCE OCT 1040 CE</b>
+          <div class="sub">Zerodha <code>BAJFINANCE26OCT1040CE</code> &middot; Angel <code>BAJFINANCE27OCT261040CE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
+        <td class="num"><b>₹29.7</b><div class="sub">&times;750 = ₹22,275</div></td>
+        <td class="num up"><b>₹44.55</b><div class="sub">net ₹11,016.1</div></td>
+        <td class="num down">₹14.85</td>
+        <td class="num">₹29.7<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">21% / 21.8%<div class="sub">VRP 0.96</div></td>
+        <td class="num">58%<div class="sub">~8.9d</div></td>
+        <td class="num ">11.5%</td>
+        <td class="num">76.5</td>
       </tr></tbody>
 </table></div>
   </section>
@@ -561,290 +691,212 @@
     <th class="num">IV / REALISED</th><th class="num">P(TOUCH)</th><th class="num">DECAY</th><th class="num">SCORE</th>
   </tr></thead><tbody>
       <tr>
-        <td><b>TATAPOWER 380 PE</b>
-          <div class="sub"><code>TATAPOWER26OCT380PE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
-        <td class="num"><b>₹12.75</b><div class="sub">&times;1450 = ₹18,487.5</div></td>
-        <td class="num up"><b>₹19.13</b><div class="sub">net ₹9,134.97</div></td>
-        <td class="num down">₹6.38</td>
-        <td class="num">₹12.75<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">19.1% / 22.4%<div class="sub">VRP 0.85</div></td>
-        <td class="num">69%<div class="sub">~5.7d</div></td>
-        <td class="num ">3.51%</td>
-        <td class="num">80.1</td>
-      </tr>
-      <tr>
-        <td><b>HEROMOTOCO 5500 PE</b>
-          <div class="sub"><code>HEROMOTOCO26OCT5500PE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
+        <td><b class="name">HEROMOTOCO OCT 5500 PE</b>
+          <div class="sub">Zerodha <code>HEROMOTOCO26OCT5500PE</code> &middot; Angel <code>HEROMOTOCO27OCT265500PE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
         <td class="num"><b>₹205</b><div class="sub">&times;150 = ₹30,750</div></td>
         <td class="num up"><b>₹307.5</b><div class="sub">net ₹15,225.37</div></td>
         <td class="num down">₹102.5</td>
         <td class="num">₹205<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">25.2% / 26.1%<div class="sub">VRP 0.97</div></td>
-        <td class="num">61.9%<div class="sub">~7.7d</div></td>
-        <td class="num ">6.96%</td>
-        <td class="num">80.1</td>
+        <td class="num">22.6% / 26.1%<div class="sub">VRP 0.87</div></td>
+        <td class="num">61.3%<div class="sub">~7.9d</div></td>
+        <td class="num ">8.04%</td>
+        <td class="num">79.3</td>
       </tr>
       <tr>
-        <td><b>COALINDIA 430 PE</b>
-          <div class="sub"><code>COALINDIA26OCT430PE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
-        <td class="num"><b>₹10.6</b><div class="sub">&times;1350 = ₹14,310</div></td>
-        <td class="num up"><b>₹15.9</b><div class="sub">net ₹7,060.13</div></td>
-        <td class="num down">₹5.3</td>
-        <td class="num">₹10.6<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">19.2% / 19.8%<div class="sub">VRP 0.97</div></td>
-        <td class="num">62.7%<div class="sub">~7.6d</div></td>
-        <td class="num ">7.63%</td>
-        <td class="num">80</td>
-      </tr>
-      <tr>
-        <td><b>PFC 360 PE</b>
-          <div class="sub"><code>PFC26OCT360PE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
-        <td class="num"><b>₹14.5</b><div class="sub">&times;1300 = ₹18,850</div></td>
-        <td class="num up"><b>₹21.75</b><div class="sub">net ₹9,315.01</div></td>
-        <td class="num down">₹7.25</td>
-        <td class="num">₹14.5<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">22.8% / 21.6%<div class="sub">VRP 1.05</div></td>
-        <td class="num">60.9%<div class="sub">~8.1d</div></td>
-        <td class="num ">5.33%</td>
-        <td class="num">78.8</td>
-      </tr>
-      <tr>
-        <td><b>HEROMOTOCO 5600 PE</b>
-          <div class="sub"><code>HEROMOTOCO26OCT5600PE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
-        <td class="num"><b>₹267.1</b><div class="sub">&times;150 = ₹40,065</div></td>
-        <td class="num up"><b>₹400.65</b><div class="sub">net ₹19,851.84</div></td>
-        <td class="num down">₹133.55</td>
-        <td class="num">₹267.1<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">25.1% / 26.1%<div class="sub">VRP 0.96</div></td>
-        <td class="num">63.1%<div class="sub">~7.4d</div></td>
-        <td class="num ">4.45%</td>
-        <td class="num">78.2</td>
-      </tr>
-      <tr>
-        <td><b>TATAPOWER 370 PE</b>
-          <div class="sub"><code>TATAPOWER26OCT370PE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
-        <td class="num"><b>₹7.5</b><div class="sub">&times;1450 = ₹10,875</div></td>
-        <td class="num up"><b>₹11.25</b><div class="sub">net ₹5,354.07</div></td>
-        <td class="num down">₹3.75</td>
-        <td class="num">₹7.5<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">19.6% / 22.4%<div class="sub">VRP 0.88</div></td>
-        <td class="num">62.6%<div class="sub">~7.6d</div></td>
-        <td class="num ">10.04%</td>
-        <td class="num">77.9</td>
-      </tr>
-      <tr>
-        <td><b>ITC 275 PE</b>
-          <div class="sub"><code>ITC26OCT275PE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
-        <td class="num"><b>₹7.3</b><div class="sub">&times;1725 = ₹12,592.5</div></td>
-        <td class="num up"><b>₹10.95</b><div class="sub">net ₹6,207.1</div></td>
-        <td class="num down">₹3.65</td>
-        <td class="num">₹7.3<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">18.7% / 17.5%<div class="sub">VRP 1.07</div></td>
-        <td class="num">60.7%<div class="sub">~8.2d</div></td>
-        <td class="num ">7.07%</td>
-        <td class="num">77.6</td>
-      </tr>
-      <tr>
-        <td><b>TMPV 305 PE</b>
-          <div class="sub"><code>TMPV26OCT305PE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
-        <td class="num"><b>₹11.15</b><div class="sub">&times;1600 = ₹17,840</div></td>
-        <td class="num up"><b>₹16.73</b><div class="sub">net ₹8,813.37</div></td>
-        <td class="num down">₹5.58</td>
-        <td class="num">₹11.15<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">30% / 34.3%<div class="sub">VRP 0.87</div></td>
-        <td class="num">61.9%<div class="sub">~7.6d</div></td>
-        <td class="num ">9.21%</td>
-        <td class="num">77.5</td>
-      </tr>
-      <tr>
-        <td><b>HEROMOTOCO 5400 PE</b>
-          <div class="sub"><code>HEROMOTOCO26OCT5400PE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
-        <td class="num"><b>₹147</b><div class="sub">&times;150 = ₹22,050</div></td>
-        <td class="num up"><b>₹220.5</b><div class="sub">net ₹10,904.35</div></td>
-        <td class="num down">₹73.5</td>
-        <td class="num">₹147<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">24.5% / 26.1%<div class="sub">VRP 0.94</div></td>
-        <td class="num">59.6%<div class="sub">~8.4d</div></td>
-        <td class="num ">10.84%</td>
-        <td class="num">77.4</td>
-      </tr>
-      <tr>
-        <td><b>KOTAKBANK 420 PE</b>
-          <div class="sub"><code>KOTAKBANK26OCT420PE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
-        <td class="num"><b>₹12</b><div class="sub">&times;2000 = ₹24,000</div></td>
-        <td class="num up"><b>₹18</b><div class="sub">net ₹11,872.85</div></td>
-        <td class="num down">₹6</td>
-        <td class="num">₹12<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">22.1% / 18.2%<div class="sub">VRP 1.22</div></td>
-        <td class="num">53%<div class="sub">~10.4d</div></td>
-        <td class="num ">10.86%</td>
-        <td class="num">77.3</td>
-      </tr>
-      <tr>
-        <td><b>HAVELLS 1100 PE</b>
-          <div class="sub"><code>HAVELLS26OCT1100PE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
-        <td class="num"><b>₹38.95</b><div class="sub">&times;500 = ₹19,475</div></td>
-        <td class="num up"><b>₹58.43</b><div class="sub">net ₹9,625.43</div></td>
-        <td class="num down">₹19.48</td>
-        <td class="num">₹38.95<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">27.9% / 24.3%<div class="sub">VRP 1.15</div></td>
-        <td class="num">53.1%<div class="sub">~10.3d</div></td>
-        <td class="num ">11.68%</td>
-        <td class="num">77.3</td>
-      </tr>
-      <tr>
-        <td><b>BRITANNIA 5000 PE</b>
-          <div class="sub"><code>BRITANNIA26OCT5000PE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
-        <td class="num"><b>₹125</b><div class="sub">&times;125 = ₹15,625</div></td>
-        <td class="num up"><b>₹187.5</b><div class="sub">net ₹7,713.25</div></td>
-        <td class="num down">₹62.5</td>
-        <td class="num">₹125<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">20.5% / 19.2%<div class="sub">VRP 1.07</div></td>
-        <td class="num">58%<div class="sub">~9d</div></td>
-        <td class="num ">9.86%</td>
-        <td class="num">77.2</td>
-      </tr>
-      <tr>
-        <td><b>TMPV 310 PE</b>
-          <div class="sub"><code>TMPV26OCT310PE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
-        <td class="num"><b>₹14.15</b><div class="sub">&times;1600 = ₹22,640</div></td>
-        <td class="num up"><b>₹21.23</b><div class="sub">net ₹11,197.38</div></td>
-        <td class="num down">₹7.08</td>
-        <td class="num">₹14.15<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">30.6% / 34.3%<div class="sub">VRP 0.89</div></td>
-        <td class="num">63.1%<div class="sub">~7.3d</div></td>
-        <td class="num ">6.85%</td>
-        <td class="num">77.2</td>
-      </tr>
-      <tr>
-        <td><b>LT 4000 PE</b>
-          <div class="sub"><code>LT26OCT4000PE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
-        <td class="num"><b>₹108.8</b><div class="sub">&times;175 = ₹19,040</div></td>
-        <td class="num up"><b>₹163.2</b><div class="sub">net ₹9,409.38</div></td>
-        <td class="num down">₹54.4</td>
-        <td class="num">₹108.8<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">19.3% / 15.2%<div class="sub">VRP 1.28</div></td>
-        <td class="num">53.6%<div class="sub">~10.3d</div></td>
-        <td class="num ">9.16%</td>
-        <td class="num">77</td>
-      </tr>
-      <tr>
-        <td><b>M&amp;M 3100 PE</b>
-          <div class="sub"><code>M&amp;M26OCT3100PE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
-        <td class="num"><b>₹106</b><div class="sub">&times;200 = ₹21,200</div></td>
-        <td class="num up"><b>₹159</b><div class="sub">net ₹10,482.18</div></td>
-        <td class="num down">₹53</td>
-        <td class="num">₹106<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">25.5% / 20.9%<div class="sub">VRP 1.22</div></td>
-        <td class="num">52.1%<div class="sub">~10.6d</div></td>
-        <td class="num ">10.99%</td>
-        <td class="num">76.9</td>
-      </tr>
-      <tr>
-        <td><b>HAL 4900 PE</b>
-          <div class="sub"><code>HAL26OCT4900PE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
-        <td class="num"><b>₹148.7</b><div class="sub">&times;150 = ₹22,305</div></td>
-        <td class="num up"><b>₹223.05</b><div class="sub">net ₹11,031</div></td>
-        <td class="num down">₹74.35</td>
-        <td class="num">₹148.7<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">23.4% / 25.2%<div class="sub">VRP 0.93</div></td>
-        <td class="num">62.5%<div class="sub">~7.5d</div></td>
-        <td class="num ">7.92%</td>
-        <td class="num">76.5</td>
-      </tr>
-      <tr>
-        <td><b>ASIANPAINT 2500 PE</b>
-          <div class="sub"><code>ASIANPAINT26OCT2500PE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
-        <td class="num"><b>₹73.8</b><div class="sub">&times;250 = ₹18,450</div></td>
-        <td class="num up"><b>₹110.7</b><div class="sub">net ₹9,116.34</div></td>
-        <td class="num down">₹36.9</td>
-        <td class="num">₹73.8<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">21% / 19.4%<div class="sub">VRP 1.09</div></td>
-        <td class="num">58.9%<div class="sub">~8.7d</div></td>
-        <td class="num ">7.99%</td>
-        <td class="num">76.5</td>
-      </tr>
-      <tr>
-        <td><b>COALINDIA 425 PE</b>
-          <div class="sub"><code>COALINDIA26OCT425PE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
-        <td class="num"><b>₹7.85</b><div class="sub">&times;1350 = ₹10,597.5</div></td>
-        <td class="num up"><b>₹11.77</b><div class="sub">net ₹5,216.25</div></td>
-        <td class="num down">₹3.93</td>
-        <td class="num">₹7.85<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">18.6% / 19.8%<div class="sub">VRP 0.94</div></td>
-        <td class="num">60.2%<div class="sub">~8.3d</div></td>
-        <td class="num ">11.24%</td>
-        <td class="num">76.1</td>
-      </tr>
-      <tr>
-        <td><b>ETERNAL 350 PE</b>
-          <div class="sub"><code>ETERNAL26OCT350PE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
-        <td class="num"><b>₹15.1</b><div class="sub">&times;2425 = ₹36,617.5</div></td>
-        <td class="num up"><b>₹22.65</b><div class="sub">net ₹18,139.57</div></td>
-        <td class="num down">₹7.55</td>
-        <td class="num">₹15.1<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">30.6% / 26.7%<div class="sub">VRP 1.15</div></td>
-        <td class="num">53.8%<div class="sub">~10.1d</div></td>
-        <td class="num ">10.21%</td>
-        <td class="num">76</td>
-      </tr>
-      <tr>
-        <td><b>HAVELLS 1120 PE</b>
-          <div class="sub"><code>HAVELLS26OCT1120PE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
-        <td class="num"><b>₹51.3</b><div class="sub">&times;500 = ₹25,650</div></td>
-        <td class="num up"><b>₹76.95</b><div class="sub">net ₹12,692.36</div></td>
-        <td class="num down">₹25.65</td>
-        <td class="num">₹51.3<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">28.6% / 24.3%<div class="sub">VRP 1.18</div></td>
-        <td class="num">54.4%<div class="sub">~9.9d</div></td>
-        <td class="num ">8.21%</td>
-        <td class="num">76</td>
-      </tr>
-      <tr>
-        <td><b>PFC 350 PE</b>
-          <div class="sub"><code>PFC26OCT350PE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
+        <td><b class="name">PFC OCT 350 PE</b>
+          <div class="sub">Zerodha <code>PFC26OCT350PE</code> &middot; Angel <code>PFC27OCT26350PE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
         <td class="num"><b>₹9.6</b><div class="sub">&times;1300 = ₹12,480</div></td>
         <td class="num up"><b>₹14.4</b><div class="sub">net ₹6,151.23</div></td>
         <td class="num down">₹4.8</td>
         <td class="num">₹9.6<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">24.6% / 21.6%<div class="sub">VRP 1.14</div></td>
-        <td class="num">52.6%<div class="sub">~10.5d</div></td>
-        <td class="num down">13.48%</td>
-        <td class="num">75.9</td>
+        <td class="num">20.9% / 21.6%<div class="sub">VRP 0.97</div></td>
+        <td class="num">55.8%<div class="sub">~9.5d</div></td>
+        <td class="num down">12.7%</td>
+        <td class="num">79.2</td>
       </tr>
       <tr>
-        <td><b>UNIONBANK 180 PE</b>
-          <div class="sub"><code>UNIONBANK26OCT180PE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
-        <td class="num"><b>₹4.9</b><div class="sub">&times;4425 = ₹21,682.5</div></td>
-        <td class="num up"><b>₹7.35</b><div class="sub">net ₹10,721.82</div></td>
-        <td class="num down">₹2.45</td>
-        <td class="num">₹4.9<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">26.8% / 25.9%<div class="sub">VRP 1.04</div></td>
-        <td class="num">53.8%<div class="sub">~10.1d</div></td>
-        <td class="num down">14.68%</td>
-        <td class="num">75.8</td>
+        <td><b class="name">PFC OCT 360 PE</b>
+          <div class="sub">Zerodha <code>PFC26OCT360PE</code> &middot; Angel <code>PFC27OCT26360PE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
+        <td class="num"><b>₹14.5</b><div class="sub">&times;1300 = ₹18,850</div></td>
+        <td class="num up"><b>₹21.75</b><div class="sub">net ₹9,315.01</div></td>
+        <td class="num down">₹7.25</td>
+        <td class="num">₹14.5<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">17.2% / 21.6%<div class="sub">VRP 0.8</div></td>
+        <td class="num">64.3%<div class="sub">~7.1d</div></td>
+        <td class="num ">4.26%</td>
+        <td class="num">78.9</td>
+      </tr>
+      <tr>
+        <td><b class="name">TATAPOWER OCT 380 PE</b>
+          <div class="sub">Zerodha <code>TATAPOWER26OCT380PE</code> &middot; Angel <code>TATAPOWER27OCT26380PE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
+        <td class="num"><b>₹12.75</b><div class="sub">&times;1450 = ₹18,487.5</div></td>
+        <td class="num up"><b>₹19.13</b><div class="sub">net ₹9,134.97</div></td>
+        <td class="num down">₹6.38</td>
+        <td class="num">₹12.75<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">16.9% / 22.4%<div class="sub">VRP 0.75</div></td>
+        <td class="num">66.8%<div class="sub">~6.4d</div></td>
+        <td class="num ">5.01%</td>
+        <td class="num">78.8</td>
+      </tr>
+      <tr>
+        <td><b class="name">COALINDIA OCT 430 PE</b>
+          <div class="sub">Zerodha <code>COALINDIA26OCT430PE</code> &middot; Angel <code>COALINDIA27OCT26430PE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
+        <td class="num"><b>₹10.6</b><div class="sub">&times;1350 = ₹14,310</div></td>
+        <td class="num up"><b>₹15.9</b><div class="sub">net ₹7,060.13</div></td>
+        <td class="num down">₹5.3</td>
+        <td class="num">₹10.6<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">17.3% / 19.8%<div class="sub">VRP 0.87</div></td>
+        <td class="num">60.7%<div class="sub">~8.1d</div></td>
+        <td class="num ">9.87%</td>
+        <td class="num">78.7</td>
+      </tr>
+      <tr>
+        <td><b class="name">HEROMOTOCO OCT 5400 PE</b>
+          <div class="sub">Zerodha <code>HEROMOTOCO26OCT5400PE</code> &middot; Angel <code>HEROMOTOCO27OCT265400PE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
+        <td class="num"><b>₹147</b><div class="sub">&times;150 = ₹22,050</div></td>
+        <td class="num up"><b>₹220.5</b><div class="sub">net ₹10,904.35</div></td>
+        <td class="num down">₹73.5</td>
+        <td class="num">₹147<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">22.4% / 26.1%<div class="sub">VRP 0.86</div></td>
+        <td class="num">59%<div class="sub">~8.5d</div></td>
+        <td class="num down">12.36%</td>
+        <td class="num">78.4</td>
+      </tr>
+      <tr>
+        <td><b class="name">TATAPOWER OCT 370 PE</b>
+          <div class="sub">Zerodha <code>TATAPOWER26OCT370PE</code> &middot; Angel <code>TATAPOWER27OCT26370PE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
+        <td class="num"><b>₹7.5</b><div class="sub">&times;1450 = ₹10,875</div></td>
+        <td class="num up"><b>₹11.25</b><div class="sub">net ₹5,354.07</div></td>
+        <td class="num down">₹3.75</td>
+        <td class="num">₹7.5<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">18.2% / 22.4%<div class="sub">VRP 0.81</div></td>
+        <td class="num">60.5%<div class="sub">~8.2d</div></td>
+        <td class="num down">12.98%</td>
+        <td class="num">77.8</td>
+      </tr>
+      <tr>
+        <td><b class="name">TMPV OCT 305 PE</b>
+          <div class="sub">Zerodha <code>TMPV26OCT305PE</code> &middot; Angel <code>TMPV27OCT26305PE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
+        <td class="num"><b>₹11.15</b><div class="sub">&times;1600 = ₹17,840</div></td>
+        <td class="num up"><b>₹16.73</b><div class="sub">net ₹8,813.37</div></td>
+        <td class="num down">₹5.58</td>
+        <td class="num">₹11.15<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">27.9% / 34.3%<div class="sub">VRP 0.81</div></td>
+        <td class="num">61.2%<div class="sub">~7.8d</div></td>
+        <td class="num ">10.45%</td>
+        <td class="num">77.8</td>
+      </tr>
+      <tr>
+        <td><b class="name">HEROMOTOCO OCT 5600 PE</b>
+          <div class="sub">Zerodha <code>HEROMOTOCO26OCT5600PE</code> &middot; Angel <code>HEROMOTOCO27OCT265600PE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
+        <td class="num"><b>₹267.1</b><div class="sub">&times;150 = ₹40,065</div></td>
+        <td class="num up"><b>₹400.65</b><div class="sub">net ₹19,851.84</div></td>
+        <td class="num down">₹133.55</td>
+        <td class="num">₹267.1<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">21.9% / 26.1%<div class="sub">VRP 0.84</div></td>
+        <td class="num">62.5%<div class="sub">~7.5d</div></td>
+        <td class="num ">5.04%</td>
+        <td class="num">77.5</td>
+      </tr>
+      <tr>
+        <td><b class="name">ITC OCT 275 PE</b>
+          <div class="sub">Zerodha <code>ITC26OCT275PE</code> &middot; Angel <code>ITC27OCT26275PE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
+        <td class="num"><b>₹7.3</b><div class="sub">&times;1725 = ₹12,592.5</div></td>
+        <td class="num up"><b>₹10.95</b><div class="sub">net ₹6,207.1</div></td>
+        <td class="num down">₹3.65</td>
+        <td class="num">₹7.3<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">15.9% / 17.5%<div class="sub">VRP 0.91</div></td>
+        <td class="num">60.4%<div class="sub">~8.2d</div></td>
+        <td class="num ">8.22%</td>
+        <td class="num">77</td>
+      </tr>
+      <tr>
+        <td><b class="name">BRITANNIA OCT 5000 PE</b>
+          <div class="sub">Zerodha <code>BRITANNIA26OCT5000PE</code> &middot; Angel <code>BRITANNIA27OCT265000PE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
+        <td class="num"><b>₹125</b><div class="sub">&times;125 = ₹15,625</div></td>
+        <td class="num up"><b>₹187.5</b><div class="sub">net ₹7,713.25</div></td>
+        <td class="num down">₹62.5</td>
+        <td class="num">₹125<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">18.1% / 19.2%<div class="sub">VRP 0.95</div></td>
+        <td class="num">57.3%<div class="sub">~9.1d</div></td>
+        <td class="num ">11.53%</td>
+        <td class="num">76.8</td>
+      </tr>
+      <tr>
+        <td><b class="name">HAVELLS OCT 1100 PE</b>
+          <div class="sub">Zerodha <code>HAVELLS26OCT1100PE</code> &middot; Angel <code>HAVELLS27OCT261100PE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
+        <td class="num"><b>₹38.95</b><div class="sub">&times;500 = ₹19,475</div></td>
+        <td class="num up"><b>₹58.43</b><div class="sub">net ₹9,625.43</div></td>
+        <td class="num down">₹19.48</td>
+        <td class="num">₹38.95<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">25.4% / 24.3%<div class="sub">VRP 1.05</div></td>
+        <td class="num">52.9%<div class="sub">~10.3d</div></td>
+        <td class="num down">12.85%</td>
+        <td class="num">76.8</td>
+      </tr>
+      <tr>
+        <td><b class="name">BAJFINANCE OCT 1050 PE</b>
+          <div class="sub">Zerodha <code>BAJFINANCE26OCT1050PE</code> &middot; Angel <code>BAJFINANCE27OCT261050PE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
+        <td class="num"><b>₹28</b><div class="sub">&times;750 = ₹21,000</div></td>
+        <td class="num up"><b>₹42</b><div class="sub">net ₹10,382.85</div></td>
+        <td class="num down">₹14</td>
+        <td class="num">₹28<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">20.8% / 21.8%<div class="sub">VRP 0.95</div></td>
+        <td class="num">56.1%<div class="sub">~9.4d</div></td>
+        <td class="num down">12.88%</td>
+        <td class="num">76.8</td>
+      </tr>
+      <tr>
+        <td><b class="name">TMPV OCT 310 PE</b>
+          <div class="sub">Zerodha <code>TMPV26OCT310PE</code> &middot; Angel <code>TMPV27OCT26310PE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
+        <td class="num"><b>₹14.15</b><div class="sub">&times;1600 = ₹22,640</div></td>
+        <td class="num up"><b>₹21.23</b><div class="sub">net ₹11,197.38</div></td>
+        <td class="num down">₹7.08</td>
+        <td class="num">₹14.15<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">28.2% / 34.3%<div class="sub">VRP 0.82</div></td>
+        <td class="num">62.4%<div class="sub">~7.5d</div></td>
+        <td class="num ">7.79%</td>
+        <td class="num">76.7</td>
+      </tr>
+      <tr>
+        <td><b class="name">M&amp;M OCT 3100 PE</b>
+          <div class="sub">Zerodha <code>M&amp;M26OCT3100PE</code> &middot; Angel <code>M&amp;M27OCT263100PE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
+        <td class="num"><b>₹106</b><div class="sub">&times;200 = ₹21,200</div></td>
+        <td class="num up"><b>₹159</b><div class="sub">net ₹10,482.18</div></td>
+        <td class="num down">₹53</td>
+        <td class="num">₹106<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">22.9% / 20.9%<div class="sub">VRP 1.1</div></td>
+        <td class="num">51.9%<div class="sub">~10.7d</div></td>
+        <td class="num down">12.33%</td>
+        <td class="num">76.4</td>
+      </tr>
+      <tr>
+        <td><b class="name">LT OCT 4000 PE</b>
+          <div class="sub">Zerodha <code>LT26OCT4000PE</code> &middot; Angel <code>LT27OCT264000PE</code></div>
+          <div class="sub">expires Tue 27 Oct &middot; 33.7d left &middot; <b class="warn">exit by Wed 21 Oct</b></div></td>
+        <td class="num"><b>₹108.8</b><div class="sub">&times;175 = ₹19,040</div></td>
+        <td class="num up"><b>₹163.2</b><div class="sub">net ₹9,409.38</div></td>
+        <td class="num down">₹54.4</td>
+        <td class="num">₹108.8<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">16.6% / 15.2%<div class="sub">VRP 1.09</div></td>
+        <td class="num">53.3%<div class="sub">~10.4d</div></td>
+        <td class="num ">10.67%</td>
+        <td class="num">76.4</td>
       </tr></tbody>
 </table></div>
   </section>
@@ -935,8 +987,9 @@
 </main>
 
 <div class="note" style="margin-top:20px">
-  <b>WHERE THESE PRICES COME FROM.</b> All prices are from the <b>2026-09-23</b> settlement file. The market was closed when this was built, so nothing here is executable right now. <b class="up">Broker login OK</b> from the build server at 2026-09-23 22:35 IST
-         &mdash; a NIFTY quote came back.
+  <b>WHERE THESE PRICES COME FROM.</b> All prices are from the <b>2026-09-23</b> settlement file. The market was closed when this was built, so nothing here is executable right now. 40 of 40 options priced against the live futures price. <b class="up">Broker login OK</b> from the build server at 2026-09-23 23:15 IST
+         &mdash; a NIFTY quote came back. <b>F&amp;O ban for 2026-09-24:</b> KAYNES, LICHSGFIN, MANAPPURAM, SAIL &mdash;
+         left out entirely, because NSE allows only exits in a banned stock.
   This page is a <b>snapshot</b>, rebuilt on a schedule &mdash; it is not a live feed.
   <b>Check the price on your broker before placing anything.</b>
   Net figures are after brokerage, STT at 0.15%, exchange, stamp and GST; the
