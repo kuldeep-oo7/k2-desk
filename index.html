@@ -34,14 +34,22 @@
                      background:var(--line); color:var(--text); font-weight:400 }
   .pane { display:none }
   .pane h2 { margin-top:8px }
-  #v-fut:checked ~ .pane-fut, #v-ce:checked ~ .pane-ce, #v-pe:checked ~ .pane-pe { display:block }
+  #v-fut:checked ~ .pane-fut, #v-ce:checked ~ .pane-ce, #v-pe:checked ~ .pane-pe,
+  #v-trk:checked ~ .pane-trk { display:block }
+  #v-trk:checked ~ .tabs .t-trk { color:var(--bg); background:#40c4ff; border-color:#40c4ff }
+  /* Four tabs on a 360px phone: tighter, never wrapping into two rows. */
+  @media (max-width: 480px) {
+    .tabs { gap:4px }
+    .tabs label { font-size:11px; padding:10px 2px; letter-spacing:0 }
+    .tabs label span { margin-left:3px; padding:0 5px }
+  }
   #v-fut:checked ~ .tabs .t-fut { color:var(--bg); background:var(--amber); border-color:var(--amber) }
   #v-ce:checked ~ .tabs .t-ce { color:var(--bg); background:var(--green); border-color:var(--green) }
   #v-pe:checked ~ .tabs .t-pe { color:var(--bg); background:var(--red); border-color:var(--red) }
 </style></head><body>
 
 <h1>K&sup2; Desk</h1>
-<div class="stamp">Built 2026-09-23 22:14 IST &middot; session 2026-09-23 &middot; market CLOSED &middot;
+<div class="stamp">Built 2026-09-23 22:29 IST &middot; session 2026-09-23 &middot; market CLOSED &middot;
   13,695 contracts examined, 1,062 cleared every gate</div>
 
 <div class="note "><b>THESE LEVELS ARE INDICATIVE, NOT FIXED.</b> The market is closed.
@@ -53,11 +61,13 @@
   <input type="radio" name="view" id="v-fut" checked>
   <input type="radio" name="view" id="v-ce">
   <input type="radio" name="view" id="v-pe">
+  <input type="radio" name="view" id="v-trk">
 
   <nav class="tabs">
     <label for="v-fut" class="t-fut">FUTURES <span>25</span></label>
     <label for="v-ce" class="t-ce">CALLS <span>18</span></label>
     <label for="v-pe" class="t-pe">PUTS <span>22</span></label>
+    <label for="v-trk" class="t-trk">TRACK <span>0</span></label>
   </nav>
 
   <section class="pane pane-fut">
@@ -68,229 +78,229 @@
         <th class="num">STOP</th><th class="num">NOW</th><th class="num">1 UNIT</th><th class="num">R : R</th>
       </tr></thead><tbody>
       <tr>
-        <td><b>LT</b><div class="sub"><code>LT26OCTFUT</code></div></td>
-        <td class="num"><b>₹3,873.56</b></td>
-        <td class="num up">₹3,970.4<div class="sub">₹4,067.24</div></td>
-        <td class="num down">₹3,815.46</td>
-        <td class="num">₹3,904.8<div class="sub ">WAITING — needs a 0.8% dip</div></td>
-        <td class="num">₹3,873.56<div class="sub">per unit</div></td>
-        <td class="num">1.67<div class="sub">+₹96.84 / &minus;₹58.1</div></td>
+        <td><b>LT</b><div class="sub"><code>LT26OCTFUT</code></div><div class="sub">Angel <code>LT27OCT26FUT</code></div></td>
+        <td class="num"><b>₹3,914.83</b></td>
+        <td class="num up">₹4,012.7<div class="sub">₹4,110.57</div></td>
+        <td class="num down">₹3,856.11</td>
+        <td class="num">₹3,946.4<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹3,914.83<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹97.87 / &minus;₹58.72</div></td>
       </tr>
       <tr>
-        <td><b>MARUTI</b><div class="sub"><code>MARUTI26OCTFUT</code></div></td>
-        <td class="num"><b>₹12,092.48</b></td>
-        <td class="num up">₹12,394.79<div class="sub">₹12,697.1</div></td>
-        <td class="num down">₹11,911.09</td>
-        <td class="num">₹12,190<div class="sub ">WAITING — needs a 0.8% dip</div></td>
-        <td class="num">₹12,092.48<div class="sub">per unit</div></td>
-        <td class="num">1.67<div class="sub">+₹302.31 / &minus;₹181.39</div></td>
+        <td><b>MARUTI</b><div class="sub"><code>MARUTI26OCTFUT</code></div><div class="sub">Angel <code>MARUTI27OCT26FUT</code></div></td>
+        <td class="num"><b>₹12,201.6</b></td>
+        <td class="num up">₹12,506.64<div class="sub">₹12,811.68</div></td>
+        <td class="num down">₹12,018.58</td>
+        <td class="num">₹12,300<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹12,201.6<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹305.04 / &minus;₹183.02</div></td>
       </tr>
       <tr>
-        <td><b>WIPRO</b><div class="sub"><code>WIPRO26OCTFUT</code></div></td>
-        <td class="num"><b>₹164.67</b></td>
-        <td class="num up">₹168.79<div class="sub">₹172.9</div></td>
-        <td class="num down">₹162.2</td>
-        <td class="num">₹166<div class="sub ">WAITING — needs a 0.8% dip</div></td>
-        <td class="num">₹164.67<div class="sub">per unit</div></td>
-        <td class="num">1.67<div class="sub">+₹4.12 / &minus;₹2.47</div></td>
+        <td><b>WIPRO</b><div class="sub"><code>WIPRO26OCTFUT</code></div><div class="sub">Angel <code>WIPRO27OCT26FUT</code></div></td>
+        <td class="num"><b>₹162.69</b></td>
+        <td class="num up">₹166.76<div class="sub">₹170.82</div></td>
+        <td class="num down">₹160.25</td>
+        <td class="num">₹164<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹162.69<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹4.07 / &minus;₹2.44</div></td>
       </tr>
       <tr>
-        <td><b>EICHERMOT</b><div class="sub"><code>EICHERMOT26OCTFUT</code></div></td>
-        <td class="num"><b>₹7,367.58</b></td>
-        <td class="num up">₹7,551.77<div class="sub">₹7,735.96</div></td>
-        <td class="num down">₹7,257.07</td>
-        <td class="num">₹7,427<div class="sub ">WAITING — needs a 0.8% dip</div></td>
-        <td class="num">₹7,367.58<div class="sub">per unit</div></td>
-        <td class="num">1.67<div class="sub">+₹184.19 / &minus;₹110.51</div></td>
+        <td><b>EICHERMOT</b><div class="sub"><code>EICHERMOT26OCTFUT</code></div><div class="sub">Angel <code>EICHERMOT27OCT26FUT</code></div></td>
+        <td class="num"><b>₹7,453.89</b></td>
+        <td class="num up">₹7,640.24<div class="sub">₹7,826.58</div></td>
+        <td class="num down">₹7,342.08</td>
+        <td class="num">₹7,514<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹7,453.89<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹186.35 / &minus;₹111.81</div></td>
       </tr>
       <tr>
-        <td><b>KOTAKBANK</b><div class="sub"><code>KOTAKBANK26OCTFUT</code></div></td>
-        <td class="num"><b>₹409.35</b></td>
-        <td class="num up">₹419.58<div class="sub">₹429.82</div></td>
-        <td class="num down">₹403.21</td>
-        <td class="num">₹412.65<div class="sub ">WAITING — needs a 0.8% dip</div></td>
-        <td class="num">₹409.35<div class="sub">per unit</div></td>
-        <td class="num">1.67<div class="sub">+₹10.23 / &minus;₹6.14</div></td>
+        <td><b>KOTAKBANK</b><div class="sub"><code>KOTAKBANK26OCTFUT</code></div><div class="sub">Angel <code>KOTAKBANK27OCT26FUT</code></div></td>
+        <td class="num"><b>₹413.07</b></td>
+        <td class="num up">₹423.4<div class="sub">₹433.72</div></td>
+        <td class="num down">₹406.87</td>
+        <td class="num">₹416.4<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹413.07<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹10.33 / &minus;₹6.2</div></td>
       </tr>
       <tr>
-        <td><b>PFC</b><div class="sub"><code>PFC26OCTFUT</code></div></td>
-        <td class="num"><b>₹343.03</b></td>
-        <td class="num up">₹351.61<div class="sub">₹360.18</div></td>
-        <td class="num down">₹337.88</td>
-        <td class="num">₹345.8<div class="sub ">WAITING — needs a 0.8% dip</div></td>
-        <td class="num">₹343.03<div class="sub">per unit</div></td>
-        <td class="num">1.67<div class="sub">+₹8.58 / &minus;₹5.15</div></td>
+        <td><b>PFC</b><div class="sub"><code>PFC26OCTFUT</code></div><div class="sub">Angel <code>PFC27OCT26FUT</code></div></td>
+        <td class="num"><b>₹345.61</b></td>
+        <td class="num up">₹354.25<div class="sub">₹362.89</div></td>
+        <td class="num down">₹340.43</td>
+        <td class="num">₹348.4<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹345.61<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹8.64 / &minus;₹5.18</div></td>
       </tr>
       <tr>
-        <td><b>UNIONBANK</b><div class="sub"><code>UNIONBANK26OCTFUT</code></div></td>
-        <td class="num"><b>₹176.58</b></td>
-        <td class="num up">₹180.99<div class="sub">₹185.41</div></td>
-        <td class="num down">₹173.93</td>
-        <td class="num">₹178<div class="sub ">WAITING — needs a 0.8% dip</div></td>
-        <td class="num">₹176.58<div class="sub">per unit</div></td>
-        <td class="num">1.66<div class="sub">+₹4.41 / &minus;₹2.65</div></td>
+        <td><b>UNIONBANK</b><div class="sub"><code>UNIONBANK26OCTFUT</code></div><div class="sub">Angel <code>UNIONBANK27OCT26FUT</code></div></td>
+        <td class="num"><b>₹179.93</b></td>
+        <td class="num up">₹184.43<div class="sub">₹188.93</div></td>
+        <td class="num down">₹177.23</td>
+        <td class="num">₹181.38<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹179.93<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹4.5 / &minus;₹2.7</div></td>
       </tr>
       <tr>
-        <td><b>M&amp;M</b><div class="sub"><code>M&amp;M26OCTFUT</code></div></td>
-        <td class="num"><b>₹3,010.72</b></td>
-        <td class="num up">₹3,085.99<div class="sub">₹3,161.26</div></td>
-        <td class="num down">₹2,965.56</td>
-        <td class="num">₹3,035<div class="sub ">WAITING — needs a 0.8% dip</div></td>
-        <td class="num">₹3,010.72<div class="sub">per unit</div></td>
-        <td class="num">1.67<div class="sub">+₹75.27 / &minus;₹45.16</div></td>
+        <td><b>M&amp;M</b><div class="sub"><code>M&amp;M26OCTFUT</code></div><div class="sub">Angel <code>M&amp;M27OCT26FUT</code></div></td>
+        <td class="num"><b>₹3,036.12</b></td>
+        <td class="num up">₹3,112.02<div class="sub">₹3,187.93</div></td>
+        <td class="num down">₹2,990.58</td>
+        <td class="num">₹3,060.6<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹3,036.12<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹75.9 / &minus;₹45.54</div></td>
       </tr>
       <tr>
-        <td><b>MAZDOCK</b><div class="sub"><code>MAZDOCK26OCTFUT</code></div></td>
-        <td class="num"><b>₹2,186.37</b></td>
-        <td class="num up">₹2,241.03<div class="sub">₹2,295.69</div></td>
-        <td class="num down">₹2,153.57</td>
-        <td class="num">₹2,204<div class="sub ">WAITING — needs a 0.8% dip</div></td>
-        <td class="num">₹2,186.37<div class="sub">per unit</div></td>
+        <td><b>MAZDOCK</b><div class="sub"><code>MAZDOCK26OCTFUT</code></div><div class="sub">Angel <code>MAZDOCK27OCT26FUT</code></div></td>
+        <td class="num"><b>₹2,186.47</b></td>
+        <td class="num up">₹2,241.13<div class="sub">₹2,295.79</div></td>
+        <td class="num down">₹2,153.67</td>
+        <td class="num">₹2,204.1<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹2,186.47<div class="sub">per unit</div></td>
         <td class="num">1.67<div class="sub">+₹54.66 / &minus;₹32.8</div></td>
       </tr>
       <tr>
-        <td><b>AMBER</b><div class="sub"><code>AMBER26OCTFUT</code></div></td>
-        <td class="num"><b>₹6,944</b></td>
-        <td class="num up">₹7,117.6<div class="sub">₹7,291.2</div></td>
-        <td class="num down">₹6,839.84</td>
-        <td class="num">₹7,000<div class="sub ">WAITING — needs a 0.8% dip</div></td>
-        <td class="num">₹6,944<div class="sub">per unit</div></td>
-        <td class="num">1.67<div class="sub">+₹173.6 / &minus;₹104.16</div></td>
+        <td><b>AMBER</b><div class="sub"><code>AMBER26OCTFUT</code></div><div class="sub">Angel <code>AMBER27OCT26FUT</code></div></td>
+        <td class="num"><b>₹7,041.22</b></td>
+        <td class="num up">₹7,217.25<div class="sub">₹7,393.28</div></td>
+        <td class="num down">₹6,935.6</td>
+        <td class="num">₹7,098<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹7,041.22<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹176.03 / &minus;₹105.62</div></td>
       </tr>
       <tr>
-        <td><b>JINDALSTEL</b><div class="sub"><code>JINDALSTEL26OCTFUT</code></div></td>
-        <td class="num"><b>₹1,131.87</b></td>
-        <td class="num up">₹1,160.17<div class="sub">₹1,188.46</div></td>
-        <td class="num down">₹1,114.89</td>
-        <td class="num">₹1,141<div class="sub ">WAITING — needs a 0.8% dip</div></td>
-        <td class="num">₹1,131.87<div class="sub">per unit</div></td>
-        <td class="num">1.67<div class="sub">+₹28.3 / &minus;₹16.98</div></td>
+        <td><b>JINDALSTEL</b><div class="sub"><code>JINDALSTEL26OCTFUT</code></div><div class="sub">Angel <code>JINDALSTEL27OCT26FUT</code></div></td>
+        <td class="num"><b>₹1,170.66</b></td>
+        <td class="num up">₹1,199.93<div class="sub">₹1,229.19</div></td>
+        <td class="num down">₹1,153.1</td>
+        <td class="num">₹1,180.1<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹1,170.66<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹29.27 / &minus;₹17.56</div></td>
       </tr>
       <tr>
-        <td><b>GLENMARK</b><div class="sub"><code>GLENMARK26OCTFUT</code></div></td>
-        <td class="num"><b>₹2,441.71</b></td>
-        <td class="num up">₹2,502.75<div class="sub">₹2,563.8</div></td>
-        <td class="num down">₹2,405.08</td>
-        <td class="num">₹2,461.4<div class="sub ">WAITING — needs a 0.8% dip</div></td>
-        <td class="num">₹2,441.71<div class="sub">per unit</div></td>
-        <td class="num">1.67<div class="sub">+₹61.04 / &minus;₹36.63</div></td>
+        <td><b>GLENMARK</b><div class="sub"><code>GLENMARK26OCTFUT</code></div><div class="sub">Angel <code>GLENMARK27OCT26FUT</code></div></td>
+        <td class="num"><b>₹2,475.04</b></td>
+        <td class="num up">₹2,536.92<div class="sub">₹2,598.79</div></td>
+        <td class="num down">₹2,437.91</td>
+        <td class="num">₹2,495<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹2,475.04<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹61.88 / &minus;₹37.13</div></td>
       </tr>
       <tr>
-        <td><b>HEROMOTOCO</b><div class="sub"><code>HEROMOTOCO26OCTFUT</code></div></td>
-        <td class="num"><b>₹5,375.65</b></td>
-        <td class="num up">₹5,510.04<div class="sub">₹5,644.43</div></td>
-        <td class="num down">₹5,295.02</td>
-        <td class="num">₹5,419<div class="sub ">WAITING — needs a 0.8% dip</div></td>
-        <td class="num">₹5,375.65<div class="sub">per unit</div></td>
-        <td class="num">1.67<div class="sub">+₹134.39 / &minus;₹80.63</div></td>
+        <td><b>HEROMOTOCO</b><div class="sub"><code>HEROMOTOCO26OCTFUT</code></div><div class="sub">Angel <code>HEROMOTOCO27OCT26FUT</code></div></td>
+        <td class="num"><b>₹5,354.32</b></td>
+        <td class="num up">₹5,488.18<div class="sub">₹5,622.04</div></td>
+        <td class="num down">₹5,274.01</td>
+        <td class="num">₹5,397.5<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹5,354.32<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹133.86 / &minus;₹80.31</div></td>
       </tr>
       <tr>
-        <td><b>BDL</b><div class="sub"><code>BDL26OCTFUT</code></div></td>
-        <td class="num"><b>₹1,158.66</b></td>
-        <td class="num up">₹1,187.63<div class="sub">₹1,216.59</div></td>
-        <td class="num down">₹1,141.28</td>
-        <td class="num">₹1,168<div class="sub ">WAITING — needs a 0.8% dip</div></td>
-        <td class="num">₹1,158.66<div class="sub">per unit</div></td>
-        <td class="num">1.67<div class="sub">+₹28.97 / &minus;₹17.38</div></td>
+        <td><b>BDL</b><div class="sub"><code>BDL26OCTFUT</code></div><div class="sub">Angel <code>BDL27OCT26FUT</code></div></td>
+        <td class="num"><b>₹1,141.79</b></td>
+        <td class="num up">₹1,170.33<div class="sub">₹1,198.88</div></td>
+        <td class="num down">₹1,124.66</td>
+        <td class="num">₹1,151<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹1,141.79<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹28.54 / &minus;₹17.13</div></td>
       </tr>
       <tr>
-        <td><b>UNITDSPR</b><div class="sub"><code>UNITDSPR26OCTFUT</code></div></td>
-        <td class="num"><b>₹1,385.82</b></td>
-        <td class="num up">₹1,420.47<div class="sub">₹1,455.11</div></td>
-        <td class="num down">₹1,365.03</td>
-        <td class="num">₹1,397<div class="sub ">WAITING — needs a 0.8% dip</div></td>
-        <td class="num">₹1,385.82<div class="sub">per unit</div></td>
-        <td class="num">1.67<div class="sub">+₹34.65 / &minus;₹20.79</div></td>
+        <td><b>UNITDSPR</b><div class="sub"><code>UNITDSPR26OCTFUT</code></div><div class="sub">Angel <code>UNITDSPR27OCT26FUT</code></div></td>
+        <td class="num"><b>₹1,432.45</b></td>
+        <td class="num up">₹1,468.26<div class="sub">₹1,504.07</div></td>
+        <td class="num down">₹1,410.96</td>
+        <td class="num">₹1,444<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹1,432.45<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹35.81 / &minus;₹21.49</div></td>
       </tr>
       <tr>
-        <td><b>BAJAJ-AUTO</b><div class="sub"><code>BAJAJ-AUTO26OCTFUT</code></div></td>
-        <td class="num"><b>₹11,272.1</b></td>
-        <td class="num up">₹11,553.9<div class="sub">₹11,835.71</div></td>
-        <td class="num down">₹11,103.02</td>
-        <td class="num">₹11,363<div class="sub ">WAITING — needs a 0.8% dip</div></td>
-        <td class="num">₹11,272.1<div class="sub">per unit</div></td>
-        <td class="num">1.67<div class="sub">+₹281.8 / &minus;₹169.08</div></td>
+        <td><b>BAJAJ-AUTO</b><div class="sub"><code>BAJAJ-AUTO26OCTFUT</code></div><div class="sub">Angel <code>BAJAJ-AUTO27OCT26FUT</code></div></td>
+        <td class="num"><b>₹11,412.96</b></td>
+        <td class="num up">₹11,698.28<div class="sub">₹11,983.61</div></td>
+        <td class="num down">₹11,241.77</td>
+        <td class="num">₹11,505<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹11,412.96<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹285.32 / &minus;₹171.19</div></td>
       </tr>
       <tr>
-        <td><b>JUBLFOOD</b><div class="sub"><code>JUBLFOOD26OCTFUT</code></div></td>
-        <td class="num"><b>₹487.17</b></td>
-        <td class="num up">₹499.35<div class="sub">₹511.53</div></td>
-        <td class="num down">₹479.86</td>
-        <td class="num">₹491.1<div class="sub ">WAITING — needs a 0.8% dip</div></td>
-        <td class="num">₹487.17<div class="sub">per unit</div></td>
-        <td class="num">1.67<div class="sub">+₹12.18 / &minus;₹7.31</div></td>
+        <td><b>JUBLFOOD</b><div class="sub"><code>JUBLFOOD26OCTFUT</code></div><div class="sub">Angel <code>JUBLFOOD27OCT26FUT</code></div></td>
+        <td class="num"><b>₹478.79</b></td>
+        <td class="num up">₹490.76<div class="sub">₹502.73</div></td>
+        <td class="num down">₹471.61</td>
+        <td class="num">₹482.65<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹478.79<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹11.97 / &minus;₹7.18</div></td>
       </tr>
       <tr>
-        <td><b>DRREDDY</b><div class="sub"><code>DRREDDY26OCTFUT</code></div></td>
-        <td class="num"><b>₹1,201.31</b></td>
-        <td class="num up">₹1,231.34<div class="sub">₹1,261.38</div></td>
-        <td class="num down">₹1,183.29</td>
-        <td class="num">₹1,211<div class="sub ">WAITING — needs a 0.8% dip</div></td>
-        <td class="num">₹1,201.31<div class="sub">per unit</div></td>
-        <td class="num">1.67<div class="sub">+₹30.03 / &minus;₹18.02</div></td>
+        <td><b>DRREDDY</b><div class="sub"><code>DRREDDY26OCTFUT</code></div><div class="sub">Angel <code>DRREDDY27OCT26FUT</code></div></td>
+        <td class="num"><b>₹1,200.32</b></td>
+        <td class="num up">₹1,230.33<div class="sub">₹1,260.34</div></td>
+        <td class="num down">₹1,182.32</td>
+        <td class="num">₹1,210<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹1,200.32<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹30.01 / &minus;₹18</div></td>
       </tr>
       <tr>
-        <td><b>TITAN</b><div class="sub"><code>TITAN26OCTFUT</code></div></td>
-        <td class="num"><b>₹4,889.07</b></td>
-        <td class="num up">₹5,011.3<div class="sub">₹5,133.52</div></td>
-        <td class="num down">₹4,815.73</td>
-        <td class="num">₹4,928.5<div class="sub ">WAITING — needs a 0.8% dip</div></td>
-        <td class="num">₹4,889.07<div class="sub">per unit</div></td>
-        <td class="num">1.67<div class="sub">+₹122.23 / &minus;₹73.34</div></td>
+        <td><b>TITAN</b><div class="sub"><code>TITAN26OCTFUT</code></div><div class="sub">Angel <code>TITAN27OCT26FUT</code></div></td>
+        <td class="num"><b>₹4,883.62</b></td>
+        <td class="num up">₹5,005.71<div class="sub">₹5,127.8</div></td>
+        <td class="num down">₹4,810.37</td>
+        <td class="num">₹4,923<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹4,883.62<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹122.09 / &minus;₹73.25</div></td>
       </tr>
       <tr>
-        <td><b>ASTRAL</b><div class="sub"><code>ASTRAL26OCTFUT</code></div></td>
-        <td class="num"><b>₹1,370.55</b></td>
-        <td class="num up">₹1,404.81<div class="sub">₹1,439.08</div></td>
-        <td class="num down">₹1,349.99</td>
-        <td class="num">₹1,381.6<div class="sub ">WAITING — needs a 0.8% dip</div></td>
-        <td class="num">₹1,370.55<div class="sub">per unit</div></td>
-        <td class="num">1.67<div class="sub">+₹34.26 / &minus;₹20.56</div></td>
+        <td><b>ASTRAL</b><div class="sub"><code>ASTRAL26OCTFUT</code></div><div class="sub">Angel <code>ASTRAL27OCT26FUT</code></div></td>
+        <td class="num"><b>₹1,394.26</b></td>
+        <td class="num up">₹1,429.12<div class="sub">₹1,463.97</div></td>
+        <td class="num down">₹1,373.35</td>
+        <td class="num">₹1,405.5<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹1,394.26<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹34.86 / &minus;₹20.91</div></td>
       </tr>
       <tr>
-        <td><b>DABUR</b><div class="sub"><code>DABUR26OCTFUT</code></div></td>
-        <td class="num"><b>₹385</b></td>
-        <td class="num up">₹394.62<div class="sub">₹404.25</div></td>
-        <td class="num down">₹379.23</td>
-        <td class="num">₹388.1<div class="sub ">WAITING — needs a 0.8% dip</div></td>
-        <td class="num">₹385<div class="sub">per unit</div></td>
-        <td class="num">1.67<div class="sub">+₹9.62 / &minus;₹5.77</div></td>
+        <td><b>DABUR</b><div class="sub"><code>DABUR26OCTFUT</code></div><div class="sub">Angel <code>DABUR27OCT26FUT</code></div></td>
+        <td class="num"><b>₹387.38</b></td>
+        <td class="num up">₹397.06<div class="sub">₹406.75</div></td>
+        <td class="num down">₹381.57</td>
+        <td class="num">₹390.5<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹387.38<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹9.68 / &minus;₹5.81</div></td>
       </tr>
       <tr>
-        <td><b>SHRIRAMFIN</b><div class="sub"><code>SHRIRAMFIN26OCTFUT</code></div></td>
-        <td class="num"><b>₹997.95</b></td>
-        <td class="num up">₹1,022.9<div class="sub">₹1,047.85</div></td>
-        <td class="num down">₹982.98</td>
-        <td class="num">₹1,006<div class="sub ">WAITING — needs a 0.8% dip</div></td>
-        <td class="num">₹997.95<div class="sub">per unit</div></td>
-        <td class="num">1.67<div class="sub">+₹24.95 / &minus;₹14.97</div></td>
+        <td><b>SHRIRAMFIN</b><div class="sub"><code>SHRIRAMFIN26OCTFUT</code></div><div class="sub">Angel <code>SHRIRAMFIN27OCT26FUT</code></div></td>
+        <td class="num"><b>₹1,006.88</b></td>
+        <td class="num up">₹1,032.05<div class="sub">₹1,057.22</div></td>
+        <td class="num down">₹991.78</td>
+        <td class="num">₹1,015<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹1,006.88<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹25.17 / &minus;₹15.1</div></td>
       </tr>
       <tr>
-        <td><b>HAVELLS</b><div class="sub"><code>HAVELLS26OCTFUT</code></div></td>
-        <td class="num"><b>₹1,080.19</b></td>
-        <td class="num up">₹1,107.19<div class="sub">₹1,134.2</div></td>
-        <td class="num down">₹1,063.99</td>
-        <td class="num">₹1,088.9<div class="sub ">WAITING — needs a 0.8% dip</div></td>
-        <td class="num">₹1,080.19<div class="sub">per unit</div></td>
-        <td class="num">1.67<div class="sub">+₹27 / &minus;₹16.2</div></td>
+        <td><b>HAVELLS</b><div class="sub"><code>HAVELLS26OCTFUT</code></div><div class="sub">Angel <code>HAVELLS27OCT26FUT</code></div></td>
+        <td class="num"><b>₹1,080.78</b></td>
+        <td class="num up">₹1,107.8<div class="sub">₹1,134.82</div></td>
+        <td class="num down">₹1,064.57</td>
+        <td class="num">₹1,089.5<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹1,080.78<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹27.02 / &minus;₹16.21</div></td>
       </tr>
       <tr>
-        <td><b>OBEROIRLTY</b><div class="sub"><code>OBEROIRLTY26OCTFUT</code></div></td>
-        <td class="num"><b>₹1,806.43</b></td>
-        <td class="num up">₹1,851.59<div class="sub">₹1,896.75</div></td>
-        <td class="num down">₹1,779.33</td>
-        <td class="num">₹1,821<div class="sub ">WAITING — needs a 0.8% dip</div></td>
-        <td class="num">₹1,806.43<div class="sub">per unit</div></td>
-        <td class="num">1.67<div class="sub">+₹45.16 / &minus;₹27.1</div></td>
+        <td><b>OBEROIRLTY</b><div class="sub"><code>OBEROIRLTY26OCTFUT</code></div><div class="sub">Angel <code>OBEROIRLTY27OCT26FUT</code></div></td>
+        <td class="num"><b>₹1,827.26</b></td>
+        <td class="num up">₹1,872.94<div class="sub">₹1,918.62</div></td>
+        <td class="num down">₹1,799.85</td>
+        <td class="num">₹1,842<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹1,827.26<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹45.68 / &minus;₹27.41</div></td>
       </tr>
       <tr>
-        <td><b>SAGILITY</b><div class="sub"><code>SAGILITY26OCTFUT</code></div></td>
-        <td class="num"><b>₹45.25</b></td>
-        <td class="num up">₹46.38<div class="sub">₹47.51</div></td>
-        <td class="num down">₹44.57</td>
-        <td class="num">₹45.61<div class="sub ">WAITING — needs a 0.8% dip</div></td>
-        <td class="num">₹45.25<div class="sub">per unit</div></td>
-        <td class="num">1.66<div class="sub">+₹1.13 / &minus;₹0.68</div></td>
+        <td><b>SAGILITY</b><div class="sub"><code>SAGILITY26OCTFUT</code></div><div class="sub">Angel <code>SAGILITY27OCT26FUT</code></div></td>
+        <td class="num"><b>₹45.91</b></td>
+        <td class="num up">₹47.06<div class="sub">₹48.21</div></td>
+        <td class="num down">₹45.22</td>
+        <td class="num">₹46.28<div class="sub ">WAITING — needs a 0.8% dip</div><div class="sub ">futures, last traded</div></td>
+        <td class="num">₹45.91<div class="sub">per unit</div></td>
+        <td class="num">1.67<div class="sub">+₹1.15 / &minus;₹0.69</div></td>
       </tr></tbody>
     </table></div>
   </section>
@@ -314,7 +324,7 @@
         <td class="num">₹32<div class="sub up">AT OR BELOW LIMIT</div></td>
         <td class="num">20.1% / 27.7%<div class="sub">VRP 0.72</div></td>
         <td class="num">62%<div class="sub">~7.7d</div></td>
-        <td class="num down">12.79%</td>
+        <td class="num down">12.8%</td>
         <td class="num">80.5</td>
       </tr>
       <tr>
@@ -353,7 +363,7 @@
         <td class="num">₹16.6<div class="sub up">AT OR BELOW LIMIT</div></td>
         <td class="num">20.2% / 38.1%<div class="sub">VRP 0.53</div></td>
         <td class="num">67.6%<div class="sub">~6d</div></td>
-        <td class="num down">13.74%</td>
+        <td class="num down">13.75%</td>
         <td class="num">78.7</td>
       </tr>
       <tr>
@@ -392,7 +402,7 @@
         <td class="num">₹68.75<div class="sub up">AT OR BELOW LIMIT</div></td>
         <td class="num">21.3% / 25.6%<div class="sub">VRP 0.83</div></td>
         <td class="num">56.9%<div class="sub">~9.2d</div></td>
-        <td class="num down">15.75%</td>
+        <td class="num down">15.76%</td>
         <td class="num">77.5</td>
       </tr>
       <tr>
@@ -429,9 +439,9 @@
         <td class="num up"><b>₹53.4</b><div class="sub">net ₹7,025.37</div></td>
         <td class="num down">₹17.8</td>
         <td class="num">₹35.6<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">15.9% / 21.1%<div class="sub">VRP 0.75</div></td>
+        <td class="num">15.9% / 21.1%<div class="sub">VRP 0.76</div></td>
         <td class="num">60.4%<div class="sub">~8.2d</div></td>
-        <td class="num down">12.63%</td>
+        <td class="num down">12.64%</td>
         <td class="num">77.1</td>
       </tr>
       <tr>
@@ -457,7 +467,7 @@
         <td class="num">₹23.3<div class="sub up">AT OR BELOW LIMIT</div></td>
         <td class="num">20.5% / 27.7%<div class="sub">VRP 0.74</div></td>
         <td class="num">57.2%<div class="sub">~9d</div></td>
-        <td class="num down">20.02%</td>
+        <td class="num down">20.03%</td>
         <td class="num">76.7</td>
       </tr>
       <tr>
@@ -482,7 +492,7 @@
         <td class="num down">₹87.43</td>
         <td class="num">₹174.85<div class="sub up">AT OR BELOW LIMIT</div></td>
         <td class="num">16.4% / 19.1%<div class="sub">VRP 0.86</div></td>
-        <td class="num">55.3%<div class="sub">~9.8d</div></td>
+        <td class="num">55.2%<div class="sub">~9.8d</div></td>
         <td class="num down">16.26%</td>
         <td class="num">76</td>
       </tr>
@@ -522,7 +532,7 @@
         <td class="num">₹46<div class="sub up">AT OR BELOW LIMIT</div></td>
         <td class="num">24.3% / 32.2%<div class="sub">VRP 0.75</div></td>
         <td class="num">62%<div class="sub">~7.6d</div></td>
-        <td class="num ">11.32%</td>
+        <td class="num ">11.33%</td>
         <td class="num">75.9</td>
       </tr>
       <tr>
@@ -586,7 +596,7 @@
         <td class="num">₹10.6<div class="sub up">AT OR BELOW LIMIT</div></td>
         <td class="num">19.2% / 19.8%<div class="sub">VRP 0.97</div></td>
         <td class="num">62.7%<div class="sub">~7.6d</div></td>
-        <td class="num ">7.62%</td>
+        <td class="num ">7.63%</td>
         <td class="num">80</td>
       </tr>
       <tr>
@@ -625,7 +635,7 @@
         <td class="num">₹7.5<div class="sub up">AT OR BELOW LIMIT</div></td>
         <td class="num">19.6% / 22.4%<div class="sub">VRP 0.88</div></td>
         <td class="num">62.6%<div class="sub">~7.6d</div></td>
-        <td class="num ">10.03%</td>
+        <td class="num ">10.04%</td>
         <td class="num">77.9</td>
       </tr>
       <tr>
@@ -694,19 +704,6 @@
         <td class="num">77.3</td>
       </tr>
       <tr>
-        <td><b>TMPV 310 PE</b>
-          <div class="sub"><code>TMPV26OCT310PE</code></div>
-          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
-        <td class="num"><b>₹14.15</b><div class="sub">&times;1600 = ₹22,640</div></td>
-        <td class="num up"><b>₹21.23</b><div class="sub">net ₹11,197.38</div></td>
-        <td class="num down">₹7.08</td>
-        <td class="num">₹14.15<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">30.6% / 34.3%<div class="sub">VRP 0.89</div></td>
-        <td class="num">63.1%<div class="sub">~7.3d</div></td>
-        <td class="num ">6.84%</td>
-        <td class="num">77.3</td>
-      </tr>
-      <tr>
         <td><b>BRITANNIA 5000 PE</b>
           <div class="sub"><code>BRITANNIA26OCT5000PE</code></div>
           <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
@@ -716,7 +713,20 @@
         <td class="num">₹125<div class="sub up">AT OR BELOW LIMIT</div></td>
         <td class="num">20.5% / 19.2%<div class="sub">VRP 1.07</div></td>
         <td class="num">58%<div class="sub">~9d</div></td>
-        <td class="num ">9.85%</td>
+        <td class="num ">9.86%</td>
+        <td class="num">77.2</td>
+      </tr>
+      <tr>
+        <td><b>TMPV 310 PE</b>
+          <div class="sub"><code>TMPV26OCT310PE</code></div>
+          <div class="sub">2026-10-27 &middot; 33.7d left</div></td>
+        <td class="num"><b>₹14.15</b><div class="sub">&times;1600 = ₹22,640</div></td>
+        <td class="num up"><b>₹21.23</b><div class="sub">net ₹11,197.38</div></td>
+        <td class="num down">₹7.08</td>
+        <td class="num">₹14.15<div class="sub up">AT OR BELOW LIMIT</div></td>
+        <td class="num">30.6% / 34.3%<div class="sub">VRP 0.89</div></td>
+        <td class="num">63.1%<div class="sub">~7.3d</div></td>
+        <td class="num ">6.85%</td>
         <td class="num">77.2</td>
       </tr>
       <tr>
@@ -742,7 +752,7 @@
         <td class="num">₹106<div class="sub up">AT OR BELOW LIMIT</div></td>
         <td class="num">25.5% / 20.9%<div class="sub">VRP 1.22</div></td>
         <td class="num">52.1%<div class="sub">~10.6d</div></td>
-        <td class="num ">10.98%</td>
+        <td class="num ">10.99%</td>
         <td class="num">76.9</td>
       </tr>
       <tr>
@@ -768,7 +778,7 @@
         <td class="num">₹73.8<div class="sub up">AT OR BELOW LIMIT</div></td>
         <td class="num">21% / 19.4%<div class="sub">VRP 1.09</div></td>
         <td class="num">58.9%<div class="sub">~8.7d</div></td>
-        <td class="num ">7.98%</td>
+        <td class="num ">7.99%</td>
         <td class="num">76.5</td>
       </tr>
       <tr>
@@ -794,7 +804,7 @@
         <td class="num">₹15.1<div class="sub up">AT OR BELOW LIMIT</div></td>
         <td class="num">30.6% / 26.7%<div class="sub">VRP 1.15</div></td>
         <td class="num">53.8%<div class="sub">~10.1d</div></td>
-        <td class="num ">10.2%</td>
+        <td class="num ">10.21%</td>
         <td class="num">76</td>
       </tr>
       <tr>
@@ -807,7 +817,7 @@
         <td class="num">₹51.3<div class="sub up">AT OR BELOW LIMIT</div></td>
         <td class="num">28.5% / 24.3%<div class="sub">VRP 1.18</div></td>
         <td class="num">54.4%<div class="sub">~9.9d</div></td>
-        <td class="num ">8.2%</td>
+        <td class="num ">8.21%</td>
         <td class="num">76</td>
       </tr>
       <tr>
@@ -818,7 +828,7 @@
         <td class="num up"><b>₹14.4</b><div class="sub">net ₹6,151.23</div></td>
         <td class="num down">₹4.8</td>
         <td class="num">₹9.6<div class="sub up">AT OR BELOW LIMIT</div></td>
-        <td class="num">24.6% / 21.6%<div class="sub">VRP 1.13</div></td>
+        <td class="num">24.6% / 21.6%<div class="sub">VRP 1.14</div></td>
         <td class="num">52.6%<div class="sub">~10.5d</div></td>
         <td class="num down">13.47%</td>
         <td class="num">75.9</td>
@@ -838,10 +848,92 @@
       </tr></tbody>
 </table></div>
   </section>
+
+  <section class="pane pane-trk">
+    <h2>Track record &mdash; every price shown, bought on paper the moment it appeared</h2>
+    
+    <div class="wrap"><table>
+      <thead><tr>
+        <th></th><th class="num">SHOWN</th><th class="num">WAITING</th><th class="num">OPEN</th>
+        <th class="num">TARGET ✓</th><th class="num">STOP ✗</th><th class="num">EXPIRED</th><th class="num">UNFILLED</th>
+        <th class="num">HIT RATE</th><th class="num">EXPECTED</th>
+        <th class="num">TIME TO FILL</th><th class="num">FILL &rarr; TARGET</th>
+        <th class="num">AVG RETURN</th><th class="num">NET / LOT</th>
+      </tr></thead><tbody>
+        
+      <tr><td><b>FUTURES</b></td>
+        <td class="num">0</td><td class="num">0</td><td class="num">0</td>
+        <td class="num up">0</td><td class="num down">0</td><td class="num">0</td>
+        <td class="num">0</td>
+        <td class="num"><b>&mdash;</b><div class="sub">of 0 finished</div></td>
+        <td class="num">&mdash;</td>
+        <td class="num">0 h</td><td class="num">0 h</td>
+        <td class="num up">&mdash;</td>
+        <td class="num up">&mdash;</td>
+      </tr>
+      <tr><td><b>CALLS</b></td>
+        <td class="num">0</td><td class="num">0</td><td class="num">0</td>
+        <td class="num up">0</td><td class="num down">0</td><td class="num">0</td>
+        <td class="num">0</td>
+        <td class="num"><b>&mdash;</b><div class="sub">of 0 finished</div></td>
+        <td class="num">&mdash;</td>
+        <td class="num">0 h</td><td class="num">0 h</td>
+        <td class="num up">&mdash;</td>
+        <td class="num up">&mdash;</td>
+      </tr>
+      <tr><td><b>PUTS</b></td>
+        <td class="num">0</td><td class="num">0</td><td class="num">0</td>
+        <td class="num up">0</td><td class="num down">0</td><td class="num">0</td>
+        <td class="num">0</td>
+        <td class="num"><b>&mdash;</b><div class="sub">of 0 finished</div></td>
+        <td class="num">&mdash;</td>
+        <td class="num">0 h</td><td class="num">0 h</td>
+        <td class="num up">&mdash;</td>
+        <td class="num up">&mdash;</td>
+      </tr>
+      <tr><td><b>ALL</b></td>
+        <td class="num">0</td><td class="num">0</td><td class="num">0</td>
+        <td class="num up">0</td><td class="num down">0</td><td class="num">0</td>
+        <td class="num">0</td>
+        <td class="num"><b>&mdash;</b><div class="sub">of 0 finished</div></td>
+        <td class="num">&mdash;</td>
+        <td class="num">0 h</td><td class="num">0 h</td>
+        <td class="num up">&mdash;</td>
+        <td class="num up">&mdash;</td>
+      </tr>
+      </tbody>
+    </table></div>
+    <div class="sub" style="margin:6px 0 18px">Hit rate counts only trades that filled and then finished. EXPECTED is what the desk
+      predicted for those same trades when it showed them &mdash; when the two disagree, the prediction is wrong, and this is where it shows.
+      Futures returns are GROSS per unit; options are NET of every charge per lot.</div>
+
+    <h2>Running now (0)</h2>
+    <div class="wrap"><table>
+      <thead><tr><th>CONTRACT</th><th class="num">SHOWN</th><th class="num">BUY</th><th class="num">TARGET</th><th class="num">STOP</th>
+        <th class="num">STATUS</th><th class="num">LAST</th><th class="num">EXPECTED TARGET</th></tr></thead>
+      <tbody><tr><td colspan="8">Nothing running. The first trades are recorded when the day&rsquo;s levels freeze, on the first build that sees a live exchange book.</td></tr></tbody>
+    </table></div>
+
+    <h2>Finished (latest 0 of 0)</h2>
+    <div class="wrap"><table>
+      <thead><tr><th>CONTRACT</th><th class="num">OUTCOME</th><th class="num">TIME TO FILL</th><th class="num">FILL &rarr; EXIT</th>
+        <th class="num">EXPECTED</th><th class="num">RESULT</th></tr></thead>
+      <tbody><tr><td colspan="6">Nothing has finished yet.</td></tr></tbody>
+    </table></div>
+
+    <div class="note" style="margin-top:14px">
+      <b>HOW THIS IS SCORED.</b> Every price this page freezes is bought on paper at the moment it is shown. Each build then
+      checks the market, using the day&rsquo;s high and low so a move between two builds is not missed. Every ambiguity counts
+      <i>against</i> the record: a target and a stop in the same window is a stop; a target in the same window as the fill is not
+      counted; a gap through the stop exits at the open; a fill is always at the limit, never better; a price from before the
+      level was shown can never fill it. Unfilled day orders die at 15:30. Futures are held at most 20 sessions; options until expiry.
+      <b>Stored</b> in the private repository under <code>docs/ledger/</code>, committed on every build, and copied to the Google Sheet.
+    </div>
+  </section>
 </main>
 
 <div class="note" style="margin-top:20px">
-  <b>WHERE THESE PRICES COME FROM.</b> All prices are from the <b>2026-09-23</b> settlement file. The market was closed when this was built, so nothing here is executable right now. <b class="up">Broker login OK</b> from the build server at 2026-09-23 22:14 IST
+  <b>WHERE THESE PRICES COME FROM.</b> All prices are from the <b>2026-09-23</b> settlement file. The market was closed when this was built, so nothing here is executable right now. <b class="up">Broker login OK</b> from the build server at 2026-09-23 22:29 IST
          &mdash; a NIFTY quote came back.
   This page is a <b>snapshot</b>, rebuilt on a schedule &mdash; it is not a live feed.
   <b>Check the price on your broker before placing anything.</b>
