@@ -64,7 +64,7 @@
     .wrap tbody td:first-child, .wrap tbody td[colspan] { grid-column:1 / -1 }
     .wrap td[data-label]:not([data-label=""])::before { content:attr(data-label); display:block; font-size:9px;
       letter-spacing:.06em; color:var(--muted); margin-bottom:2px }
-    .wrap tbody td:first-child::before { display:none }
+    .wrap tbody td[data-label]:first-child::before { display:none } /* outranks the label rule above */
     table.summary .sub { max-width:none; margin-left:0 }
   }
   #v-fut:checked ~ .tabs .t-fut { color:var(--bg); background:var(--amber); border-color:var(--amber) }
@@ -73,7 +73,7 @@
 </style></head><body>
 
 <h1>K&sup2; Desk</h1>
-<div class="stamp">Built 2026-09-27 21:08 IST &middot; no session today (last: Fri, 25 Sept) &middot; market WEEKEND &middot;
+<div class="stamp">Built 2026-09-27 21:14 IST &middot; no session today (last: Fri, 25 Sept) &middot; market WEEKEND &middot;
   2,127 contracts examined, 193 cleared every gate &middot; India VIX <b>12.18</b> (-4%) &middot; Nifty 23,140.5 (0.34%), NSE 15:30</div>
 
 <div class="note "><b>NO SESSION TODAY. THESE ROWS ARE PREVIEWS, NOT ORDERS.</b> The last session was <b>Fri, 25 Sept</b>; its buy limits were day orders and ended at 15:30 &mdash; what became of each is on <b>TRACK</b>. Every row below is worked from the last
@@ -851,7 +851,7 @@
         <td data-label="IV / REALISED" class="num">24.1% / 30%<div class="sub">VRP 0.8</div></td>
         <td data-label="P(TOUCH)" class="num">64.1%<div class="sub">touch, ~6.2d &mdash; ignores the stop</div><div class="sub">needs 50.4% wins to break even</div><div class="sub down">no trend: about &minus;₹100.1 a lot, plus the spread</div></td>
         <td data-label="DECAY" class="num ">9.1%</td>
-        <td data-label="SCORE" class="num">80.5</td>
+        <td data-label="SCORE" class="num">80.4</td>
       </tr>
       <tr>
         <td data-label="CONTRACT"><b class="name">JINDALSTEL OCT 1180 CE</b><div class="sub warn">another strike of JINDALSTEL &mdash; the same bet as the row above</div>
@@ -861,7 +861,7 @@
         <td data-label="SELL &middot; NET" class="num up"><b>₹38.15</b><div class="sub">net +₹7,837.34 a lot</div></td>
         <td data-label="STOP" class="num down">₹12.70<div class="sub down">net &minus;₹8,038.36 a lot</div></td>
         <td data-label="NOW" class="num">₹25.45<div class="sub ">PREVIEW, not an order</div></td>
-        <td data-label="IV / REALISED" class="num">23.4% / 30%<div class="sub">VRP 0.78</div></td>
+        <td data-label="IV / REALISED" class="num">23.5% / 30%<div class="sub">VRP 0.78</div></td>
         <td data-label="P(TOUCH)" class="num">60.9%<div class="sub">touch, ~7.1d &mdash; ignores the stop</div><div class="sub">needs 50.6% wins to break even</div><div class="sub down">no trend: about &minus;₹84.89 a lot, plus the spread</div></td>
         <td data-label="DECAY" class="num down">14.31%</td>
         <td data-label="SCORE" class="num">77.9</td>
@@ -941,7 +941,7 @@
         <td data-label="NOW" class="num">₹6.00<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">21.5% / 24%<div class="sub">VRP 0.89</div></td>
         <td data-label="P(TOUCH)" class="num">50.3%<div class="sub">touch, ~9.9d &mdash; ignores the stop</div><div class="sub">needs 50.8% wins to break even</div><div class="sub down">no trend: about &minus;₹67.12 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">25.88%</td>
+        <td data-label="DECAY" class="num down">25.89%</td>
         <td data-label="SCORE" class="num">68.3</td>
       </tr>
       <tr>
@@ -954,7 +954,7 @@
         <td data-label="NOW" class="num">₹10.20<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">18.5% / 21.1%<div class="sub">VRP 0.88</div></td>
         <td data-label="P(TOUCH)" class="num">61.3%<div class="sub">touch, ~7.1d &mdash; ignores the stop</div><div class="sub">needs 50.6% wins to break even</div><div class="sub down">no trend: about &minus;₹79.85 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num ">10.28%</td>
+        <td data-label="DECAY" class="num ">10.29%</td>
         <td data-label="SCORE" class="num">79</td>
       </tr>
       <tr>
@@ -993,7 +993,7 @@
         <td data-label="NOW" class="num">₹5.75<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">18.5% / 21.1%<div class="sub">VRP 0.88</div></td>
         <td data-label="P(TOUCH)" class="num">52.6%<div class="sub">touch, ~9.3d &mdash; ignores the stop</div><div class="sub">needs 50.4% wins to break even</div><div class="sub down">no trend: about &minus;₹65.67 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">23.03%</td>
+        <td data-label="DECAY" class="num down">23.04%</td>
         <td data-label="SCORE" class="num">69.5</td>
       </tr>
       <tr>
@@ -1058,7 +1058,7 @@
         <td data-label="NOW" class="num">₹18.70<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">15.5% / 18.1%<div class="sub">VRP 0.86</div></td>
         <td data-label="P(TOUCH)" class="num">51.6%<div class="sub">touch, ~9.6d &mdash; ignores the stop</div><div class="sub">needs 51% wins to break even</div><div class="sub down">no trend: about &minus;₹62.72 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">25.97%</td>
+        <td data-label="DECAY" class="num down">25.98%</td>
         <td data-label="SCORE" class="num">67.4</td>
       </tr>
       <tr>
@@ -1136,7 +1136,7 @@
         <td data-label="NOW" class="num">₹2.05<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">17.8% / 18.4%<div class="sub">VRP 0.97</div></td>
         <td data-label="P(TOUCH)" class="num">37.6%<div class="sub">touch, ~13.3d &mdash; ignores the stop</div><div class="sub">needs 51.5% wins to break even</div><div class="sub down">no trend: about &minus;₹55.59 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">47.72%</td>
+        <td data-label="DECAY" class="num down">47.73%</td>
         <td data-label="SCORE" class="num">61.8</td>
       </tr>
       <tr>
@@ -1175,7 +1175,7 @@
         <td data-label="NOW" class="num">₹18.00<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">25% / 24.9%<div class="sub">VRP 1.01</div></td>
         <td data-label="P(TOUCH)" class="num">44.7%<div class="sub">touch, ~11.3d &mdash; ignores the stop</div><div class="sub">needs 50.8% wins to break even</div><div class="sub down">no trend: about &minus;₹68.54 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">30.22%</td>
+        <td data-label="DECAY" class="num down">30.23%</td>
         <td data-label="SCORE" class="num">67.3</td>
       </tr>
       <tr>
@@ -1214,7 +1214,7 @@
         <td data-label="NOW" class="num">₹29.50<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">33% / 31.5%<div class="sub">VRP 1.05</div></td>
         <td data-label="P(TOUCH)" class="num">37.7%<div class="sub">touch, ~13.1d &mdash; ignores the stop</div><div class="sub">needs 50.7% wins to break even</div><div class="sub down">no trend: about &minus;₹69.93 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">41.48%</td>
+        <td data-label="DECAY" class="num down">41.49%</td>
         <td data-label="SCORE" class="num">64.2</td>
       </tr>
       <tr>
@@ -1318,7 +1318,7 @@
         <td data-label="NOW" class="num">₹101.30<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">23.8% / 24.9%<div class="sub">VRP 0.96</div></td>
         <td data-label="P(TOUCH)" class="num">50.4%<div class="sub">touch, ~9.8d &mdash; ignores the stop</div><div class="sub">needs 50.5% wins to break even</div><div class="sub down">no trend: about &minus;₹83.23 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">22.8%</td>
+        <td data-label="DECAY" class="num down">22.81%</td>
         <td data-label="SCORE" class="num">69</td>
       </tr>
       <tr>
@@ -1331,7 +1331,7 @@
         <td data-label="NOW" class="num">₹71.00<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">24.3% / 24.9%<div class="sub">VRP 0.98</div></td>
         <td data-label="P(TOUCH)" class="num">42%<div class="sub">touch, ~12d &mdash; ignores the stop</div><div class="sub">needs 50.7% wins to break even</div><div class="sub down">no trend: about &minus;₹72.45 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">36.97%</td>
+        <td data-label="DECAY" class="num down">36.98%</td>
         <td data-label="SCORE" class="num">61.9</td>
       </tr>
       <tr>
@@ -1370,7 +1370,7 @@
         <td data-label="NOW" class="num">₹18.00<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">23.2% / 23%<div class="sub">VRP 1.01</div></td>
         <td data-label="P(TOUCH)" class="num">48.3%<div class="sub">touch, ~10.4d &mdash; ignores the stop</div><div class="sub">needs 50.6% wins to break even</div><div class="sub down">no trend: about &minus;₹77.07 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">24.11%</td>
+        <td data-label="DECAY" class="num down">24.12%</td>
         <td data-label="SCORE" class="num">68.8</td>
       </tr>
       <tr>
@@ -1396,7 +1396,7 @@
         <td data-label="NOW" class="num">₹54.70<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">28.9% / 26.4%<div class="sub">VRP 1.09</div></td>
         <td data-label="P(TOUCH)" class="num">52.4%<div class="sub">touch, ~9.3d &mdash; ignores the stop</div><div class="sub">needs 50.4% wins to break even</div><div class="sub down">no trend: about &minus;₹125.02 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">14.22%</td>
+        <td data-label="DECAY" class="num down">14.23%</td>
         <td data-label="SCORE" class="num">76.4</td>
       </tr>
       <tr>
@@ -1474,7 +1474,7 @@
         <td data-label="NOW" class="num">₹61.25<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">23.5% / 21.5%<div class="sub">VRP 1.09</div></td>
         <td data-label="P(TOUCH)" class="num">46.2%<div class="sub">touch, ~11d &mdash; ignores the stop</div><div class="sub">needs 50.6% wins to break even</div><div class="sub down">no trend: about &minus;₹76.26 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">23.95%</td>
+        <td data-label="DECAY" class="num down">23.96%</td>
         <td data-label="SCORE" class="num">69.9</td>
       </tr>
       <tr>
@@ -1552,7 +1552,7 @@
         <td data-label="NOW" class="num">₹38.85<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">27.6% / 26.7%<div class="sub">VRP 1.04</div></td>
         <td data-label="P(TOUCH)" class="num">41%<div class="sub">touch, ~12.3d &mdash; ignores the stop</div><div class="sub">needs 50.5% wins to break even</div><div class="sub down">no trend: about &minus;₹81.76 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">35.82%</td>
+        <td data-label="DECAY" class="num down">35.83%</td>
         <td data-label="SCORE" class="num">61.9</td>
       </tr>
       <tr>
@@ -1682,7 +1682,7 @@
         <td data-label="NOW" class="num">₹11.10<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">18.1% / 17%<div class="sub">VRP 1.06</div></td>
         <td data-label="P(TOUCH)" class="num">41.3%<div class="sub">touch, ~12.3d &mdash; ignores the stop</div><div class="sub">needs 50.8% wins to break even</div><div class="sub down">no trend: about &minus;₹66.94 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">34.29%</td>
+        <td data-label="DECAY" class="num down">34.3%</td>
         <td data-label="SCORE" class="num">65.8</td>
       </tr>
       <tr>
@@ -1695,7 +1695,7 @@
         <td data-label="NOW" class="num">₹8.15<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">18% / 17%<div class="sub">VRP 1.06</div></td>
         <td data-label="P(TOUCH)" class="num">35.1%<div class="sub">touch, ~13.9d &mdash; ignores the stop</div><div class="sub">needs 50.7% wins to break even</div><div class="sub down">no trend: about &minus;₹61.73 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">47.56%</td>
+        <td data-label="DECAY" class="num down">47.57%</td>
         <td data-label="SCORE" class="num">62.6</td>
       </tr>
       <tr>
@@ -1708,7 +1708,7 @@
         <td data-label="NOW" class="num">₹33.10<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">29.9% / 26.7%<div class="sub">VRP 1.12</div></td>
         <td data-label="P(TOUCH)" class="num">50%<div class="sub">touch, ~9.9d &mdash; ignores the stop</div><div class="sub">needs 50.4% wins to break even</div><div class="sub down">no trend: about &minus;₹111.94 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">16.81%</td>
+        <td data-label="DECAY" class="num down">16.82%</td>
         <td data-label="SCORE" class="num">75.3</td>
       </tr>
       <tr>
@@ -1719,9 +1719,9 @@
         <td data-label="SELL &middot; NET" class="num up"><b>₹66.00</b><div class="sub">net +₹17,981.88 a lot</div></td>
         <td data-label="STOP" class="num down">₹22.00<div class="sub down">net &minus;₹18,248.41 a lot</div></td>
         <td data-label="NOW" class="num">₹44.00<div class="sub ">PREVIEW, not an order</div></td>
-        <td data-label="IV / REALISED" class="num">30.3% / 26.7%<div class="sub">VRP 1.14</div></td>
+        <td data-label="IV / REALISED" class="num">30.4% / 26.7%<div class="sub">VRP 1.14</div></td>
         <td data-label="P(TOUCH)" class="num">53%<div class="sub">touch, ~9.1d &mdash; ignores the stop</div><div class="sub">needs 50.4% wins to break even</div><div class="sub down">no trend: about &minus;₹133.26 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num ">11.37%</td>
+        <td data-label="DECAY" class="num ">11.38%</td>
         <td data-label="SCORE" class="num">73.2</td>
       </tr>
       <tr>
@@ -1734,7 +1734,7 @@
         <td data-label="NOW" class="num">₹57.50<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">31.6% / 26.7%<div class="sub">VRP 1.18</div></td>
         <td data-label="P(TOUCH)" class="num">52.8%<div class="sub">touch, ~9.2d &mdash; ignores the stop</div><div class="sub">needs 50.3% wins to break even</div><div class="sub down">no trend: about &minus;₹159.67 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num ">8.4%</td>
+        <td data-label="DECAY" class="num ">8.41%</td>
         <td data-label="SCORE" class="num">71.9</td>
       </tr>
       <tr>
@@ -1747,7 +1747,7 @@
         <td data-label="NOW" class="num">₹23.10<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">28.6% / 26.7%<div class="sub">VRP 1.07</div></td>
         <td data-label="P(TOUCH)" class="num">46%<div class="sub">touch, ~10.9d &mdash; ignores the stop</div><div class="sub">needs 50.5% wins to break even</div><div class="sub down">no trend: about &minus;₹92.38 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">24.83%</td>
+        <td data-label="DECAY" class="num down">24.84%</td>
         <td data-label="SCORE" class="num">68.9</td>
       </tr>
       <tr>
@@ -1773,7 +1773,7 @@
         <td data-label="NOW" class="num">₹52.40<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">26.2% / 27.3%<div class="sub">VRP 0.96</div></td>
         <td data-label="P(TOUCH)" class="num">54.5%<div class="sub">touch, ~8.7d &mdash; ignores the stop</div><div class="sub">needs 50.5% wins to break even</div><div class="sub down">no trend: about &minus;₹90.68 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">16.28%</td>
+        <td data-label="DECAY" class="num down">16.29%</td>
         <td data-label="SCORE" class="num">75.2</td>
       </tr>
       <tr>
@@ -1786,7 +1786,7 @@
         <td data-label="NOW" class="num">₹258.50<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">26.4% / 25%<div class="sub">VRP 1.06</div></td>
         <td data-label="P(TOUCH)" class="num">53.1%<div class="sub">touch, ~9.1d &mdash; ignores the stop</div><div class="sub">needs 50.4% wins to break even</div><div class="sub down">no trend: about &minus;₹123.81 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">14.71%</td>
+        <td data-label="DECAY" class="num down">14.72%</td>
         <td data-label="SCORE" class="num">75</td>
       </tr>
       <tr>
@@ -1864,7 +1864,7 @@
         <td data-label="NOW" class="num">₹126.00<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">20.1% / 19.1%<div class="sub">VRP 1.05</div></td>
         <td data-label="P(TOUCH)" class="num">47.9%<div class="sub">touch, ~10.6d &mdash; ignores the stop</div><div class="sub">needs 50.6% wins to break even</div><div class="sub down">no trend: about &minus;₹77.07 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">23.18%</td>
+        <td data-label="DECAY" class="num down">23.19%</td>
         <td data-label="SCORE" class="num">69.8</td>
       </tr>
       <tr>
@@ -1903,7 +1903,7 @@
         <td data-label="NOW" class="num">₹4.69<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">28% / 25.5%<div class="sub">VRP 1.09</div></td>
         <td data-label="P(TOUCH)" class="num">43.8%<div class="sub">touch, ~11.5d &mdash; ignores the stop</div><div class="sub">needs 50.6% wins to break even</div><div class="sub down">no trend: about &minus;₹71.13 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">27.48%</td>
+        <td data-label="DECAY" class="num down">27.49%</td>
         <td data-label="SCORE" class="num">66.4</td>
       </tr>
       <tr>
@@ -1942,7 +1942,7 @@
         <td data-label="NOW" class="num">₹13.95<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">30.7% / 29.1%<div class="sub">VRP 1.05</div></td>
         <td data-label="P(TOUCH)" class="num">56.5%<div class="sub">touch, ~8.2d &mdash; ignores the stop</div><div class="sub">needs 50.6% wins to break even</div><div class="sub down">no trend: about &minus;₹100.04 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num ">9.36%</td>
+        <td data-label="DECAY" class="num ">9.37%</td>
         <td data-label="SCORE" class="num">73.5</td>
       </tr>
       <tr>
@@ -1968,7 +1968,7 @@
         <td data-label="NOW" class="num">₹8.75<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">30.5% / 29.1%<div class="sub">VRP 1.05</div></td>
         <td data-label="P(TOUCH)" class="num">50.6%<div class="sub">touch, ~9.7d &mdash; ignores the stop</div><div class="sub">needs 50.3% wins to break even</div><div class="sub down">no trend: about &minus;₹80.47 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">18.55%</td>
+        <td data-label="DECAY" class="num down">18.56%</td>
         <td data-label="SCORE" class="num">72.4</td>
       </tr>
       <tr>
@@ -2007,7 +2007,7 @@
         <td data-label="NOW" class="num">₹4.10<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">31.5% / 29.1%<div class="sub">VRP 1.08</div></td>
         <td data-label="P(TOUCH)" class="num">32.8%<div class="sub">touch, ~14.4d &mdash; ignores the stop</div><div class="sub">needs 51% wins to break even</div><div class="sub down">no trend: about &minus;₹62.75 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">50.59%</td>
+        <td data-label="DECAY" class="num down">50.6%</td>
         <td data-label="SCORE" class="num">59.7</td>
       </tr>
       <tr>
@@ -2046,7 +2046,7 @@
         <td data-label="NOW" class="num">₹7.65<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">30.6% / 27%<div class="sub">VRP 1.13</div></td>
         <td data-label="P(TOUCH)" class="num">46.5%<div class="sub">touch, ~10.8d &mdash; ignores the stop</div><div class="sub">needs 50.4% wins to break even</div><div class="sub down">no trend: about &minus;₹68.12 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">21.57%</td>
+        <td data-label="DECAY" class="num down">21.58%</td>
         <td data-label="SCORE" class="num">70.4</td>
       </tr>
       <tr>
@@ -2059,7 +2059,7 @@
         <td data-label="NOW" class="num">₹5.85<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">30.9% / 27%<div class="sub">VRP 1.15</div></td>
         <td data-label="P(TOUCH)" class="num">40.3%<div class="sub">touch, ~12.4d &mdash; ignores the stop</div><div class="sub">needs 51.4% wins to break even</div><div class="sub down">no trend: about &minus;₹63.09 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">31.46%</td>
+        <td data-label="DECAY" class="num down">31.47%</td>
         <td data-label="SCORE" class="num">65.1</td>
       </tr>
       <tr>
@@ -2072,7 +2072,7 @@
         <td data-label="NOW" class="num">₹4.30<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">30.9% / 27%<div class="sub">VRP 1.14</div></td>
         <td data-label="P(TOUCH)" class="num">33.7%<div class="sub">touch, ~14.2d &mdash; ignores the stop</div><div class="sub">needs 51.2% wins to break even</div><div class="sub down">no trend: about &minus;₹58.93 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">44.98%</td>
+        <td data-label="DECAY" class="num down">44.99%</td>
         <td data-label="SCORE" class="num">61.5</td>
       </tr>
       <tr>
@@ -2137,7 +2137,7 @@
         <td data-label="NOW" class="num">₹5.90<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">21.8% / 19.3%<div class="sub">VRP 1.13</div></td>
         <td data-label="P(TOUCH)" class="num">40%<div class="sub">touch, ~12.6d &mdash; ignores the stop</div><div class="sub">needs 50.6% wins to break even</div><div class="sub down">no trend: about &minus;₹75.18 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">33.32%</td>
+        <td data-label="DECAY" class="num down">33.33%</td>
         <td data-label="SCORE" class="num">65.8</td>
       </tr>
       <tr>
@@ -2174,7 +2174,7 @@
         <td data-label="SELL &middot; NET" class="num up"><b>₹40.60</b><div class="sub">net +₹8,365.2 a lot</div></td>
         <td data-label="STOP" class="num down">₹13.55<div class="sub down">net &minus;₹8,508.58 a lot</div></td>
         <td data-label="NOW" class="num">₹27.05<div class="sub ">PREVIEW, not an order</div></td>
-        <td data-label="IV / REALISED" class="num">23.7% / 20.2%<div class="sub">VRP 1.17</div></td>
+        <td data-label="IV / REALISED" class="num">23.8% / 20.2%<div class="sub">VRP 1.17</div></td>
         <td data-label="P(TOUCH)" class="num">45.2%<div class="sub">touch, ~11.2d &mdash; ignores the stop</div><div class="sub">needs 50.4% wins to break even</div><div class="sub down">no trend: about &minus;₹87.32 a lot, plus the spread</div></td>
         <td data-label="DECAY" class="num down">22.11%</td>
         <td data-label="SCORE" class="num">68.9</td>
@@ -2202,7 +2202,7 @@
         <td data-label="NOW" class="num">₹16.45<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">23.9% / 20.2%<div class="sub">VRP 1.18</div></td>
         <td data-label="P(TOUCH)" class="num">34.3%<div class="sub">touch, ~14.1d &mdash; ignores the stop</div><div class="sub">needs 50.8% wins to break even</div><div class="sub down">no trend: about &minus;₹71.55 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">41.77%</td>
+        <td data-label="DECAY" class="num down">41.78%</td>
         <td data-label="SCORE" class="num">61.4</td>
       </tr>
       <tr>
@@ -2215,7 +2215,7 @@
         <td data-label="NOW" class="num">₹13.75<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">24% / 20.2%<div class="sub">VRP 1.18</div></td>
         <td data-label="P(TOUCH)" class="num">30.3%<div class="sub">touch, ~15.1d &mdash; ignores the stop</div><div class="sub">needs 50.6% wins to break even</div><div class="sub down">no trend: about &minus;₹67.61 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">50.52%</td>
+        <td data-label="DECAY" class="num down">50.53%</td>
         <td data-label="SCORE" class="num">59.4</td>
       </tr>
       <tr>
@@ -2267,7 +2267,7 @@
         <td data-label="NOW" class="num">₹197.00<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">19.5% / 17.6%<div class="sub">VRP 1.11</div></td>
         <td data-label="P(TOUCH)" class="num">46.5%<div class="sub">touch, ~10.9d &mdash; ignores the stop</div><div class="sub">needs 50.6% wins to break even</div><div class="sub down">no trend: about &minus;₹82.23 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">22.89%</td>
+        <td data-label="DECAY" class="num down">22.9%</td>
         <td data-label="SCORE" class="num">70.3</td>
       </tr>
       <tr>
@@ -2423,7 +2423,7 @@
         <td data-label="NOW" class="num">₹4.20<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">22.1% / 18.5%<div class="sub">VRP 1.19</div></td>
         <td data-label="P(TOUCH)" class="num">30.2%<div class="sub">touch, ~15.2d &mdash; ignores the stop</div><div class="sub">needs 51% wins to break even</div><div class="sub down">no trend: about &minus;₹61.39 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">50.6%</td>
+        <td data-label="DECAY" class="num down">50.61%</td>
         <td data-label="SCORE" class="num">61.2</td>
       </tr>
       <tr>
@@ -2462,7 +2462,7 @@
         <td data-label="NOW" class="num">₹3.89<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">28.2% / 24.9%<div class="sub">VRP 1.13</div></td>
         <td data-label="P(TOUCH)" class="num">42.5%<div class="sub">touch, ~11.9d &mdash; ignores the stop</div><div class="sub">needs 50.4% wins to break even</div><div class="sub down">no trend: about &minus;₹88.05 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">28.4%</td>
+        <td data-label="DECAY" class="num down">28.41%</td>
         <td data-label="SCORE" class="num">66.2</td>
       </tr>
       <tr>
@@ -2475,7 +2475,7 @@
         <td data-label="NOW" class="num">₹2.50<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">28.9% / 24.9%<div class="sub">VRP 1.16</div></td>
         <td data-label="P(TOUCH)" class="num">31.1%<div class="sub">touch, ~14.9d &mdash; ignores the stop</div><div class="sub">needs 50.7% wins to break even</div><div class="sub down">no trend: about &minus;₹73.43 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">49.99%</td>
+        <td data-label="DECAY" class="num down">50%</td>
         <td data-label="SCORE" class="num">60.5</td>
       </tr>
       <tr>
@@ -2512,9 +2512,9 @@
         <td data-label="SELL &middot; NET" class="num up"><b>₹15.15</b><div class="sub">net +₹12,117.46 a lot</div></td>
         <td data-label="STOP" class="num down">₹5.05<div class="sub down">net &minus;₹12,328 a lot</div></td>
         <td data-label="NOW" class="num">₹10.10<div class="sub ">PREVIEW, not an order</div></td>
-        <td data-label="IV / REALISED" class="num">30.7% / 27%<div class="sub">VRP 1.14</div></td>
+        <td data-label="IV / REALISED" class="num">30.8% / 27%<div class="sub">VRP 1.14</div></td>
         <td data-label="P(TOUCH)" class="num">47%<div class="sub">touch, ~10.7d &mdash; ignores the stop</div><div class="sub">needs 50.4% wins to break even</div><div class="sub down">no trend: about &minus;₹105.27 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">20.61%</td>
+        <td data-label="DECAY" class="num down">20.62%</td>
         <td data-label="SCORE" class="num">70.5</td>
       </tr>
       <tr>
@@ -2540,7 +2540,7 @@
         <td data-label="NOW" class="num">₹6.40<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">30.7% / 27%<div class="sub">VRP 1.14</div></td>
         <td data-label="P(TOUCH)" class="num">37.6%<div class="sub">touch, ~13.2d &mdash; ignores the stop</div><div class="sub">needs 50.5% wins to break even</div><div class="sub down">no trend: about &minus;₹84 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">37.15%</td>
+        <td data-label="DECAY" class="num down">37.16%</td>
         <td data-label="SCORE" class="num">63.1</td>
       </tr>
       <tr>
@@ -2605,7 +2605,7 @@
         <td data-label="NOW" class="num">₹46.15<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">19.2% / 15.8%<div class="sub">VRP 1.22</div></td>
         <td data-label="P(TOUCH)" class="num">34.8%<div class="sub">touch, ~14d &mdash; ignores the stop</div><div class="sub">needs 50.9% wins to break even</div><div class="sub down">no trend: about &minus;₹66.34 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">39.36%</td>
+        <td data-label="DECAY" class="num down">39.37%</td>
         <td data-label="SCORE" class="num">63.4</td>
       </tr>
       <tr>
@@ -2631,7 +2631,7 @@
         <td data-label="NOW" class="num">₹35.30<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">31.7% / 30.3%<div class="sub">VRP 1.05</div></td>
         <td data-label="P(TOUCH)" class="num">50.7%<div class="sub">touch, ~9.7d &mdash; ignores the stop</div><div class="sub">needs 50.6% wins to break even</div><div class="sub down">no trend: about &minus;₹82.77 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">18.49%</td>
+        <td data-label="DECAY" class="num down">18.5%</td>
         <td data-label="SCORE" class="num">72.8</td>
       </tr>
       <tr>
@@ -2644,7 +2644,7 @@
         <td data-label="NOW" class="num">₹28.90<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">33% / 30.3%<div class="sub">VRP 1.09</div></td>
         <td data-label="P(TOUCH)" class="num">44.4%<div class="sub">touch, ~11.3d &mdash; ignores the stop</div><div class="sub">needs 50.6% wins to break even</div><div class="sub down">no trend: about &minus;₹76.32 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">26.66%</td>
+        <td data-label="DECAY" class="num down">26.67%</td>
         <td data-label="SCORE" class="num">67.3</td>
       </tr>
       <tr>
@@ -2670,7 +2670,7 @@
         <td data-label="NOW" class="num">₹17.40<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">33.5% / 30.3%<div class="sub">VRP 1.1</div></td>
         <td data-label="P(TOUCH)" class="num">32.5%<div class="sub">touch, ~14.4d &mdash; ignores the stop</div><div class="sub">needs 50.9% wins to break even</div><div class="sub down">no trend: about &minus;₹64.73 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">49.6%</td>
+        <td data-label="DECAY" class="num down">49.61%</td>
         <td data-label="SCORE" class="num">61.1</td>
       </tr>
       <tr>
@@ -2709,7 +2709,7 @@
         <td data-label="NOW" class="num">₹362.75<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">34.8% / 27.4%<div class="sub">VRP 1.27</div></td>
         <td data-label="P(TOUCH)" class="num">38%<div class="sub">touch, ~13d &mdash; ignores the stop</div><div class="sub">needs 50.5% wins to break even</div><div class="sub down">no trend: about &minus;₹90.21 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">30.13%</td>
+        <td data-label="DECAY" class="num down">30.14%</td>
         <td data-label="SCORE" class="num">65.6</td>
       </tr>
       <tr>
@@ -2722,7 +2722,7 @@
         <td data-label="NOW" class="num">₹216.00<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">35.2% / 27.4%<div class="sub">VRP 1.29</div></td>
         <td data-label="P(TOUCH)" class="num">25.7%<div class="sub">touch, ~16.3d &mdash; ignores the stop</div><div class="sub">needs 50.7% wins to break even</div><div class="sub down">no trend: about &minus;₹72.81 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">55.71%</td>
+        <td data-label="DECAY" class="num down">55.72%</td>
         <td data-label="SCORE" class="num">59.4</td>
       </tr>
       <tr>
@@ -2735,7 +2735,7 @@
         <td data-label="NOW" class="num">₹277.00<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">34.6% / 27.4%<div class="sub">VRP 1.27</div></td>
         <td data-label="P(TOUCH)" class="num">32.2%<div class="sub">touch, ~14.5d &mdash; ignores the stop</div><div class="sub">needs 50.6% wins to break even</div><div class="sub down">no trend: about &minus;₹80.04 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">41.37%</td>
+        <td data-label="DECAY" class="num down">41.38%</td>
         <td data-label="SCORE" class="num">59.3</td>
       </tr>
       <tr>
@@ -2761,7 +2761,7 @@
         <td data-label="NOW" class="num">₹11.45<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">31.5% / 26.6%<div class="sub">VRP 1.18</div></td>
         <td data-label="P(TOUCH)" class="num">38.3%<div class="sub">touch, ~13d &mdash; ignores the stop</div><div class="sub">needs 50.9% wins to break even</div><div class="sub down">no trend: about &minus;₹72.94 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">33.52%</td>
+        <td data-label="DECAY" class="num down">33.53%</td>
         <td data-label="SCORE" class="num">63.4</td>
       </tr>
       <tr>
@@ -2774,7 +2774,7 @@
         <td data-label="NOW" class="num">₹8.80<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">32.2% / 26.6%<div class="sub">VRP 1.21</div></td>
         <td data-label="P(TOUCH)" class="num">30.9%<div class="sub">touch, ~14.9d &mdash; ignores the stop</div><div class="sub">needs 50.8% wins to break even</div><div class="sub down">no trend: about &minus;₹67.02 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">47.23%</td>
+        <td data-label="DECAY" class="num down">47.24%</td>
         <td data-label="SCORE" class="num">58.6</td>
       </tr>
       <tr>
@@ -2798,7 +2798,7 @@
         <td data-label="SELL &middot; NET" class="num up"><b>₹11.95</b><div class="sub">net +₹4,919.64 a lot</div></td>
         <td data-label="STOP" class="num down">₹4.00<div class="sub down">net &minus;₹4,998.78 a lot</div></td>
         <td data-label="NOW" class="num">₹7.95<div class="sub ">PREVIEW, not an order</div></td>
-        <td data-label="IV / REALISED" class="num">21.7% / 18.1%<div class="sub">VRP 1.2</div></td>
+        <td data-label="IV / REALISED" class="num">21.8% / 18.1%<div class="sub">VRP 1.2</div></td>
         <td data-label="P(TOUCH)" class="num">44.1%<div class="sub">touch, ~11.5d &mdash; ignores the stop</div><div class="sub">needs 50.4% wins to break even</div><div class="sub down">no trend: about &minus;₹70.82 a lot, plus the spread</div></td>
         <td data-label="DECAY" class="num down">22.8%</td>
         <td data-label="SCORE" class="num">67.7</td>
@@ -2813,7 +2813,7 @@
         <td data-label="NOW" class="num">₹4.45<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">21.8% / 18.1%<div class="sub">VRP 1.21</div></td>
         <td data-label="P(TOUCH)" class="num">31.8%<div class="sub">touch, ~14.8d &mdash; ignores the stop</div><div class="sub">needs 50.5% wins to break even</div><div class="sub down">no trend: about &minus;₹60.45 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">46.35%</td>
+        <td data-label="DECAY" class="num down">46.36%</td>
         <td data-label="SCORE" class="num">59.6</td>
       </tr>
       <tr>
@@ -2839,7 +2839,7 @@
         <td data-label="NOW" class="num">₹325.00<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">21.7% / 17.3%<div class="sub">VRP 1.26</div></td>
         <td data-label="P(TOUCH)" class="num">46.8%<div class="sub">touch, ~10.9d &mdash; ignores the stop</div><div class="sub">needs 50.5% wins to break even</div><div class="sub down">no trend: about &minus;₹85.73 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">16.57%</td>
+        <td data-label="DECAY" class="num down">16.58%</td>
         <td data-label="SCORE" class="num">72</td>
       </tr>
       <tr>
@@ -2891,8 +2891,8 @@
         <td data-label="NOW" class="num">₹132.50<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">21.7% / 17.3%<div class="sub">VRP 1.26</div></td>
         <td data-label="P(TOUCH)" class="num">28.7%<div class="sub">touch, ~15.6d &mdash; ignores the stop</div><div class="sub">needs 51% wins to break even</div><div class="sub down">no trend: about &minus;₹62.91 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">50.58%</td>
-        <td data-label="SCORE" class="num">56.7</td>
+        <td data-label="DECAY" class="num down">50.59%</td>
+        <td data-label="SCORE" class="num">56.6</td>
       </tr>
       <tr>
         <td data-label="CONTRACT"><b class="name">MARUTI OCT 12700 CE</b><div class="sub warn">another strike of MARUTI &mdash; the same bet as the row above</div>
@@ -2904,7 +2904,7 @@
         <td data-label="NOW" class="num">₹112.95<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">22.2% / 17.3%<div class="sub">VRP 1.28</div></td>
         <td data-label="P(TOUCH)" class="num">23.9%<div class="sub">touch, ~16.9d &mdash; ignores the stop</div><div class="sub">needs 51.1% wins to break even</div><div class="sub down">no trend: about &minus;₹60.59 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">61.42%</td>
+        <td data-label="DECAY" class="num down">61.43%</td>
         <td data-label="SCORE" class="num">55.9</td>
       </tr>
       <tr>
@@ -2930,7 +2930,7 @@
         <td data-label="NOW" class="num">₹13.80<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">23.4% / 21%<div class="sub">VRP 1.11</div></td>
         <td data-label="P(TOUCH)" class="num">40.7%<div class="sub">touch, ~12.4d &mdash; ignores the stop</div><div class="sub">needs 50.9% wins to break even</div><div class="sub down">no trend: about &minus;₹63.56 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">32.66%</td>
+        <td data-label="DECAY" class="num down">32.67%</td>
         <td data-label="SCORE" class="num">63.4</td>
       </tr>
       <tr>
@@ -2969,7 +2969,7 @@
         <td data-label="NOW" class="num">₹4.42<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">30.4% / 23.6%<div class="sub">VRP 1.29</div></td>
         <td data-label="P(TOUCH)" class="num">39.8%<div class="sub">touch, ~12.6d &mdash; ignores the stop</div><div class="sub">needs 50.6% wins to break even</div><div class="sub down">no trend: about &minus;₹78.64 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">26.3%</td>
+        <td data-label="DECAY" class="num down">26.31%</td>
         <td data-label="SCORE" class="num">67.4</td>
       </tr>
       <tr>
@@ -2982,7 +2982,7 @@
         <td data-label="NOW" class="num">₹3.55<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">30.8% / 23.6%<div class="sub">VRP 1.3</div></td>
         <td data-label="P(TOUCH)" class="num">34.3%<div class="sub">touch, ~14d &mdash; ignores the stop</div><div class="sub">needs 50.7% wins to break even</div><div class="sub down">no trend: about &minus;₹72.45 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">35.5%</td>
+        <td data-label="DECAY" class="num down">35.51%</td>
         <td data-label="SCORE" class="num">64.4</td>
       </tr>
       <tr>
@@ -2995,7 +2995,7 @@
         <td data-label="NOW" class="num">₹2.80<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">31% / 23.6%<div class="sub">VRP 1.31</div></td>
         <td data-label="P(TOUCH)" class="num">28.6%<div class="sub">touch, ~15.5d &mdash; ignores the stop</div><div class="sub">needs 50.8% wins to break even</div><div class="sub down">no trend: about &minus;₹67.12 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">47.05%</td>
+        <td data-label="DECAY" class="num down">47.06%</td>
         <td data-label="SCORE" class="num">61.4</td>
       </tr>
       <tr>
@@ -3008,7 +3008,7 @@
         <td data-label="NOW" class="num">₹2.16<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">31% / 23.6%<div class="sub">VRP 1.31</div></td>
         <td data-label="P(TOUCH)" class="num">23%<div class="sub">touch, ~17d &mdash; ignores the stop</div><div class="sub">needs 51% wins to break even</div><div class="sub down">no trend: about &minus;₹62.57 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">61.14%</td>
+        <td data-label="DECAY" class="num down">61.15%</td>
         <td data-label="SCORE" class="num">58.6</td>
       </tr>
       <tr>
@@ -3047,7 +3047,7 @@
         <td data-label="NOW" class="num">₹46.20<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">31% / 25.4%<div class="sub">VRP 1.22</div></td>
         <td data-label="P(TOUCH)" class="num">36.5%<div class="sub">touch, ~13.4d &mdash; ignores the stop</div><div class="sub">needs 50.7% wins to break even</div><div class="sub down">no trend: about &minus;₹71.85 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">34.96%</td>
+        <td data-label="DECAY" class="num down">34.97%</td>
         <td data-label="SCORE" class="num">64.9</td>
       </tr>
       <tr>
@@ -3060,7 +3060,7 @@
         <td data-label="NOW" class="num">₹31.15<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">30.8% / 25.4%<div class="sub">VRP 1.21</div></td>
         <td data-label="P(TOUCH)" class="num">28.5%<div class="sub">touch, ~15.5d &mdash; ignores the stop</div><div class="sub">needs 51% wins to break even</div><div class="sub down">no trend: about &minus;₹63.81 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">52.96%</td>
+        <td data-label="DECAY" class="num down">52.97%</td>
         <td data-label="SCORE" class="num">60.7</td>
       </tr>
       <tr>
@@ -3125,7 +3125,7 @@
         <td data-label="NOW" class="num">₹4.45<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">24.5% / 19.4%<div class="sub">VRP 1.26</div></td>
         <td data-label="P(TOUCH)" class="num">31.8%<div class="sub">touch, ~14.8d &mdash; ignores the stop</div><div class="sub">needs 50.4% wins to break even</div><div class="sub down">no trend: about &minus;₹63.89 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">43.13%</td>
+        <td data-label="DECAY" class="num down">43.14%</td>
         <td data-label="SCORE" class="num">60.9</td>
       </tr>
       <tr>
@@ -3190,7 +3190,7 @@
         <td data-label="NOW" class="num">₹3.20<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">27% / 20.2%<div class="sub">VRP 1.34</div></td>
         <td data-label="P(TOUCH)" class="num">40.6%<div class="sub">touch, ~12.5d &mdash; ignores the stop</div><div class="sub">needs 50.4% wins to break even</div><div class="sub down">no trend: about &minus;₹107.9 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">23.3%</td>
+        <td data-label="DECAY" class="num down">23.31%</td>
         <td data-label="SCORE" class="num">67.9</td>
       </tr>
       <tr>
@@ -3217,7 +3217,7 @@
         <td data-label="IV / REALISED" class="num">31.8% / 24.6%<div class="sub">VRP 1.3</div></td>
         <td data-label="P(TOUCH)" class="num">43.1%<div class="sub">touch, ~11.7d &mdash; ignores the stop</div><div class="sub">needs 50.6% wins to break even</div><div class="sub down">no trend: about &minus;₹79.22 a lot, plus the spread</div></td>
         <td data-label="DECAY" class="num down">20.7%</td>
-        <td data-label="SCORE" class="num">69.8</td>
+        <td data-label="SCORE" class="num">69.9</td>
       </tr>
       <tr>
         <td data-label="CONTRACT"><b class="name">TATAELXSI OCT 3300 CE</b><div class="sub warn">another strike of TATAELXSI &mdash; the same bet as the row above</div>
@@ -3229,7 +3229,7 @@
         <td data-label="NOW" class="num">₹71.50<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">32.7% / 24.6%<div class="sub">VRP 1.33</div></td>
         <td data-label="P(TOUCH)" class="num">32.7%<div class="sub">touch, ~14.5d &mdash; ignores the stop</div><div class="sub">needs 50.8% wins to break even</div><div class="sub down">no trend: about &minus;₹68.39 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">37.75%</td>
+        <td data-label="DECAY" class="num down">37.76%</td>
         <td data-label="SCORE" class="num">61.8</td>
       </tr>
       <tr>
@@ -3242,7 +3242,7 @@
         <td data-label="NOW" class="num">₹46.00<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">33.5% / 24.6%<div class="sub">VRP 1.36</div></td>
         <td data-label="P(TOUCH)" class="num">21.6%<div class="sub">touch, ~17.4d &mdash; ignores the stop</div><div class="sub">needs 51.1% wins to break even</div><div class="sub down">no trend: about &minus;₹60.83 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">62.43%</td>
+        <td data-label="DECAY" class="num down">62.44%</td>
         <td data-label="SCORE" class="num">54.4</td>
       </tr>
       <tr>
@@ -3281,7 +3281,7 @@
         <td data-label="NOW" class="num">₹235.00<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">29.3% / 23%<div class="sub">VRP 1.27</div></td>
         <td data-label="P(TOUCH)" class="num">45.1%<div class="sub">touch, ~11.2d &mdash; ignores the stop</div><div class="sub">needs 50.4% wins to break even</div><div class="sub down">no trend: about &minus;₹102.92 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">18.38%</td>
+        <td data-label="DECAY" class="num down">18.39%</td>
         <td data-label="SCORE" class="num">69.1</td>
       </tr>
       <tr>
@@ -3292,7 +3292,7 @@
         <td data-label="SELL &middot; NET" class="num up"><b>₹226.75</b><div class="sub">net +₹7,462.45 a lot</div></td>
         <td data-label="STOP" class="num down">₹75.60<div class="sub down">net &minus;₹7,623.53 a lot</div></td>
         <td data-label="NOW" class="num">₹151.15<div class="sub ">PREVIEW, not an order</div></td>
-        <td data-label="IV / REALISED" class="num">29.2% / 23%<div class="sub">VRP 1.27</div></td>
+        <td data-label="IV / REALISED" class="num">29.3% / 23%<div class="sub">VRP 1.27</div></td>
         <td data-label="P(TOUCH)" class="num">36.3%<div class="sub">touch, ~13.5d &mdash; ignores the stop</div><div class="sub">needs 50.5% wins to break even</div><div class="sub down">no trend: about &minus;₹83.04 a lot, plus the spread</div></td>
         <td data-label="DECAY" class="num down">33.2%</td>
         <td data-label="SCORE" class="num">63.6</td>
@@ -3320,7 +3320,7 @@
         <td data-label="NOW" class="num">₹3.05<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">29.7% / 18.1%<div class="sub">VRP 1.64</div></td>
         <td data-label="P(TOUCH)" class="num">29%<div class="sub">touch, ~15.5d &mdash; ignores the stop</div><div class="sub">needs 50.6% wins to break even</div><div class="sub down">no trend: about &minus;₹78.66 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">31.95%</td>
+        <td data-label="DECAY" class="num down">31.96%</td>
         <td data-label="SCORE" class="num">62.8</td>
       </tr>
       <tr>
@@ -3333,7 +3333,7 @@
         <td data-label="NOW" class="num">₹2.14<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">29.7% / 18.1%<div class="sub">VRP 1.64</div></td>
         <td data-label="P(TOUCH)" class="num">21.4%<div class="sub">touch, ~17.5d &mdash; ignores the stop</div><div class="sub">needs 50.7% wins to break even</div><div class="sub down">no trend: about &minus;₹69.27 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">48.2%</td>
+        <td data-label="DECAY" class="num down">48.21%</td>
         <td data-label="SCORE" class="num">58.5</td>
       </tr>
       <tr>
@@ -3346,7 +3346,7 @@
         <td data-label="NOW" class="num">₹1.50<div class="sub ">PREVIEW, not an order</div></td>
         <td data-label="IV / REALISED" class="num">30.1% / 18.1%<div class="sub">VRP 1.67</div></td>
         <td data-label="P(TOUCH)" class="num">13.6%<div class="sub">touch, ~19.7d &mdash; ignores the stop</div><div class="sub">needs 51% wins to break even</div><div class="sub down">no trend: about &minus;₹62.67 a lot, plus the spread</div></td>
-        <td data-label="DECAY" class="num down">69.72%</td>
+        <td data-label="DECAY" class="num down">69.73%</td>
         <td data-label="SCORE" class="num">54.2</td>
       </tr></tbody>
 </table></div>
@@ -5236,8 +5236,8 @@
 </main>
 
 <div class="note" style="margin-top:20px">
-  <b>WHERE THESE PRICES COME FROM.</b> All prices are from the <b>2026-09-25</b> settlement file. The market was closed for the weekend when this was built, so nothing here is executable right now. Premiums and the futures prices they are measured against both come from that same settlement file, so they describe the same moment. <b class="up">Checked against NSE's own site</b> at 2026-09-27 21:08 IST: 16 of 16 sampled
-           contracts are the same contract on both (the same previous close), last prices within 4.52%. <b class="up">Broker login OK</b> from the build server at 2026-09-27 21:08 IST
+  <b>WHERE THESE PRICES COME FROM.</b> All prices are from the <b>2026-09-25</b> settlement file. The market was closed for the weekend when this was built, so nothing here is executable right now. Premiums and the futures prices they are measured against both come from that same settlement file, so they describe the same moment. <b class="up">Checked against NSE's own site</b> at 2026-09-27 21:14 IST: 16 of 16 sampled
+           contracts are the same contract on both (the same previous close), last prices within 4.76%. <b class="up">Broker login OK</b> from the build server at 2026-09-27 21:14 IST
          &mdash; a NIFTY quote came back. <b>F&amp;O ban for 2026-09-28:</b> KAYNES, LICHSGFIN, MANAPPURAM, SAIL &mdash;
          left out entirely, because NSE allows only exits in a banned stock.
   This page is a <b>snapshot</b>, rebuilt on a schedule &mdash; it is not a live feed.
